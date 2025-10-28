@@ -11,7 +11,7 @@ import "../assets/styles/Timeline.scss";
 function Timeline() {
   return (
     <div id="history">
-      <div className="items-container">
+      <div className="items-container" data-aos="fade-up">
         <h1>Career History</h1>
         <VerticalTimeline>
           <VerticalTimelineElement

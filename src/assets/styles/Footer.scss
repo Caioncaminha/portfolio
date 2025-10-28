@@ -1,15 +1,26 @@
 footer {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-    svg {
-        width: 1.1em !important;
-        height: 1.1em !important;
-        margin-right: 10px;
-    }
+  svg {
+    width: 1.1em !important;
+    height: 1.1em !important;
+    margin-right: 10px;
+  }
 
-    p {
-        font-size: 0.8em;
-    }
+  p {
+    font-size: 0.8em;
+  }
+}
+
+/* Footer subtle interactions */
+footer a {
+  color: var(--footer-link);
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+footer a:hover {
+  color: var(--footer-link-hover);
+  transform: translateY(-3px);
 }

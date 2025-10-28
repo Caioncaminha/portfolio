@@ -1,5 +1,5 @@
 .vertical-timeline span {
-  color: white;
+  color: var(--text-light);
   font-family: "Courier Prime", monospace;
 }
 
@@ -16,11 +16,39 @@
 }
 
 .vertical-timeline-element a {
-  color: rgba(80, 0, 146, 0.966);
+  color: var(--accent);
 }
 
 .vertical-timeline-element a:hover {
   text-decoration: underline;
+}
+
+/* subtle animations for timeline elements */
+.vertical-timeline-element .vertical-timeline-element-content {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+.vertical-timeline-element .vertical-timeline-element-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 26px var(--card-elev-strong);
+}
+
+/* ensure icon images fill the circular icon properly */
+
+.vertical-timeline-element-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  background: var(--bg-dark);
+  border: 2px solid var(--accent);
+}
+
+.vertical-timeline-element-icon:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(80, 30, 150, 0.12);
 }
 
 .vertical-timeline-element h4 {

@@ -8,15 +8,39 @@ body {
   font-size: 1.1rem !important;
 }
 
+:root {
+  /* Theme variables */
+  --accent: #8b67f7;
+  --accent-strong: #4915c0;
+  --bg-dark: #0c0620;
+  --bg-light: #f8f9fa;
+  --bg-section-dark: rgba(40, 5, 60, 0.25);
+  --bg-section-light: #f8f9fa;
+  --text-dark: #0d1116;
+  --text-light: #fff;
+  --text-muted-dark: rgba(255, 255, 255, 0.78);
+  --text-muted-light: #6a3bd6;
+  --border-dark: rgba(155, 123, 255, 0.12);
+  --border-light: rgba(80, 30, 150, 0.12);
+  --card-elev: rgba(90, 40, 150, 0.06);
+  --card-elev-strong: rgba(80, 30, 150, 0.12);
+  --chip-bg-dark: #fff;
+  --chip-bg-light: rgba(0, 0, 0, 0.08);
+  --timeline-bg-dark: rgba(155, 123, 255, 0.06);
+  --timeline-bg-light: rgba(0, 0, 0, 0.08);
+  --footer-link: #dcd6ff;
+  --footer-link-hover: #fff;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace !important;
   font-size: 1rem !important;
 }
 
 .main-container {
   position: relative;
-  background-color: #0d1116;
-
+  background-color: var(--bg-dark);
 }
 
 a {
@@ -24,33 +48,53 @@ a {
 }
 
 a:hover {
-  color: #5000ca;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  color: var(--accent);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 
-p, a, h1, h2, h3, h4, h5, label, button {
-  color: white;
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+label,
+button {
+  color: var(--text-light);
   font-family: "Lato", sans-serif;
 }
 
 .navigation-bar {
-  justify-content: space-between;
+  /* center navigation items and provide a small gap */
+  justify-content: center;
+  gap: 18px;
   background-color: #0d1116;
+  align-items: center;
 
   button {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-family: "Lato", sans-serif;
     text-transform: initial;
-    padding: 6px 10px;
-  }
-
-  svg {
-    cursor: pointer;
+    padding: 6px 12px;
+    color: var(--accent);
+    border-bottom: 2px solid transparent;
+    transition: color 0.18s ease, transform 0.18s ease, border-color 0.18s ease,
+      box-shadow 0.18s ease;
+    border-radius: 6px;
   }
 }
 
+svg {
+  cursor: pointer;
+}
+
 .navigation-bar-responsive {
-  span, p {
+  span,
+  p {
     color: #0d1116;
     font-family: "Lato", sans-serif;
   }
@@ -99,13 +143,24 @@ p, a, h1, h2, h3, h4, h5, label, button {
     background-color: #f8f9fa;
   }
 
-  p, a, h1, h2, h3, h4, h5, label, button {
-    color: #0d1116;
+  p,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  ul,
+  li,
+  label,
+  button {
+    color: var(--text-dark) !important;
   }
 
   a:hover {
     color: #5000ca;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
   }
 
   .navigation-bar svg {
@@ -122,7 +177,8 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
   .chip {
     background-color: rgba(0, 0, 0, 0.08);
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
 
   .vertical-timeline::before {
@@ -130,10 +186,13 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
     color: gray;
   }
 
@@ -144,6 +203,13 @@ p, a, h1, h2, h3, h4, h5, label, button {
   .flex-chips .chip-title {
     color: #0d1116;
   }
+}
+
+/* Navbar when scrolled - slightly purple tint and blur */
+.navbar-fixed-top.scrolled {
+  background-color: rgba(12, 5, 25, 0.6) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(60, 20, 120, 0.12);
 }
 
 @media screen {

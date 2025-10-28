@@ -9,23 +9,24 @@
 
   button {
     float: right;
-    background-color: white;
-    color: #050f0b;
+    background-color: var(--chip-bg-dark);
+    color: var(--text-dark);
   }
 
   button:hover {
-    background-color: #5000ca;
-    color: white;
+    background-color: var(--accent);
+    color: var(--text-light);
   }
 
   fieldset {
-    background-color: white;
+    background-color: var(--chip-bg-dark);
   }
 }
 
 label {
   font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+  font-family: "DomaineDispNar-Medium", sans-serif;
+  color: var(--text-light);
 }
 
 .form-flex {
