@@ -6,35 +6,26 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import "../assets/styles/Timeline.scss";
+import "../assets/styles/Timeline.scss"; // O SCSS fará todo o trabalho de estilização
+import { useTranslation } from "../hooks/useTranslation";
 
 function Timeline() {
+  const { t } = useTranslation();
+
   return (
     <div id="history">
       <div className="items-container" data-aos="fade-up">
-        <h1>Career History</h1>
+        <h1>{t.careerHistory}</h1>
+
+        {/* A VerticalTimeline agora é estilizada puramente pelo SCSS */}
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
-            contentArrowStyle={{ borderRight: "7px solid  white" }}
-            date="Nov/2025 - present"
-            iconStyle={{ background: "white" }}
-            icon={
-              <img
-                src={unentelLogo}
-                alt="Unentel Logo"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "50%",
-                }}
-              />
-            }
+            date={t.dateTimeUnentel}
+            icon={<img src={unentelLogo} alt="Unentel Logo" />}
           >
             <h3 className="vertical-timeline-element-title">
-              Pre-Sales Intern at{" "}
+              {t.presalesIntern} @{" "}
               <a
                 href="https://unentel.com.br"
                 target="_blank"
@@ -44,48 +35,52 @@ function Timeline() {
               </a>
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              São Paulo, SP
+              📍{t.location}
             </h4>
-            <p>
-              Solution Design, Client Engagement, Technical Presentations,
-              Front-End Development and Design
-            </p>
+
+            {/* Adicionado 'whiteSpace: "pre-wrap"' para renderizar os bullet points */}
+            <p style={{ whiteSpace: "pre-wrap" }}>{t.descUnentelIntern}</p>
           </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Mar/2025 - Oct/2025"
-            iconStyle={{ background: "white" }}
-            icon={
-              <img
-                src={fiapLogo}
-                alt="FIAP Logo"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "50%",
-                }}
-              />
-            }
+            date={t.dateTimeFiap}
+            icon={<img src={fiapLogo} alt="FIAP Logo" />}
           >
             <h3 className="vertical-timeline-element-title">
-              Technical Leader at{" "}
+              {t.techLeader} @{" "}
               <a
                 href="https://fiap.com.br"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 FIAP
-              </a>
-              {"\u00A0"}(Academic Project)
+              </a>{" "}
+              {t.academicProject}
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              São Paulo, SP
+              📍{t.location}
             </h4>
-            <p>
-              Team Coordination, Backend Development, Cloud Infrastructure, Code
-              Reviews, Pitching Ideas and Presentations
-            </p>
+            {t.fiapRespTitle ? (
+              <>
+                <strong className="timeline-subtitle">{t.fiapRespTitle}</strong>
+                <p style={{ whiteSpace: "pre-wrap", marginTop: "8px" }}>
+                  {t.fiapRespList}
+                </p>
+                <strong
+                  className="timeline-subtitle"
+                  style={{ marginTop: "16px" }}
+                >
+                  {t.fiapResultsTitle}
+                </strong>
+                <p style={{ whiteSpace: "pre-wrap", marginTop: "8px" }}>
+                  {t.fiapResultsList}
+                </p>
+              </>
+            ) : (
+              // Se NÃO (estamos em EN), usamos o layout antigo
+              <p style={{ whiteSpace: "pre-wrap" }}>{t.teamCoordination}</p>
+            )}
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

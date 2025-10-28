@@ -1,5 +1,5 @@
 .skills-container {
-  padding: 2% 10% 7% 10%;
+  padding: 2% 10% 7% 8%;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -64,25 +64,51 @@
     monospace;
 }
 
-.about-section-expertise {
-  text-align: left;
-  max-width: 700px;
-  margin-left: 0;
-  margin-right: auto;
-  color: var(--text-light);
-  margin-bottom: 48px;
-}
-
 .skills-section {
   margin-top: 32px;
   margin-bottom: 48px;
-  text-align: left;
-  max-width: 900px;
+  max-width: 400px;
   margin-left: 0;
   margin-right: auto;
   color: var(--text-light);
 }
 .skills-section h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 18px;
+}
+.about-section-expertise {
+  /* Keep the section centered on the page, but align body text to the left
+     for better readability. The container remains centered via margin auto. */
+  max-width: 700px;
+  margin: 0 auto 48px; /* top 0, horiz auto, bottom 48px */
+  color: var(--text-light);
+  text-align: left; /* paragraphs and lists align to left inside the centered block */
+}
+
+.about-section-expertise h1 {
+  /* Keep the section title visually centered */
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.about-section-expertise p,
+.about-section-expertise .about-bullets {
+  text-align: left;
+}
+
+/* The About component uses the class 'skills-list' for the skills block.
+   Ensure the skills title and list are centered. */
+.skills-list {
+  margin-top: 32px;
+  margin-bottom: 48px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-light);
+}
+.skills-list h1 {
   font-size: 2em;
   color: white;
   margin-bottom: 18px;
@@ -93,6 +119,7 @@
   gap: 16px 32px;
   font-size: 1.15em;
   color: white;
+  justify-content: center; /* center skill chips */
 }
 .skills-row span {
   background: rgba(90, 40, 150, 0.12);
@@ -112,21 +139,6 @@
   .skills-section {
     max-width: 100%;
   }
-}
-
-.about-bullets ul {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 1.2em;
-  color: white;
-}
-.about-bullets li {
-  margin-bottom: 6px;
-  font-size: 1.08em;
-  color: white;
-}
-.about-bullets strong {
-  color: #9b7bff;
 }
 
 .light-mode .about-section-expertise,

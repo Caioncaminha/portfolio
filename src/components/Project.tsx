@@ -1,29 +1,179 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "../hooks/useTranslation";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import Carousel from "react-material-ui-carousel";
 import "../assets/styles/Project.scss";
 
+interface ProjectData {
+  id: number;
+  titleKey: string;
+  shortDescKey: string;
+  longDescKey: string;
+  imgUrlsKey: string;
+  repoUrlKey: string;
+  stackKey: string;
+}
+
+const projectData: ProjectData[] = [
+  {
+    id: 1,
+    titleKey: "project1Title",
+    shortDescKey: "project1ShortDesc",
+    longDescKey: "project1LongDesc",
+    imgUrlsKey: "project1ImgUrls",
+    repoUrlKey: "project1RepoUrl",
+    stackKey: "project1Stack",
+  },
+  {
+    id: 2,
+    titleKey: "project2Title",
+    shortDescKey: "project2ShortDesc",
+    longDescKey: "project2LongDesc",
+    imgUrlsKey: "project2ImgUrls",
+    repoUrlKey: "project2RepoUrl",
+    stackKey: "project2Stack",
+  },
+  {
+    id: 3,
+    titleKey: "project3Title",
+    shortDescKey: "project3ShortDesc",
+    longDescKey: "project3LongDesc",
+    imgUrlsKey: "project3ImgUrls",
+    repoUrlKey: "project3RepoUrl",
+    stackKey: "project3Stack",
+  },
+];
+
 function Project() {
-  const placeholders = [1, 2, 3];
+  const { t } = useTranslation();
+
+  const [openProject, setOpenProject] = useState<ProjectData | null>(null);
+
+  const handleClickOpen = (project: ProjectData) => {
+    setOpenProject(project);
+  };
+
+  const handleClose = () => {
+    setOpenProject(null);
+  };
 
   return (
     <div className="projects-container" id="projects" data-aos="fade-up">
-      <h1>Personal Projects</h1>
+      <h1>{t.projectsTitle || "Personal Projects"}</h1>
+
       <div className="projects-grid">
-        {placeholders.map((i) => (
-          <div className="project-card" key={i}>
-            <a className="project-media" href={`/projects/${i}`}>
-              <div className="media-placeholder">Project {i}</div>
-            </a>
-            <h2>Project Title {i}</h2>
-            <p>
-              Short description of the project goes here. Replace with real
-              content later.
-            </p>
-            <a className="project-link" href={`/projects/${i}`}>
-              View details
-            </a>
+        {projectData.map((project) => (
+          <div
+            className="project-card"
+            key={project.id}
+            onClick={() => handleClickOpen(project)}
+          >
+            <div className="project-media">
+              <div
+                className="media-placeholder"
+                style={{
+                  backgroundImage: `url(${
+                    t[project.imgUrlsKey]
+                      ? t[project.imgUrlsKey].split(",")[0]
+                      : ""
+                  })`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+
+            <div className="project-content">
+              <h2>{t[project.titleKey]}</h2>
+              <p>{t[project.shortDescKey]}</p>
+              <div className="project-stack">
+                {t[project.stackKey] &&
+                  t[project.stackKey].split(",").map((tech, index) => (
+                    <span key={index} className="tech-chip">
+                      {tech.trim()}
+                    </span>
+                  ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>
+
+      <Dialog
+        onClose={handleClose}
+        open={openProject !== null}
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle
+          sx={{ fontWeight: "bold", fontSize: "1.5rem", padding: "20px 24px" }}
+        >
+          {openProject ? t[openProject.titleKey] : ""}
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+
+        <DialogContent dividers>
+          {openProject && (
+            <Carousel
+              animation="slide"
+              autoPlay={false}
+              navButtonsAlwaysVisible
+              indicators={true}
+              className="project-carousel"
+            >
+              {t[openProject.imgUrlsKey].split(",").map((imgUrl, i) => (
+                <img
+                  key={i}
+                  src={imgUrl.trim()}
+                  alt={`${t[openProject.titleKey]} - Imagem ${i + 1}`}
+                  className="carousel-image"
+                />
+              ))}
+            </Carousel>
+          )}
+
+          <p style={{ whiteSpace: "pre-wrap", marginTop: "20px" }}>
+            {openProject ? t[openProject.longDescKey] : ""}
+          </p>
+        </DialogContent>
+
+        <DialogActions sx={{ padding: "12px 24px" }}>
+          <Button onClick={handleClose}>{t.close || "Close"}</Button>
+          <Button
+            variant="contained"
+            startIcon={<GitHubIcon />}
+            href={openProject ? t[openProject.repoUrlKey] : "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              backgroundColor: "#4915c0",
+              "&:hover": {
+                backgroundColor: "#3a119a",
+              },
+            }}
+          >
+            {t.viewCode || "View Code"}
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }

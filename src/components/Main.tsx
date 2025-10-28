@@ -1,9 +1,24 @@
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Button from "@mui/material/Button";
+import DownloadIcon from "@mui/icons-material/Download";
 import "../assets/styles/Main.scss";
+import { useTranslation } from "../hooks/useTranslation";
 
 function Main() {
+  const { t, lang } = useTranslation();
+
+  const cvPath =
+    lang === "pt"
+      ? "/curriculo_caio_nascimento_caminha.pdf"
+      : "/en_curriculo_caio_nascimento_caminha.pdf";
+
+  const downloadName =
+    lang === "pt"
+      ? "curriculo_caio_nascimento_caminha.pdf"
+      : "en_curriculo_caio_nascimento_caminha.pdf";
+
   return (
     <div className="container" data-aos="fade-up">
       <div className="about-section">
@@ -14,6 +29,7 @@ function Main() {
             style={{ width: "180px", height: "180px" }}
           />
         </div>
+
         <div className="content">
           <div className="social_icons">
             <a
@@ -31,15 +47,28 @@ function Main() {
               <LinkedInIcon />
             </a>
           </div>
+
           <h1>Caio Caminha</h1>
-          <p>Software Engineer</p>
-          <p
-            style={{
-              fontSize: "1em",
+          <p>{t.role}</p>
+          <p style={{ fontSize: "1em" }}>📍 {t.location}</p>
+
+          <Button
+            variant="contained"
+            href={cvPath}
+            download={downloadName}
+            startIcon={<DownloadIcon />}
+            sx={{
+              marginTop: "15px",
+              fontWeight: "bold",
+              backgroundColor: "#4915c0", // <-- Sua cor
+              // Adiciona um efeito 'hover' para escurecer um pouco
+              "&:hover": {
+                backgroundColor: "#390ea0ff",
+              },
             }}
           >
-            São Paulo, SP, Brazil
-          </p>
+            {t.downloadCV || "Download CV"}
+          </Button>
 
           <div className="mobile_social_icons">
             <a

@@ -1,3 +1,9 @@
+/* ========================================
+Estilização do Formulário de Contato (Corrigido)
+========================================
+*/
+
+/* --- Estilos de Layout (do seu arquivo original) --- */
 .contact_wrapper svg {
   font-size: 1em;
   vertical-align: middle;
@@ -6,27 +12,7 @@
 
 .contact-form {
   padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: var(--chip-bg-dark);
-    color: var(--text-dark);
-  }
-
-  button:hover {
-    background-color: var(--accent);
-    color: var(--text-light);
-  }
-
-  fieldset {
-    background-color: var(--chip-bg-dark);
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: "DomaineDispNar-Medium", sans-serif;
-  color: var(--text-light);
+  width: 100% !important;
 }
 
 .form-flex {
@@ -39,11 +25,104 @@ label {
   width: 100%;
 }
 
-form {
-  width: 100% !important;
-}
-
 .body-form {
   width: 100% !important;
   margin-bottom: 15px !important;
+}
+
+/* ========================================
+Estilos do Tema (Dark Mode - Padrão)
+========================================
+*/
+
+/* --- Botão Enviar --- */
+.contact-form .MuiButton-root {
+  float: right;
+  background-color: var(--accent-strong); /* Cor de destaque do seu site */
+  color: var(--text-light); /* Texto claro */
+  font-weight: bold;
+}
+
+.contact-form .MuiButton-root:hover {
+  background-color: var(--accent); /* Hover mais claro */
+  color: var(--text-light);
+}
+
+/* --- Campos de Texto (TextField) --- */
+.contact-form .MuiTextField-root {
+  /* Estilo do Label (ex: "Nome", "Email") */
+  .MuiInputLabel-root {
+    color: var(--text-muted-dark);
+  }
+  /* Label quando focado */
+  .MuiInputLabel-root.Mui-focused {
+    color: var(--accent);
+  }
+
+  /* Texto que o usuário digita */
+  .MuiInputBase-input,
+  .MuiInputBase-multiline {
+    color: var(--text-light);
+  }
+
+  /* Borda do campo */
+  .MuiOutlinedInput-notchedOutline {
+    border-color: var(--border-dark);
+  }
+  /* Borda no hover */
+  &:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--accent);
+  }
+  /* Borda no foco */
+  & .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--accent-strong);
+  }
+}
+
+.light-mode {
+  /* --- Botão Enviar (Light) --- */
+  .contact-form .MuiButton-root {
+    background-color: var(--accent-strong);
+    color: var(--text-light) !important;
+  }
+  .contact-form .MuiButton-root:hover {
+    background-color: var(--accent);
+  }
+
+  /* --- Campos de Texto (Light) --- */
+  .contact-form .MuiTextField-root {
+    /* Label */
+    .MuiInputLabel-root {
+      color: var(--text-muted-light);
+    }
+    .MuiInputLabel-root.Mui-focused {
+      color: var(--accent-strong);
+    }
+
+    /* Texto digitado */
+    .MuiInputBase-input,
+    .MuiInputBase-multiline {
+      color: var(--text-dark);
+    }
+
+    /* Borda */
+    .MuiOutlinedInput-notchedOutline {
+      border-color: var(--border-light);
+    }
+    &:hover .MuiOutlinedInput-notchedOutline {
+      border-color: var(--text-dark);
+    }
+    & .Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: var(--accent-strong);
+    }
+  }
+}
+
+/* Media query para telas menores (do seu arquivo original) */
+@media screen {
+  @media (max-width: 600px) {
+    .form-flex {
+      flex-direction: column;
+    }
+  }
 }

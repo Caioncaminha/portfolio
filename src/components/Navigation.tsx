@@ -3,6 +3,9 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
+import "../assets/styles/LanguageSwitch.scss";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -15,54 +18,47 @@ import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 
 const drawerWidth = 240;
-const navItems = [
-  ["About", "about"],
-  ["Skills", "skills"],
-  ["History", "history"],
-  ["Projects", "projects"],
-  ["Contact", "contact"],
-];
 
 function Navigation({ parentToChild, modeChange }: any) {
   const { mode } = parentToChild;
-
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language]; // 👈 pega as traduções corretas
 
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
+  const navItems = [
+    [t.about, "about"],
+    [t.history, "history"],
+    [t.projects, "projects"],
+    [t.education, "education"],
+    [t.contact, "contact"],
+  ];
+
+  const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.getElementById("navigation");
       if (navbar) {
-        const scrolled = window.scrollY > navbar.clientHeight;
-        setScrolled(scrolled);
+        setScrolled(window.scrollY > navbar.clientHeight);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (section: string) => {
     const navbar = document.getElementById("navigation");
-    const offset = navbar ? navbar.offsetHeight + 24 : 80; // 24px extra spacing
+    const offset = navbar ? navbar.offsetHeight + 24 : 80;
     if (section === "about") {
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
     const el = document.getElementById(section);
     if (el) {
       const rect = el.getBoundingClientRect();
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const top = rect.top + scrollTop - offset;
-      window.scrollTo({ top, left: 0, behavior: "smooth" });
+      const top = rect.top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
@@ -117,7 +113,8 @@ function Navigation({ parentToChild, modeChange }: any) {
           >
             Caio Caminha
           </div>
-          {/* Center: Nav Items with separators */}
+
+          {/* Center: Nav Items */}
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },
@@ -130,15 +127,15 @@ function Navigation({ parentToChild, modeChange }: any) {
                 <Button
                   onClick={() => scrollToSection(item[1])}
                   sx={{
-                    color: item[0] === "Contact" ? "#fff" : "var(--accent)",
-                    fontWeight: item[0] === "About" ? 700 : 500,
+                    color: item[0] === t.contact ? "#fff" : "var(--accent)",
+                    fontWeight: item[0] === t.about ? 700 : 500,
                     background:
-                      item[0] === "Contact" ? "var(--accent-strong)" : "none",
-                    borderRadius: item[0] === "Contact" ? "8px" : "6px",
-                    px: item[0] === "Contact" ? 2 : 1,
-                    py: item[0] === "Contact" ? 1 : 0,
+                      item[0] === t.contact ? "var(--accent-strong)" : "none",
+                    borderRadius: item[0] === t.contact ? "8px" : "6px",
+                    px: item[0] === t.contact ? 2 : 1,
+                    py: item[0] === t.contact ? 1 : 0,
                     boxShadow:
-                      item[0] === "Contact"
+                      item[0] === t.contact
                         ? "0 2px 12px rgba(80,30,150,0.18)"
                         : "none",
                   }}
@@ -160,19 +157,28 @@ function Navigation({ parentToChild, modeChange }: any) {
               </React.Fragment>
             ))}
           </Box>
-          {/* Right: Dark mode toggle */}
+
+          {/* Right: Switch */}
           <div
             className="nav-right"
-            style={{ display: "flex", alignItems: "center" }}
+            style={{ display: "flex", alignItems: "center", gap: "12px" }}
           >
+            <label className="language-switch">
+              <input
+                type="checkbox"
+                checked={language === "en"}
+                onChange={toggleLanguage}
+              />
+              <span className="slider">
+                <span className="lang-label pt">EN</span>
+                <span className="lang-label en">PT</span>
+              </span>
+            </label>
+
             {mode === "dark" ? (
               <LightModeIcon
                 onClick={() => modeChange()}
-                style={{
-                  cursor: "pointer",
-                  fontSize: "1.5em",
-                  color: "#fff",
-                }}
+                style={{ cursor: "pointer", fontSize: "1.5em", color: "#fff" }}
               />
             ) : (
               <DarkModeIcon
@@ -187,14 +193,13 @@ function Navigation({ parentToChild, modeChange }: any) {
           </div>
         </Toolbar>
       </AppBar>
+
       <nav>
         <Drawer
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
+          ModalProps={{ keepMounted: true }}
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {

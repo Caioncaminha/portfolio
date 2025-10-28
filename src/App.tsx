@@ -10,8 +10,10 @@ import {
   Navigation,
   Footer,
 } from "./components";
+import Education from "./components/Education";
 import FadeIn from "./components/FadeIn";
 import "./index.scss";
+import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
   const [mode, setMode] = useState<string>("dark");
@@ -32,21 +34,24 @@ function App() {
   }, []);
 
   return (
-    <div
-      className={`main-container ${
-        mode === "dark" ? "dark-mode" : "light-mode"
-      }`}
-    >
-      <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
-      <FadeIn transitionDuration={700}>
-        <Main />
-        <About />
-        <Timeline />
-        <Project />
-        <Contact />
-      </FadeIn>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div
+        className={`main-container ${
+          mode === "dark" ? "dark-mode" : "light-mode"
+        }`}
+      >
+        <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
+        <FadeIn transitionDuration={700}>
+          <Main />
+          <About />
+          <Timeline />
+          <Project />
+          <Education />
+          <Contact />
+        </FadeIn>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 

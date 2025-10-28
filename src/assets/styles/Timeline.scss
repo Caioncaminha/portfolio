@@ -72,3 +72,23 @@
     color: rgb(39, 40, 34);
   }
 }
+
+.timeline-subtitle {
+  display: block; // Faz o <strong> ocupar a própria linha
+  font-size: 1.05rem; // Aumenta um pouco a fonte
+  font-weight: 700; // Garante o negrito
+  color: var(--text-dark); // Cor principal
+  margin-top: 16px; // Espaçamento
+}
+
+/* Primeira ocorrência sem margem superior */
+.vertical-timeline-element-content > .timeline-subtitle:first-of-type {
+  margin-top: 32px;
+}
+
+/* --- Light Mode --- */
+.light-mode {
+  .timeline-subtitle {
+    color: var(--text-light);
+  }
+}

@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.1rem !important;
+  font-size: 1.2rem !important;
 }
 
 :root {
@@ -24,8 +24,6 @@ body {
   --border-light: rgba(80, 30, 150, 0.12);
   --card-elev: rgba(90, 40, 150, 0.06);
   --card-elev-strong: rgba(80, 30, 150, 0.12);
-  --chip-bg-dark: #fff;
-  --chip-bg-light: rgba(0, 0, 0, 0.08);
   --timeline-bg-dark: rgba(155, 123, 255, 0.06);
   --timeline-bg-light: rgba(0, 0, 0, 0.08);
   --footer-link: #dcd6ff;
@@ -217,5 +215,83 @@ svg {
     .items-container {
       padding: 5% 5%;
     }
+  }
+}
+
+/* Additional responsive niceties for mobile/tablet to finish responsiveness
+   - Allow navbar items to wrap
+   - Reduce paddings and font sizes on small screens
+   - Keep main container comfortable on narrow viewports */
+@media (max-width: 900px) {
+  .navigation-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 6px;
+    justify-content: center;
+  }
+
+  .navigation-bar button {
+    font-size: 0.95rem;
+    padding: 6px 8px;
+  }
+
+  .container {
+    margin-top: 56px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .items-container {
+    padding: 4% 6%;
+  }
+
+  .header-image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-bar button {
+    font-size: 0.9rem;
+    padding: 6px 6px;
+  }
+
+  .container {
+    margin-top: 48px;
+  }
+
+  .header-image {
+    height: 220px;
+  }
+
+  /* Make skill chips more compact on very small screens */
+  .skills-row span {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small device paddings to keep centered sections visually balanced
+   Add horizontal padding inside centered blocks so text looks more centered
+   on narrow screens (phones/tablets). */
+@media (max-width: 900px) {
+  .container .about-section-expertise,
+  .skills-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section-expertise,
+  .skills-list,
+  .aboutTitle {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
