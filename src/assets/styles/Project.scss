@@ -202,3 +202,65 @@
     color: var(--border-light);
   }
 }
+
+.project-card-actions {
+  display: flex;
+  justify-content: space-between; // "View Code" à esquerda, "See Details" à direita
+  align-items: center;
+  margin-top: auto; // Empurra os botões para o final do card
+  padding-top: 20px; // Espaço acima dos botões
+  border-top: 1px solid var(--border-dark); // Linha sutil de separação
+  margin-top: 20px; // Garante o espaço
+}
+
+.project-card-actions .MuiButton-root {
+  font-size: 0.85rem !important; // Diminui a fonte
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+/* Botão "View Code" (Outlined) */
+.project-card-actions .MuiButton-outlined {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.project-card-actions .MuiButton-outlined:hover {
+  border-color: var(--accent);
+  background-color: rgba(
+    139,
+    103,
+    247,
+    0.1
+  ); // Usa a cor --accent com opacidade
+}
+
+/* Botão "See Details" (Contained) */
+.project-card-actions .MuiButton-contained {
+  background-color: var(--accent-strong);
+  color: #fff;
+}
+.project-card-actions .MuiButton-contained:hover {
+  background-color: #3a119a; // Um tom mais escuro
+}
+
+/* --- Light Mode para os botões do card --- */
+.light-mode {
+  .project-card-actions {
+    border-top: 1px solid var(--border-light);
+  }
+
+  /* Botão "View Code" (Outlined) */
+  .light-mode .project-card-actions .MuiButton-outlined {
+    color: var(--accent-strong);
+    border-color: var(--accent-strong);
+  }
+  .light-mode .project-card-actions .MuiButton-outlined:hover {
+    border-color: var(--accent-strong);
+    background-color: rgba(
+      73,
+      21,
+      192,
+      0.1
+    ); // Usa a cor --accent-strong com opacidade
+  }
+}

@@ -22,7 +22,7 @@ export const translations: Translation = {
     softwareStudent: "Software Engineering Student",
     studentDescription:
       "With a focus on Python, algorithms, and data structures. I emphasize practices such as SOLID, version control, and clean code.",
-    experience:
+    aboutExperience:
       'Experience as a leader and co-leader in semi-professional teams both inside and outside the academic environment, contributing to small-scale projects, notably the "Passa a Bola" project currently.',
     areasOfInterest: "Areas of interest (Internship):",
     interestAreas:
@@ -58,10 +58,12 @@ export const translations: Translation = {
 
     // Skills
     skillsTitle: "Skills",
+    skillsList:
+      "Python, SQLite, SQL, NoSQL, Cloud Firestore, MongoDB, Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Power BI, Excel, Git",
 
     // Navigation
     about: "About",
-    history: "History",
+    experience: "Experience",
     projects: "Projects",
     education: "Education",
     contact: "Contact",
@@ -73,7 +75,7 @@ export const translations: Translation = {
     emailphonePlaceholder: "Email / Phone",
     sendEmail: "Send",
 
-    projectsTitle: "Personal Projects",
+    projectsTitle: "Projects",
 
     // Projeto 1
     project1Title: "Passa a Bola",
@@ -99,29 +101,48 @@ export const translations: Translation = {
     project1Stack: "Flutter (Dart), Firebase Auth, Cloud Firestore, Git, Figma",
 
     // Projeto 2
-    project2Title: "Project Title 2",
+    project2Title: "Python CLI Simulator",
     project2ShortDesc:
-      "Short description of the project goes here. Replace with real content.",
+      "CLI (command-line interface) simulator in Python that manages a simple registration of athletes, clubs and matches for the Python discipline in the context of the Passa a Bola project.",
     project2LongDesc:
-      "This is the FULL, detailed description for Project 2. Explain everything about this project here.",
-    project2RepoUrl: "https://github.com/your-username/project-2",
-    project2ImgUrl:
-      "https://via.placeholder.com/600x400.png?text=Project+2+Image",
-    project2Stack: "Python, FastAPI, Docker, PostgreSQL, AWS",
+      "Implemented functionalities:" +
+      "\n\nInput reading and validation" +
+      "\n • read_non_empty(prompt) - " +
+      "\n • read_positive_int(prompt) — requests a non-negative integer." +
+      "\n • select_option(options, prompt, allow_blank=False) — presents a numbered list and validates the user's choice." +
+      "\n\n Main operations (in-memory CRUD)" +
+      "\n • cadastrar_atleta() — registers an athlete (name, age, position and affiliation to an existing club)." +
+      "\n • cadastrar_clube() — creates a new club with a name, city, and an empty list of athletes." +
+      "\n • registrar_partida() — records a match between two clubs (prevents the club from playing against itself) and stores the score." +
+      "\n • listar_atletas(), listar_clubes(), listar_partidas() — display the records currently loaded into memory.",
+
+    project2RepoUrl: "https://github.com/Caioncaminha/fourthsprintpython",
+    project2ImgUrls:
+      "https://i.imgur.com/poWubGH.png, https://i.imgur.com/NQjFIdE.png, https://i.imgur.com/tlTp0rx.png",
+    project2Stack: "Python, JSON",
 
     // Projeto 3
-    project3Title: "Project Title 3",
+    project3Title: "CRUD Web System",
     project3ShortDesc:
-      "Short description of the project goes here. Replace with real content.",
+      "CRUD web system developed for information management of women's soccer players.",
     project3LongDesc:
-      "This is the FULL, detailed description for Project 3. Explain everything about this project here.",
-    project3RepoUrl: "https://github.com/your-username/project-3",
-    project3ImgUrl:
-      "https://via.placeholder.com/600x400.png?text=Project+3+Image",
-    project3Stack: "C++, Unreal Engine, Blender",
+      "CRUD (Create, Read, Update, Delete) web system developed for information management of women's soccer players." +
+      "\nThe application allows you to register, view, edit and delete players, as well as advanced search, filtering and favorites features." +
+      "\n\n Key Features:" +
+      "\n • Player Registration - Add new players with complete information" +
+      "\n • Listing in Cards - Organized view with photo, statistics and information" +
+      "\n • Data Editing - Update existing player information" +
+      "\n • Exclusion with Confirmation - Remove players" +
+      "\n • Favorites System - Tag your favorite players" +
+      "\n • Data Persistence - Data automatically saved to LocalStorage",
+
+    project3RepoUrl: "https://github.com/Caioncaminha/cp1-webdev-crud",
+    project3ImgUrls:
+      "https://i.imgur.com/PQdcRjs.png, https://i.imgur.com/6OMY9Ul.png",
+    project3Stack: "HTML5, CSS3, JavaScript, LocalStorage",
 
     // Botões do Modal
-    close: "Close",
+    seeDetails: "See Details",
     viewCode: "View Code",
   },
   pt: {
@@ -142,7 +163,7 @@ export const translations: Translation = {
     softwareStudent: "Estudante de Engenharia de Software",
     studentDescription:
       "Com foco em Python, algoritmos e estruturas de dados. Enfatizo práticas como SOLID, controle de versão e código limpo.",
-    experience:
+    aboutExperience:
       'Experiência como líder e co-líder em equipes semi-profissionais dentro e fora do ambiente acadêmico, contribuindo para projetos de pequena escala, notadamente o projeto "Passa a Bola" atualmente.',
     areasOfInterest: "Áreas de interesse (Estágio):",
     interestAreas:
@@ -178,10 +199,12 @@ export const translations: Translation = {
 
     // Skills
     skillsTitle: "Habilidades",
+    skillsList:
+      "Python, SQLite, SQL, NoSQL, Cloud Firestore, MongoDB, Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Power BI, Excel, Git",
 
     // Navigation
     about: "Sobre",
-    history: "História",
+    experience: "Experiência",
     projects: "Projetos",
     education: "Formação",
     contact: "Contato",
@@ -193,7 +216,7 @@ export const translations: Translation = {
     emailphonePlaceholder: "Email / Celular",
     sendEmail: "Enviar",
 
-    projectsTitle: "Projetos Pessoais",
+    projectsTitle: "Projetos",
 
     // Projeto 1
     project1Title: "Passa a Bola",
@@ -221,7 +244,7 @@ export const translations: Translation = {
     // Projeto 2
     project2Title: "Simulador CLI em Python",
     project2ShortDesc:
-      "Simulador CLI em Python que gerencia um cadastro simples de atletas, clubes e partidas para a disciplina de Python no contexto do projeto Passa a Bola.",
+      "Simulador CLI (command-line interface) em Python que gerencia um cadastro simples de atletas, clubes e partidas para a disciplina de Python no contexto do projeto Passa a Bola.",
     project2LongDesc:
       "Funcionalidades implementadas:" +
       "\n\n Leitura e validação de entrada" +
@@ -235,23 +258,32 @@ export const translations: Translation = {
       "\n • listar_atletas(), listar_clubes(), listar_partidas() — exibem os registros atualmente carregados em memória.",
 
     project2RepoUrl: "https://github.com/Caioncaminha/fourthsprintpython",
-    project2ImgUrl:
-      "https://via.placeholder.com/600x400.png?text=Imagem+Projeto+2",
+    project2ImgUrls:
+      "https://i.imgur.com/poWubGH.png, https://i.imgur.com/NQjFIdE.png, https://i.imgur.com/tlTp0rx.png",
     project2Stack: "Python, JSON",
 
     // Projeto 3
-    project3Title: "Título do Projeto 3",
+    project3Title: "Sistema Web CRUD",
     project3ShortDesc:
-      "Breve descrição do projeto aqui. Substitua pelo conteúdo real.",
+      "Sistema web CRUD desenvolvido para gerenciamento de informações de jogadoras de futebol feminino.",
     project3LongDesc:
-      "Esta é a descrição COMPLETA e detalhada do Projeto 3. Explique tudo sobre este projeto aqui.",
-    project3RepoUrl: "https://github.com/your-username/project-3",
-    project3ImgUrl:
-      "https://via.placeholder.com/600x400.png?text=Imagem+Projeto+3",
-    project3Stack: "C++, Unreal Engine, Blender",
+      "Sistema web CRUD (Create, Read, Update, Delete) desenvolvido para gerenciamento de informações de jogadoras de futebol feminino." +
+      "\nA aplicação permite cadastrar, visualizar, editar e excluir jogadoras, além de recursos avançados de busca, filtragem e favoritos." +
+      "\n\n Funcionalidades Principais:" +
+      "\n • Cadastro de Jogadoras - Adicione novas jogadoras com informações completas" +
+      "\n • Listagem em Cards - Visualização organizada com foto, estatísticas e informações" +
+      "\n • Edição de Dados - Atualize informações de jogadoras existentes" +
+      "\n • Exclusão com Confirmação - Remova jogadoras" +
+      "\n • Sistema de Favoritos - Marque suas jogadoras preferidas" +
+      "\n • Persistência de Dados - Dados salvos automaticamente no LocalStorage",
+
+    project3RepoUrl: "https://github.com/Caioncaminha/cp1-webdev-crud",
+    project3ImgUrls:
+      "https://i.imgur.com/PQdcRjs.png, https://i.imgur.com/6OMY9Ul.png",
+    project3Stack: "HTML5, CSS3, JavaScript, LocalStorage",
 
     // Botões do Modal
-    close: "Fechar",
+    seeDetails: "Ver Detalhes",
     viewCode: "Ver Código",
   },
 };

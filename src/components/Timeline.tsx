@@ -13,8 +13,8 @@ function Timeline() {
   const { t } = useTranslation();
 
   return (
-    <div id="history">
-      <div className="items-container" data-aos="fade-up">
+    <div id="experience" data-aos="fade-up">
+      <div className="items-container">
         <h1>{t.careerHistory}</h1>
 
         {/* A VerticalTimeline agora é estilizada puramente pelo SCSS */}

@@ -89,7 +89,8 @@ export default function FadeIn(props: PropsWithChildren<Props>) {
           <ChildTag
             className={props.childClassName}
             style={{
-              transition: `opacity ${transitionDuration}ms, transform ${transitionDuration}ms`,
+              /* A MELHORIA ESTÁ AQUI: Adicionado 'ease-out' */
+              transition: `opacity ${transitionDuration}ms ease-out, transform ${transitionDuration}ms ease-out`,
               transform: maxIsVisible > i ? "none" : "translateY(20px)",
               opacity: maxIsVisible > i ? 1 : 0,
             }}

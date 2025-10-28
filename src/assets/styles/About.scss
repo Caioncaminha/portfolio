@@ -25,6 +25,7 @@
 .skills-container .skills-grid .skill:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(80, 30, 150, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
 
 .chip {
@@ -32,7 +33,7 @@
   background-color: var(--chip-bg-dark) !important;
   font-size: 0.8rem !important;
   height: 25px !important;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   span {
     font-family: "Courier Prime", monospace;

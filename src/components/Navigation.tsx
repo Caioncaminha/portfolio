@@ -28,7 +28,7 @@ function Navigation({ parentToChild, modeChange }: any) {
 
   const navItems = [
     [t.about, "about"],
-    [t.history, "history"],
+    [t.experience, "experience"],
     [t.projects, "projects"],
     [t.education, "education"],
     [t.contact, "contact"],
@@ -114,7 +114,6 @@ function Navigation({ parentToChild, modeChange }: any) {
             Caio Caminha
           </div>
 
-          {/* Center: Nav Items */}
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },
@@ -158,7 +157,6 @@ function Navigation({ parentToChild, modeChange }: any) {
             ))}
           </Box>
 
-          {/* Right: Switch */}
           <div
             className="nav-right"
             style={{ display: "flex", alignItems: "center", gap: "12px" }}

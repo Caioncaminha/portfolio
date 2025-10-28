@@ -11,7 +11,6 @@ import {
   Footer,
 } from "./components";
 import Education from "./components/Education";
-import FadeIn from "./components/FadeIn";
 import "./index.scss";
 import { LanguageProvider } from "./context/LanguageContext";
 
@@ -28,9 +27,8 @@ function App() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    // init AOS for subtle scroll animations; once:false so animations re-run when elements
-    // re-enter the viewport (user asked for animations to reoccur).
-    AOS.init({ duration: 650, once: false, easing: "ease-out-cubic" });
+
+    AOS.init({ duration: 700, once: false, easing: "ease-out-cubic" });
   }, []);
 
   return (
@@ -41,14 +39,14 @@ function App() {
         }`}
       >
         <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
-        <FadeIn transitionDuration={700}>
-          <Main />
-          <About />
-          <Timeline />
-          <Project />
-          <Education />
-          <Contact />
-        </FadeIn>
+
+        <Main />
+        <About />
+        <Timeline />
+        <Project />
+        <Education />
+        <Contact />
+
         <Footer />
       </div>
     </LanguageProvider>

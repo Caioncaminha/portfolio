@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.2rem !important;
+  background-color: var(--bg-dark);
 }
 
 :root {
@@ -47,8 +48,8 @@ a {
 
 a:hover {
   color: var(--accent);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 p,
@@ -80,8 +81,8 @@ button {
     padding: 6px 12px;
     color: var(--accent);
     border-bottom: 2px solid transparent;
-    transition: color 0.18s ease, transform 0.18s ease, border-color 0.18s ease,
-      box-shadow 0.18s ease;
+    transition: color 0.25s ease, transform 0.25s ease, border-color 0.25s ease,
+      box-shadow 0.25s ease;
     border-radius: 6px;
   }
 }

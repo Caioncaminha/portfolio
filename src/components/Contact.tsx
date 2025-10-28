@@ -29,8 +29,8 @@ function Contact() {
   };
 
   return (
-    <div id="contact">
-      <div className="items-container" data-aos="fade-up">
+    <div id="contact" data-aos="fade-up">
+      <div className="items-container">
         <div className="contact_wrapper">
           <h1>{t.contactMeTitle}</h1>
           <Box

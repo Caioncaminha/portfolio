@@ -6,12 +6,12 @@ function About() {
   const { t } = useTranslation();
 
   return (
-    <div className="container" id="about">
+    <div className="container" id="about" data-aos="fade-up">
       <h1 className="aboutTitle">{t.aboutTitle}</h1>
       <div className="about-section-expertise">
         <p>{t.softwareStudent}</p>
         <p>{t.studentDescription}</p>
-        <p>{t.experience}</p>
+        <p>{t.aboutExperience}</p>
         <br />
         <p>
           <strong>{t.areasOfInterest}</strong>
@@ -25,20 +25,10 @@ function About() {
       <div className="skills-list">
         <h1>{t.skillsTitle}</h1>
         <div className="skills-row">
-          <span>Python</span>
-          <span>SQLite</span>
-          <span>SQL</span>
-          <span>NoSQL</span>
-          <span>Cloud Firestore</span>
-          <span>MongoDB</span>
-          <span>Pandas</span>
-          <span>NumPy</span>
-          <span>Matplotlib</span>
-          <span>Seaborn</span>
-          <span>Jupyter</span>
-          <span>Power BI</span>
-          <span>Excel</span>
-          <span>Git</span>
+          {t.skillsList &&
+            t.skillsList
+              .split(",")
+              .map((skill, index) => <span key={index}>{skill.trim()}</span>)}
         </div>
       </div>
     </div>

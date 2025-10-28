@@ -20,7 +20,7 @@ function Main() {
       : "en_curriculo_caio_nascimento_caminha.pdf";
 
   return (
-    <div className="container" data-aos="fade-up">
+    <div className="container">
       <div className="about-section">
         <div className="image-wrapper">
           <img

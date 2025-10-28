@@ -7,7 +7,7 @@ function Education() {
   const { t } = useTranslation();
 
   return (
-    <div className="container" id="education">
+    <div className="container" id="education" data-aos="fade-up">
       <h1>{t.educationTitle}</h1>
       <div className="education-content">
         <div className="education-card">

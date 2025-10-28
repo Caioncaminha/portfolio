@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Carousel from "react-material-ui-carousel";
+import LaunchIcon from "@mui/icons-material/Launch";
 import "../assets/styles/Project.scss";
 
 interface ProjectData {
@@ -64,6 +65,16 @@ function Project() {
     setOpenProject(null);
   };
 
+  const handleCodeClick = (e: React.MouseEvent, url: string) => {
+    e.stopPropagation(); // Impede que o card abra o modal
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  const handleDetailsClick = (e: React.MouseEvent, project: ProjectData) => {
+    e.stopPropagation(); // Impede o 'double-click'
+    handleClickOpen(project);
+  };
+
   return (
     <div className="projects-container" id="projects" data-aos="fade-up">
       <h1>{t.projectsTitle || "Personal Projects"}</h1>
@@ -100,6 +111,22 @@ function Project() {
                       {tech.trim()}
                     </span>
                   ))}
+              </div>
+              <div className="project-card-actions">
+                <Button
+                  variant="contained"
+                  endIcon={<LaunchIcon />}
+                  onClick={(e) => handleDetailsClick(e, project)}
+                >
+                  {t.seeDetails || "See Details"}
+                </Button>
+                <Button
+                  variant="outlined"
+                  startIcon={<GitHubIcon />}
+                  onClick={(e) => handleCodeClick(e, t[project.repoUrlKey])}
+                >
+                  {t.viewCode || "View Code"}
+                </Button>
               </div>
             </div>
           </div>
@@ -156,7 +183,6 @@ function Project() {
         </DialogContent>
 
         <DialogActions sx={{ padding: "12px 24px" }}>
-          <Button onClick={handleClose}>{t.close || "Close"}</Button>
           <Button
             variant="contained"
             startIcon={<GitHubIcon />}
