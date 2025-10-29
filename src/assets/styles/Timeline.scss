@@ -1,59 +1,94 @@
-/* ========================================
-   Estilização da Timeline (React Chrono)
-======================================== */
-
-#experience .items-container {
-  padding-bottom: 5%;
+.vertical-timeline span {
+  color: var(--text-light);
+  font-family: "Courier Prime", monospace;
 }
 
-/* Ajustes finos no card do Chrono */
-.timeline-card-content {
-  padding: 1.5em;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 12px var(--card-elev-strong) !important;
-  /* A borda e o fundo são controlados pelo ChronoWrapper no .tsx */
+.vertical-timeline p {
+  color: rgb(39, 40, 34);
 }
 
-/* Estilo para o texto detalhado (com bullets/markdown) */
-.timeline-card-content .card-detailed-text {
-  margin-top: 10px;
-  line-height: 1.6;
-  font-size: 0.95rem;
+.vertical-timeline-element p {
+  color: rgb(39, 40, 34);
+}
 
-  /* Estilo para o negrito (markdown **) */
-  strong {
-    font-weight: 700;
-    color: var(--accent); /* Destaca o título da seção */
-    display: block;
-    margin-bottom: 5px;
+.vertical-timeline-element h3 {
+  color: rgb(39, 40, 34);
+}
+
+.vertical-timeline-element a {
+  color: var(--accent);
+}
+
+.vertical-timeline-element a:hover {
+  text-decoration: underline;
+}
+
+/* subtle animations for timeline elements */
+.vertical-timeline-element .vertical-timeline-element-content {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+.vertical-timeline-element .vertical-timeline-element-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 26px var(--card-elev-strong);
+}
+
+/* ensure icon images fill the circular icon properly */
+
+.vertical-timeline-element-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  background: var(--bg-dark);
+  border: 2px solid var(--accent);
+}
+
+.vertical-timeline-element-icon:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(80, 30, 150, 0.12);
+}
+
+.vertical-timeline-element h4 {
+  color: rgb(39, 40, 34);
+}
+
+.vertical-timeline-element span {
+  color: rgb(39, 40, 34);
+}
+
+.vertical-timeline-element .vertical-timeline-element-date {
+  color: white;
+}
+
+.svg-inline--fa {
+  color: white;
+}
+
+@media screen and (max-width: 1170px) {
+  .vertical-timeline-element .vertical-timeline-element-date {
+    color: rgb(39, 40, 34);
   }
 }
 
-/* Linha central e círculo (Dark Mode) */
-.timeline-horizontal-circle,
-.timeline-vertical-circle {
-  background-color: var(--accent-strong) !important;
-  border: 2px solid var(--accent-strong) !important;
+.timeline-subtitle {
+  display: block; // Faz o <strong> ocupar a própria linha
+  font-size: 1.05rem; // Aumenta um pouco a fonte
+  font-weight: 700; // Garante o negrito
+  color: var(--text-dark); // Cor principal
+  margin-top: 16px; // Espaçamento
 }
 
-.timeline-line {
-  background-color: var(--border-dark) !important;
+/* Primeira ocorrência sem margem superior */
+.vertical-timeline-element-content > .timeline-subtitle:first-of-type {
+  margin-top: 32px;
 }
 
-/* Sobrescritas para Light Mode */
+/* --- Light Mode --- */
 .light-mode {
-  .timeline-line {
-    background-color: var(--border-light) !important;
-  }
-
-  .timeline-card-content .card-detailed-text strong {
-    color: var(--accent-strong);
-  }
-}
-
-/* Media Query para telas menores */
-@media screen and (max-width: 768px) {
-  .timeline-card-content {
-    padding: 1em;
+  .timeline-subtitle {
+    color: var(--text-light);
   }
 }

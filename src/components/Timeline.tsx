@@ -1,103 +1,87 @@
-import { Chrono } from "react-chrono";
-import styled from "styled-components";
-import "../assets/styles/Timeline.scss";
-import { useTranslation } from "../hooks/useTranslation";
 import unentelLogo from "../assets/images/unentel-logo.jpg";
 import fiapLogo from "../assets/images/fiap-logo.png";
-
-interface AppTheme {
-  accent: string;
-  accentStrong: string;
-  cardBg: string;
-  textMain: string;
-  textMuted: string;
-  border: string;
-}
-
-const ChronoWrapper = styled.div<{ theme: AppTheme }>`
-  --primary-color: ${(props) => props.theme.accent};
-  --secondary-color: ${(props) => props.theme.cardBg};
-  --card-bg-color: ${(props) => props.theme.cardBg};
-  --card-details-color: ${(props) => props.theme.textMuted};
-  --card-media-bg-color: ${(props) => props.theme.accent};
-  --card-subtitle-color: ${(props) => props.theme.textMuted};
-  --card-text-color: ${(props) => props.theme.textMain};
-  --card-title-color: ${(props) => props.theme.textMain};
-  --title-color: ${(props) => props.theme.textMain};
-  --title-color-active: ${(props) => props.theme.accentStrong};
-
-  .timeline-card-content {
-    border-radius: 8px;
-    border: 1px solid ${(props) => props.theme.border};
-  }
-`;
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import "../assets/styles/Timeline.scss"; // O SCSS fará todo o trabalho de estilização
+import { useTranslation } from "../hooks/useTranslation";
 
 function Timeline() {
   const { t } = useTranslation();
-
-  const items = [
-    {
-      title: t.dateTimeUnentel,
-      cardTitle: t.presalesIntern,
-      cardSubtitle: `Unentel - 📍${t.location}`,
-      cardDetailedText: t.descUnentelIntern?.split("\n"),
-      media: { type: "IMAGE" as const, source: { url: unentelLogo } },
-    },
-    {
-      title: t.dateTimeFiap,
-      cardTitle: `${t.techLeader} - FIAP ${t.academicProject}`,
-      cardSubtitle: `📍${t.location}`,
-      cardDetailedText: [
-        `**${t.fiapRespTitle}**`,
-        ...(t.fiapRespList?.split("\n") || []),
-        "",
-        `**${t.fiapResultsTitle}**`,
-        ...(t.fiapResultsList?.split("\n") || []),
-      ],
-      media: { type: "IMAGE" as const, source: { url: fiapLogo } },
-    },
-  ];
-
-  const isLightMode = document.body.classList.contains("light-mode");
-
-  const theme: AppTheme = {
-    accent: "var(--accent)",
-    accentStrong: "var(--accent-strong)",
-    cardBg: isLightMode ? "var(--bg-light)" : "var(--card-elev)",
-    textMain: isLightMode ? "var(--text-dark)" : "var(--text-light)",
-    textMuted: isLightMode
-      ? "var(--text-muted-light)"
-      : "var(--text-muted-dark)",
-    border: isLightMode ? "var(--border-light)" : "var(--border-dark)",
-  };
 
   return (
     <div id="experience" data-aos="fade-up">
       <div className="items-container">
         <h1>{t.careerHistory}</h1>
 
-        <ChronoWrapper theme={theme}>
-          <Chrono
-            items={items}
-            mode="VERTICAL_ALTERNATING"
-            cardHeight={250}
-            theme={{
-              primary: theme.accent,
-              secondary: theme.cardBg,
-              cardBgColor: theme.cardBg,
-              textColor: theme.textMain,
-              titleColor: theme.textMain,
-              titleColorActive: theme.accentStrong,
-            }}
-            fontSizes={{
-              cardSubtitle: "0.85rem",
-              cardText: "0.9rem",
-              cardTitle: "1.2rem",
-              title: "1rem",
-            }}
-            scrollable={items.length > 3}
-          />
-        </ChronoWrapper>
+        {/* A VerticalTimeline agora é estilizada puramente pelo SCSS */}
+        <VerticalTimeline>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={t.dateTimeUnentel}
+            icon={<img src={unentelLogo} alt="Unentel Logo" />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              {t.presalesIntern} @{" "}
+              <a
+                href="https://unentel.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Unentel
+              </a>
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              📍{t.location}
+            </h4>
+
+            {/* Adicionado 'whiteSpace: "pre-wrap"' para renderizar os bullet points */}
+            <p style={{ whiteSpace: "pre-wrap" }}>{t.descUnentelIntern}</p>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={t.dateTimeFiap}
+            icon={<img src={fiapLogo} alt="FIAP Logo" />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              {t.techLeader} @{" "}
+              <a
+                href="https://fiap.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FIAP
+              </a>{" "}
+              {t.academicProject}
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              📍{t.location}
+            </h4>
+            {t.fiapRespTitle ? (
+              <>
+                <strong className="timeline-subtitle">{t.fiapRespTitle}</strong>
+                <p style={{ whiteSpace: "pre-wrap", marginTop: "8px" }}>
+                  {t.fiapRespList}
+                </p>
+                <strong
+                  className="timeline-subtitle"
+                  style={{ marginTop: "16px" }}
+                >
+                  {t.fiapResultsTitle}
+                </strong>
+                <p style={{ whiteSpace: "pre-wrap", marginTop: "8px" }}>
+                  {t.fiapResultsList}
+                </p>
+              </>
+            ) : (
+              // Se NÃO (estamos em EN), usamos o layout antigo
+              <p style={{ whiteSpace: "pre-wrap" }}>{t.teamCoordination}</p>
+            )}
+          </VerticalTimelineElement>
+        </VerticalTimeline>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import LaunchIcon from "@mui/icons-material/Launch";
 
 import Lightbox from "yet-another-react-lightbox";
@@ -190,15 +191,16 @@ function Project() {
               infiniteLoop
               autoPlay={false}
               className="carousel"
+              onClickItem={openLightbox}
             >
               {t[openProject.imgUrlsKey].split(",").map((imgUrl, i) => (
-                <img
-                  key={i}
-                  src={imgUrl.trim()}
-                  alt={`${t[openProject.titleKey]} - Imagem ${i + 1}`}
-                  className="carousel-image"
-                  onClick={() => openLightbox(i)}
-                />
+                <div key={i} className="carousel-slide-wrapper">
+                  <img
+                    src={imgUrl.trim()}
+                    alt={`${t[openProject.titleKey]} - Imagem ${i + 1}`}
+                    className="carousel-image"
+                  />
+                </div>
               ))}
             </Carousel>
           )}
@@ -228,7 +230,10 @@ function Project() {
         index={currentImageIndex}
         plugins={[Thumbnails, Zoom]}
         styles={{
-          container: { backgroundColor: "rgba(12, 6, 32, 0.9)" },
+          container: {
+            backgroundColor: "rgba(12, 6, 32, 0.9)",
+            zIndex: 1500,
+          },
         }}
       />
     </div>
