@@ -29,3 +29,8 @@ footer a:hover {
   color: var(--footer-link-hover);
   transform: translateY(-3px);
 }
+
+a:hover svg {
+  color: var(--accent) !important; /* Cor de destaque mais forte no hover */
+  transform: scale(1.1); /* Mantém o efeito de zoom */
+}

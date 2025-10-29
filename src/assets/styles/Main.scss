@@ -159,3 +159,11 @@
     }
   }
 }
+/* Adicionado para corrigir o hover dos ícones sociais no light mode */
+.light-mode .about-section .social_icons a:hover svg,
+.light-mode .about-section .mobile_social_icons a:hover svg {
+  color: var(
+    --accent-strong
+  ) !important; /* Cor de destaque mais forte no hover */
+  transform: scale(1.1); /* Mantém o efeito de zoom */
+}
