@@ -73,6 +73,7 @@
   font-weight: 600;
 }
 
+/* --- Media Query --- */
 @media screen and (max-width: 768px) {
   .projects-container {
     padding-left: 5%;
@@ -153,6 +154,10 @@
   color: var(--accent-strong) !important;
 }
 
+.project-carousel .MuiIconButton-root {
+  color: var(--border-dark);
+}
+
 /* --- Botões do Card --- */
 .project-card-actions {
   display: flex;
@@ -170,6 +175,16 @@
   padding: 6px 12px;
 }
 
+/* Botão "Ver Detalhes" (Contained) */
+.project-card-actions .MuiButton-contained {
+  background-color: var(--accent-strong);
+  color: #fff;
+}
+.project-card-actions .MuiButton-contained:hover {
+  background-color: #3a119a;
+}
+
+/* Botão "Ver Código" (Outlined) */
 .project-card-actions .MuiButton-outlined {
   color: var(--accent);
   border-color: var(--accent);
@@ -177,14 +192,6 @@
 .project-card-actions .MuiButton-outlined:hover {
   border-color: var(--accent);
   background-color: rgba(139, 103, 247, 0.1);
-}
-
-.project-card-actions .MuiButton-contained {
-  background-color: var(--accent-strong);
-  color: #fff;
-}
-.project-card-actions .MuiButton-contained:hover {
-  background-color: #3a119a;
 }
 
 /* --- Botão do Modal --- */
@@ -197,9 +204,9 @@
 }
 
 /* ========================================
-   SOBRESCRITAS DO LIGHT MODE
-   (Bloco único e consolidado)
-======================================== */
+   SOBRESCRITAS DO LIGHT MODE (CONSOLIDADO)
+========================================
+*/
 .light-mode {
   /* --- Modal (Dialog) --- */
   .MuiDialog-paper {
@@ -207,25 +214,23 @@
     color: var(--text-dark) !important;
     border: 1px solid var(--border-light);
   }
-
   .MuiDialogContent-dividers {
     border-top: 1px solid var(--border-light);
     border-bottom: 1px solid var(--border-light);
   }
 
-  /* --- Project Card --- */
+  /* --- Card de Projeto --- */
   .project-card {
     background: var(--bg-light);
     border-color: var(--border-light);
   }
-
   .media-placeholder {
     background: var(--timeline-bg-light);
     color: var(--text-muted-light);
     border-color: var(--border-light);
   }
 
-  /* --- Tech Chips (CORRIGIDO) --- */
+  /* --- Tech Chips --- */
   .tech-chip {
     background-color: var(--bg-light);
     color: var(--text-muted-light);
@@ -236,11 +241,9 @@
   .carousel-image {
     background-color: var(--timeline-bg-light);
   }
-
   .project-carousel .MuiIconButton-root[aria-hidden="false"] {
     color: var(--accent-strong) !important;
   }
-
   .project-carousel .MuiIconButton-root {
     color: var(--border-light);
   }
@@ -249,14 +252,24 @@
   .project-card-actions {
     border-top: 1px solid var(--border-light);
   }
-
   .project-card-actions .MuiButton-outlined {
     color: var(--accent-strong);
     border-color: var(--accent-strong);
   }
-
   .project-card-actions .MuiButton-outlined:hover {
     border-color: var(--accent-strong);
-    background-color: rgba(73, 21, 247, 0.1);
+    background-color: rgba(73, 21, 192, 0.1);
+  }
+  .project-card-actions .MuiButton-contained:hover {
+    background-color: #3a119a;
+  }
+
+  /* --- Botão do Modal --- */
+  .modal-view-code-button {
+    background-color: var(--accent-strong) !important;
+    color: #fff !important;
+  }
+  .modal-view-code-button:hover {
+    background-color: var(--accent) !important;
   }
 }

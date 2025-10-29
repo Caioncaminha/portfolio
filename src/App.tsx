@@ -15,7 +15,7 @@ import "./index.scss";
 import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
-  const [mode, setMode] = useState<string>("dark");
+  const [mode, setMode] = useState<"light" | "dark">("dark"); // ✅ Tipagem literal
 
   const handleModeChange = () => {
     setMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
@@ -32,7 +32,6 @@ function App() {
         className={`main-container  ${
           mode === "dark" ? "dark-mode" : "light-mode"
         }`}
-        data-aos="fade-up"
       >
         <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
         <Main />
@@ -41,7 +40,6 @@ function App() {
         <Project />
         <Education />
         <Contact />
-
         <Footer />
       </div>
     </LanguageProvider>

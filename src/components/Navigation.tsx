@@ -19,14 +19,24 @@ import Toolbar from "@mui/material/Toolbar";
 
 const drawerWidth = 240;
 
-function Navigation({ parentToChild, modeChange }: any) {
-  const { mode } = parentToChild;
-  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
-  const { language, toggleLanguage } = useLanguage();
-  const t = translations[language]; // 👈 pega as traduções corretas
+interface NavigationProps {
+  parentToChild: {
+    mode: "light" | "dark";
+  };
+  modeChange: () => void;
+}
 
-  const navItems = [
+const Navigation: React.FC<NavigationProps> = ({
+  parentToChild,
+  modeChange,
+}) => {
+  const { mode } = parentToChild;
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language];
+
+  const navItems: [string, string][] = [
     [t.about, "about"],
     [t.experience, "experience"],
     [t.projects, "projects"],
@@ -74,13 +84,13 @@ function Navigation({ parentToChild, modeChange }: any) {
       </p>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item[0]} disablePadding>
+        {navItems.map(([label, section]) => (
+          <ListItem key={section} disablePadding>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              onClick={() => scrollToSection(item[1])}
+              onClick={() => scrollToSection(section)}
             >
-              <ListItemText primary={item[0]} />
+              <ListItemText primary={label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -121,25 +131,25 @@ function Navigation({ parentToChild, modeChange }: any) {
               gap: 0,
             }}
           >
-            {navItems.map((item, idx) => (
-              <React.Fragment key={item[0]}>
+            {navItems.map(([label, section], idx) => (
+              <React.Fragment key={section}>
                 <Button
-                  onClick={() => scrollToSection(item[1])}
+                  onClick={() => scrollToSection(section)}
                   sx={{
-                    color: item[0] === t.contact ? "#fff" : "var(--accent)",
-                    fontWeight: item[0] === t.about ? 700 : 500,
+                    color: label === t.contact ? "#fff" : "var(--accent)",
+                    fontWeight: label === t.about ? 700 : 500,
                     background:
-                      item[0] === t.contact ? "var(--accent-strong)" : "none",
-                    borderRadius: item[0] === t.contact ? "8px" : "6px",
-                    px: item[0] === t.contact ? 2 : 1,
-                    py: item[0] === t.contact ? 1 : 0,
+                      label === t.contact ? "var(--accent-strong)" : "none",
+                    borderRadius: label === t.contact ? "8px" : "6px",
+                    px: label === t.contact ? 2 : 1,
+                    py: label === t.contact ? 1 : 0,
                     boxShadow:
-                      item[0] === t.contact
+                      label === t.contact
                         ? "0 2px 12px rgba(80,30,150,0.18)"
                         : "none",
                   }}
                 >
-                  {item[0]}
+                  {label}
                 </Button>
                 {idx < navItems.length - 1 && (
                   <span
@@ -175,12 +185,12 @@ function Navigation({ parentToChild, modeChange }: any) {
 
             {mode === "dark" ? (
               <LightModeIcon
-                onClick={() => modeChange()}
+                onClick={modeChange}
                 style={{ cursor: "pointer", fontSize: "1.5em", color: "#fff" }}
               />
             ) : (
               <DarkModeIcon
-                onClick={() => modeChange()}
+                onClick={modeChange}
                 style={{
                   cursor: "pointer",
                   fontSize: "1.5em",
@@ -211,6 +221,6 @@ function Navigation({ parentToChild, modeChange }: any) {
       </nav>
     </Box>
   );
-}
+};
 
 export default Navigation;

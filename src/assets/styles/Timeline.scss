@@ -1,12 +1,17 @@
+/* ========================================
+   Estilização da Timeline (React Chrono)
+======================================== */
+
 #experience .items-container {
-  padding-bottom: 5%; // Ajuste conforme necessário
+  padding-bottom: 5%;
 }
 
 /* Ajustes finos no card do Chrono */
 .timeline-card-content {
-  padding: 1.5em; /* Aumenta o padding interno do card */
-  border-radius: 8px !important; /* Garante o border-radius */
-  box-shadow: 0 4px 12px var(--card-elev-strong) !important; /* Adiciona uma sombra suave */
+  padding: 1.5em;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px var(--card-elev-strong) !important;
+  /* A borda e o fundo são controlados pelo ChronoWrapper no .tsx */
 }
 
 /* Estilo para o texto detalhado (com bullets/markdown) */
@@ -19,12 +24,12 @@
   strong {
     font-weight: 700;
     color: var(--accent); /* Destaca o título da seção */
-    display: block; /* Garante que fique em linha separada */
+    display: block;
     margin-bottom: 5px;
   }
 }
 
-/* Opcional: Ajuste da linha central e do círculo */
+/* Linha central e círculo (Dark Mode) */
 .timeline-horizontal-circle,
 .timeline-vertical-circle {
   background-color: var(--accent-strong) !important;
@@ -35,7 +40,7 @@
   background-color: var(--border-dark) !important;
 }
 
-/* Sobrescritas para Light Mode (se necessário, além do que o Wrapper faz) */
+/* Sobrescritas para Light Mode */
 .light-mode {
   .timeline-line {
     background-color: var(--border-light) !important;
@@ -46,9 +51,8 @@
   }
 }
 
-/* Media Query para telas menores (Chrono é responsivo por padrão) */
+/* Media Query para telas menores */
 @media screen and (max-width: 768px) {
-  /* Pode adicionar ajustes específicos para mobile se necessário */
   .timeline-card-content {
     padding: 1em;
   }
