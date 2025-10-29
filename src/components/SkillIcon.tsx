@@ -17,7 +17,7 @@ interface SkillIconProps {
   name: string;
 }
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, React.JSX.Element> = {
   Python: <SiPython />,
   SQLite: <SiSqlite />,
   SQL: <BsFiletypeSql />,

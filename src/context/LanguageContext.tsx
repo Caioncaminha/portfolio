@@ -1,13 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
-
-type LanguageContextType = {
-  language: "en" | "pt";
-  toggleLanguage: () => void;
-};
-
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
-);
+import React, { useState } from "react";
+import { LanguageContext } from "./LanguageContextDefinition";
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<"en" | "pt">("pt");
@@ -21,12 +13,4 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       {children}
     </LanguageContext.Provider>
   );
-}
-
-export function useLanguage() {
-  const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
-  return context;
 }

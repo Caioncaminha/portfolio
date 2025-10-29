@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import "../assets/styles/LanguageSwitch.scss";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../hooks/useTranslation";
 import { translations } from "../translations/translations";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Divider from "@mui/material/Divider";
@@ -110,7 +110,6 @@ const Navigation: React.FC<NavigationProps> = ({
           className="navigation-bar"
           style={{ justifyContent: "space-between", gap: 0 }}
         >
-          {/* Left: Name */}
           <div
             className="nav-left"
             style={{

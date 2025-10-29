@@ -5,7 +5,16 @@ import { useTranslation } from "../hooks/useTranslation";
 import unentelLogo from "../assets/images/unentel-logo.jpg";
 import fiapLogo from "../assets/images/fiap-logo.png";
 
-const ChronoWrapper = styled.div<{ theme: any }>`
+interface AppTheme {
+  accent: string;
+  accentStrong: string;
+  cardBg: string;
+  textMain: string;
+  textMuted: string;
+  border: string;
+}
+
+const ChronoWrapper = styled.div<{ theme: AppTheme }>`
   --primary-color: ${(props) => props.theme.accent};
   --secondary-color: ${(props) => props.theme.cardBg};
   --card-bg-color: ${(props) => props.theme.cardBg};
@@ -17,7 +26,6 @@ const ChronoWrapper = styled.div<{ theme: any }>`
   --title-color: ${(props) => props.theme.textMain};
   --title-color-active: ${(props) => props.theme.accentStrong};
 
-  /* Ajustes finos adicionais podem ser feitos aqui */
   .timeline-card-content {
     border-radius: 8px;
     border: 1px solid ${(props) => props.theme.border};
@@ -33,7 +41,7 @@ function Timeline() {
       cardTitle: t.presalesIntern,
       cardSubtitle: `Unentel - 📍${t.location}`,
       cardDetailedText: t.descUnentelIntern?.split("\n"),
-      media: { type: "IMAGE" as const, source: { url: unentelLogo } }, // <-- Correção aqui
+      media: { type: "IMAGE" as const, source: { url: unentelLogo } },
     },
     {
       title: t.dateTimeFiap,
@@ -46,13 +54,13 @@ function Timeline() {
         `**${t.fiapResultsTitle}**`,
         ...(t.fiapResultsList?.split("\n") || []),
       ],
-      media: { type: "IMAGE" as const, source: { url: fiapLogo } }, // <-- Correção aqui
+      media: { type: "IMAGE" as const, source: { url: fiapLogo } },
     },
   ];
 
   const isLightMode = document.body.classList.contains("light-mode");
 
-  const theme = {
+  const theme: AppTheme = {
     accent: "var(--accent)",
     accentStrong: "var(--accent-strong)",
     cardBg: isLightMode ? "var(--bg-light)" : "var(--card-elev)",
@@ -77,7 +85,7 @@ function Timeline() {
               primary: theme.accent,
               secondary: theme.cardBg,
               cardBgColor: theme.cardBg,
-              textColor: theme.textMain, // <-- Correção aqui
+              textColor: theme.textMain,
               titleColor: theme.textMain,
               titleColorActive: theme.accentStrong,
             }}
