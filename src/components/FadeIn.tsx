@@ -1,6 +1,6 @@
 import React, {
-  JSXElementConstructor,
-  PropsWithChildren,
+  type JSXElementConstructor,
+  type PropsWithChildren,
   useEffect,
   useState,
 } from "react";

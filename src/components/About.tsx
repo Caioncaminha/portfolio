@@ -1,6 +1,6 @@
-import React from "react";
 import "../assets/styles/About.scss";
 import { useTranslation } from "../hooks/useTranslation";
+import { SkillIcon } from "../components/SkillIcon";
 
 function About() {
   const { t } = useTranslation();
@@ -22,13 +22,16 @@ function About() {
         <p>{t.english}</p>
         <p>{t.spanish}</p>
       </div>
+
       <div className="skills-list">
         <h1>{t.skillsTitle}</h1>
         <div className="skills-row">
           {t.skillsList &&
             t.skillsList
               .split(",")
-              .map((skill, index) => <span key={index}>{skill.trim()}</span>)}
+              .map((skill, index) => (
+                <SkillIcon key={index} name={skill.trim()} />
+              ))}
         </div>
       </div>
     </div>

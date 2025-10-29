@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { useTranslation } from "../hooks/useTranslation";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -8,8 +8,16 @@ import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Carousel from "react-material-ui-carousel";
+import { Carousel } from "react-responsive-carousel";
 import LaunchIcon from "@mui/icons-material/Launch";
+
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+
 import "../assets/styles/Project.scss";
 
 interface ProjectData {
@@ -57,6 +65,9 @@ function Project() {
 
   const [openProject, setOpenProject] = useState<ProjectData | null>(null);
 
+  const [isLightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const handleClickOpen = (project: ProjectData) => {
     setOpenProject(project);
   };
@@ -66,13 +77,25 @@ function Project() {
   };
 
   const handleCodeClick = (e: React.MouseEvent, url: string) => {
-    e.stopPropagation(); // Impede que o card abra o modal
+    e.stopPropagation();
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const handleDetailsClick = (e: React.MouseEvent, project: ProjectData) => {
-    e.stopPropagation(); // Impede o 'double-click'
+    e.stopPropagation();
     handleClickOpen(project);
+  };
+
+  const lightboxSlides = useMemo(() => {
+    if (!openProject) return [];
+    return t[openProject.imgUrlsKey]
+      .split(",")
+      .map((url) => ({ src: url.trim() }));
+  }, [openProject, t]);
+
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
   };
 
   return (
@@ -160,11 +183,13 @@ function Project() {
         <DialogContent dividers>
           {openProject && (
             <Carousel
-              animation="slide"
+              showArrows={true}
+              showStatus={false}
+              showIndicators={true}
+              showThumbs={false}
+              infiniteLoop
               autoPlay={false}
-              navButtonsAlwaysVisible
-              indicators={true}
-              className="project-carousel"
+              className="carousel"
             >
               {t[openProject.imgUrlsKey].split(",").map((imgUrl, i) => (
                 <img
@@ -172,6 +197,7 @@ function Project() {
                   src={imgUrl.trim()}
                   alt={`${t[openProject.titleKey]} - Imagem ${i + 1}`}
                   className="carousel-image"
+                  onClick={() => openLightbox(i)}
                 />
               ))}
             </Carousel>
@@ -189,17 +215,22 @@ function Project() {
             href={openProject ? t[openProject.repoUrlKey] : "#"}
             target="_blank"
             rel="noopener noreferrer"
-            sx={{
-              backgroundColor: "#4915c0",
-              "&:hover": {
-                backgroundColor: "#3a119a",
-              },
-            }}
+            className="modal-view-code-button"
           >
             {t.viewCode || "View Code"}
           </Button>
         </DialogActions>
       </Dialog>
+      <Lightbox
+        open={isLightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={lightboxSlides}
+        index={currentImageIndex}
+        plugins={[Thumbnails, Zoom]}
+        styles={{
+          container: { backgroundColor: "rgba(12, 6, 32, 0.9)" },
+        }}
+      />
     </div>
   );
 }

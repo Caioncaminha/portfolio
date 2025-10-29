@@ -1,4 +1,3 @@
-import React from "react";
 import "../assets/styles/Education.scss";
 import { useTranslation } from "../hooks/useTranslation";
 import fiapLogo from "../assets/images/fiap-logo-black.png";

@@ -123,6 +123,12 @@
   justify-content: center; /* center skill chips */
 }
 .skills-row span {
+  /* ADICIONADO: Flexbox para alinhar ícone e texto */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+
+  /* Estilos existentes */
   background: rgba(90, 40, 150, 0.12);
   border-radius: 8px;
   padding: 8px 18px;
@@ -130,6 +136,12 @@
   font-weight: 500;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(80, 30, 150, 0.08);
+}
+
+/* ADICIONADO: Estilo para o ícone SVG dentro do chip */
+.skills-row span svg {
+  font-size: 1.2em; /* Tamanho do ícone */
+  color: var(--accent); /* Cor do ícone */
 }
 
 @media (max-width: 900px) {

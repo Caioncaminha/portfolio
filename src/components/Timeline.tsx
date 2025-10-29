@@ -1,4 +1,3 @@
-import React from "react";
 import unentelLogo from "../assets/images/unentel-logo.jpg";
 import fiapLogo from "../assets/images/fiap-logo.png";
 import {
@@ -13,7 +12,7 @@ function Timeline() {
   const { t } = useTranslation();
 
   return (
-    <div id="experience" data-aos="fade-up">
+    <div id="experience">
       <div className="items-container">
         <h1>{t.careerHistory}</h1>
 
