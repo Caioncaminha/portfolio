@@ -20,6 +20,11 @@ footer a {
   transition: color 0.18s ease, transform 0.18s ease;
 }
 
+svg:hover {
+  transform: scale(1.1);
+  transition: all 0.25s ease;
+}
+
 footer a:hover {
   color: var(--footer-link-hover);
   transform: translateY(-3px);

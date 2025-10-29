@@ -3,16 +3,24 @@
   font-family: "Courier Prime", monospace;
 }
 
+.vertical-timeline-element-content {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  box-shadow: 0 4px 16px var(--accent);
+  border-radius: 12px;
+  padding: 20px;
+}
+
 .vertical-timeline p {
-  color: rgb(39, 40, 34);
+  color: var(--text-light);
 }
 
 .vertical-timeline-element p {
-  color: rgb(39, 40, 34);
+  color: var(--text-light);
 }
 
 .vertical-timeline-element h3 {
-  color: rgb(39, 40, 34);
+  color: var(--text-light);
 }
 
 .vertical-timeline-element a {
@@ -31,7 +39,7 @@
 
 .vertical-timeline-element .vertical-timeline-element-content:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 26px var(--card-elev-strong);
+  box-shadow: 0 4px 24px var(--accent);
 }
 
 /* ensure icon images fill the circular icon properly */
@@ -52,24 +60,24 @@
 }
 
 .vertical-timeline-element h4 {
-  color: rgb(39, 40, 34);
+  color: var(--text-light);
 }
 
 .vertical-timeline-element span {
-  color: rgb(39, 40, 34);
+  color: var(--text-light);
 }
 
 .vertical-timeline-element .vertical-timeline-element-date {
-  color: white;
+  color: var(--text-light);
 }
 
 .svg-inline--fa {
-  color: white;
+  color: var(--text-light);
 }
 
 @media screen and (max-width: 1170px) {
   .vertical-timeline-element .vertical-timeline-element-date {
-    color: rgb(39, 40, 34);
+    color: var(--text-light);
   }
 }
 
@@ -90,5 +98,17 @@
 .light-mode {
   .timeline-subtitle {
     color: var(--text-light);
+  }
+
+  .vertical-timeline-element-content {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    box-shadow: 0 4px 16px var(--accent);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .vertical-timeline-element-content p {
+    color: var(--text-dark);
   }
 }

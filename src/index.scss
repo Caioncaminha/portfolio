@@ -90,10 +90,13 @@ h5 {
     text-transform: initial;
     padding: 6px 12px;
     color: var(--accent);
-    border-bottom: 2px solid transparent;
-    transition: color 0.25s ease, transform 0.25s ease, border-color 0.25s ease,
-      box-shadow 0.25s ease;
     border-radius: 6px;
+    box-shadow: 0 1px 4px var(--accent);
+  }
+
+  button:hover {
+    box-shadow: 0 4px 12px var(--accent);
+    transform: translateY(-2px);
   }
 }
 
@@ -164,12 +167,6 @@ svg {
   label,
   button {
     color: var(--text-dark) !important;
-  }
-
-  a:hover {
-    color: #5000ca;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out;
   }
 
   .navigation-bar svg {

@@ -50,7 +50,6 @@ function Main() {
           <h1>Caio Caminha</h1>
           <p>{t.role}</p>
           <p style={{ fontSize: "1em" }}>📍 {t.location}</p>
-
           <Button
             variant="contained"
             href={cvPath}
@@ -59,10 +58,11 @@ function Main() {
             sx={{
               marginTop: "15px",
               fontWeight: "bold",
-              backgroundColor: "#4915c0", // <-- Sua cor
-              // Adiciona um efeito 'hover' para escurecer um pouco
+              backgroundColor: "var(--accent)",
+              borderRadius: "6px",
               "&:hover": {
-                backgroundColor: "#390ea0ff",
+                backgroundColor: "var(--accent-strong)",
+                color: "#fff",
               },
             }}
           >
