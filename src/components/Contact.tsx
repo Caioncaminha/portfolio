@@ -67,19 +67,24 @@ function Contact() {
 
       emailjs
         .sendForm(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID as string,
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID as string,
+          import.meta.env.VITE_EMAILJS_SERVICE_ID as string, // Correção
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string, // Correção
           form.current,
-          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(
           (result) => {
             console.log("E-mail enviado com sucesso!", result.text);
             setIsSending(false);
             setSendStatus("success");
+            // Limpar o formulário
             setName("");
             setEmail("");
             setMessage("");
+            // Se o form.current existe, resetar o formulário HTML
+            if (form.current) {
+              form.current.reset();
+            }
           },
           (error) => {
             console.error("Falha ao enviar e-mail:", error.text);
