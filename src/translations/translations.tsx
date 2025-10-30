@@ -98,7 +98,7 @@ export const translations: Translation = {
       "https://media.licdn.com/dms/image/v2/D4D2DAQGTaI-GID5ThA/profile-treasury-image-shrink_8192_8192/B4DZonF164H4Ag-/0/1761592434864?e=1762286400&v=beta&t=sImwT0RBCyNf7bW6agGL83T6hYxzqv-KJcz3y0h8eKI, " +
       "https://media.licdn.com/dms/image/v2/D4D2DAQHO7kiEtWckxQ/profile-treasury-image-shrink_1920_1920/B4DZonFvI_GgAg-/0/1761592407040?e=1762286400&v=beta&t=WKyzg1rj7vAAxhJtkUabsYCbYU-f_JEABsgPHbr-3po, " +
       "https://media.licdn.com/dms/image/v2/D4D2DAQHFqY-IMqf9Tw/profile-treasury-image-shrink_8192_8192/B4DZonGC9HJEAg-/0/1761592488195?e=1762286400&v=beta&t=3USiu4RErxSXIxdKETOdqRzQhaeJVpuFGXVxHCPDXk8",
-    project1Stack: "Flutter (Dart), Firebase Auth, Cloud Firestore, Git, Figma",
+    project1Stack: "Flutter (Dart), NoSQL, Firebase (Auth) , Cloud Firestore, Git, Figma",
 
     // Projeto 2
     project2Title: "Python CLI Simulator",
@@ -138,7 +138,7 @@ export const translations: Translation = {
 
     project3RepoUrl: "https://github.com/Caioncaminha/cp1-webdev-crud",
     project3ImgUrls:
-      "https://i.imgur.com/PQdcRjs.png, https://i.imgur.com/6OMY9Ul.png",
+      "https://i.imgur.com/PQdcRjs.png, https://i.imgur.com/6OMY9Ul.png, https://i.imgur.com/OVo3gv6.png",
     project3Stack: "HTML5, CSS3, JavaScript, LocalStorage",
 
     // Botões do Modal
@@ -279,7 +279,7 @@ export const translations: Translation = {
 
     project3RepoUrl: "https://github.com/Caioncaminha/cp1-webdev-crud",
     project3ImgUrls:
-      "https://i.imgur.com/PQdcRjs.png, https://i.imgur.com/6OMY9Ul.png",
+      "https://i.imgur.com/PQdcRjs.png, https://i.imgur.com/6OMY9Ul.png, https://i.imgur.com/OVo3gv6.png",
     project3Stack: "HTML5, CSS3, JavaScript, LocalStorage",
 
     // Botões do Modal
