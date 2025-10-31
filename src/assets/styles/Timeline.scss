@@ -85,7 +85,7 @@
   display: block; // Faz o <strong> ocupar a própria linha
   font-size: 1.05rem; // Aumenta um pouco a fonte
   font-weight: 700; // Garante o negrito
-  color: var(--text-dark); // Cor principal
+  color: var(--accent); // Cor principal
   margin-top: 16px; // Espaçamento
 }
 
@@ -97,7 +97,11 @@
 /* --- Light Mode --- */
 .light-mode {
   .timeline-subtitle {
-    color: var(--text-light);
+    color: var(--accent-strong);
+  }
+
+  .vertical-timeline-element a {
+    color: var(--accent-strong) !important;
   }
 
   .vertical-timeline-element-content {

@@ -59,7 +59,7 @@ export const translations: Translation = {
     // Skills
     skillsTitle: "Skills",
     skillsList:
-      "Python, SQLite, SQL, NoSQL, Cloud Firestore, MongoDB, Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Power BI, Excel, Git",
+      "Python, PostgreSQL, MongoDB, Cloud Firestore, Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Power BI, Excel, Git",
 
     // Navigation
     about: "About",
@@ -200,7 +200,7 @@ export const translations: Translation = {
     // Skills
     skillsTitle: "Habilidades",
     skillsList:
-      "Python, SQLite, SQL, NoSQL, Cloud Firestore, MongoDB, Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Power BI, Excel, Git",
+      "Python, PostgreSQL, MongoDB, Cloud Firestore, Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Power BI, Excel, Git",
 
     // Navigation
     about: "Sobre",
