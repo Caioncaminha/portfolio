@@ -107,7 +107,7 @@
   .vertical-timeline-element-content {
     background: var(--bg-light);
     color: var(--text-dark);
-    box-shadow: 0 4px 16px var(--accent);
+    box-shadow: 0 4px 16px var(--accent-strong) !important;
     border-radius: 12px;
     padding: 20px;
   }
