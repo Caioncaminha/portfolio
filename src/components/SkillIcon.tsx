@@ -1,16 +1,15 @@
 import React from "react";
-import { FaGitAlt, FaDatabase, FaFileExcel, FaChartBar } from "react-icons/fa";
+import { FaGitAlt, FaFileExcel, FaChartBar } from "react-icons/fa";
 import {
   SiNumpy,
   SiPandas,
   SiJupyter,
   SiMongodb,
   SiPython,
-  SiSqlite,
+  SiPostgresql,
 } from "react-icons/si";
 import { IoBusiness, IoStatsChart } from "react-icons/io5";
 import { DiFirebase } from "react-icons/di";
-import { BsFiletypeSql } from "react-icons/bs";
 import { GrTechnology } from "react-icons/gr";
 
 interface SkillIconProps {
@@ -19,11 +18,9 @@ interface SkillIconProps {
 
 const iconMap: Record<string, React.JSX.Element> = {
   Python: <SiPython />,
-  SQLite: <SiSqlite />,
-  SQL: <BsFiletypeSql />,
-  NoSQL: <FaDatabase />,
-  "Cloud Firestore": <DiFirebase />,
+  PostgreSQL: <SiPostgresql />,
   MongoDB: <SiMongodb />,
+  "Cloud Firestore": <DiFirebase />,
   Pandas: <SiPandas />,
   NumPy: <SiNumpy />,
   Matplotlib: <IoStatsChart />,

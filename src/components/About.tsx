@@ -9,7 +9,6 @@ function About() {
     <div className="container" id="about" data-aos="fade-up">
       <h1 className="aboutTitle">{t.aboutTitle}</h1>
       <div className="about-section-expertise">
-        <p>{t.softwareStudent}</p>
         <p>{t.studentDescription}</p>
         <p>{t.aboutExperience}</p>
         <br />

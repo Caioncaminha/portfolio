@@ -19,9 +19,8 @@ export const translations: Translation = {
 
     // About
     aboutTitle: "About Me",
-    softwareStudent: "Software Engineering Student",
     studentDescription:
-      "With a focus on Python, algorithms, and data structures. I emphasize practices such as SOLID, version control, and clean code.",
+      "Software Engineering Student with a focus on Python, algorithms, and data structures. I emphasize practices such as SOLID, version control, and clean code.",
     aboutExperience:
       'Experience as a leader and co-leader in semi-professional teams both inside and outside the academic environment, contributing to small-scale projects, notably the "Passa a Bola" project currently.',
     areasOfInterest: "Areas of interest (Internship):",
@@ -98,7 +97,8 @@ export const translations: Translation = {
       "https://media.licdn.com/dms/image/v2/D4D2DAQGTaI-GID5ThA/profile-treasury-image-shrink_8192_8192/B4DZonF164H4Ag-/0/1761592434864?e=1762286400&v=beta&t=sImwT0RBCyNf7bW6agGL83T6hYxzqv-KJcz3y0h8eKI, " +
       "https://media.licdn.com/dms/image/v2/D4D2DAQHO7kiEtWckxQ/profile-treasury-image-shrink_1920_1920/B4DZonFvI_GgAg-/0/1761592407040?e=1762286400&v=beta&t=WKyzg1rj7vAAxhJtkUabsYCbYU-f_JEABsgPHbr-3po, " +
       "https://media.licdn.com/dms/image/v2/D4D2DAQHFqY-IMqf9Tw/profile-treasury-image-shrink_8192_8192/B4DZonGC9HJEAg-/0/1761592488195?e=1762286400&v=beta&t=3USiu4RErxSXIxdKETOdqRzQhaeJVpuFGXVxHCPDXk8",
-    project1Stack: "Flutter (Dart), NoSQL, Firebase (Auth) , Cloud Firestore, Git, Figma",
+    project1Stack:
+      "Flutter (Dart), NoSQL, Firebase (Auth) , Cloud Firestore, Git, Figma",
 
     // Projeto 2
     project2Title: "Python CLI Simulator",
@@ -160,9 +160,8 @@ export const translations: Translation = {
 
     // About
     aboutTitle: "Sobre Mim",
-    softwareStudent: "Estudante de Engenharia de Software",
     studentDescription:
-      "Com foco em Python, algoritmos e estruturas de dados. Enfatizo práticas como SOLID, controle de versão e código limpo.",
+      "Estudante de Engenharia de Software com foco em Python, algoritmos e estruturas de dados. Enfatizo práticas como SOLID, controle de versão e código limpo.",
     aboutExperience:
       'Experiência como líder e co-líder em equipes semi-profissionais dentro e fora do ambiente acadêmico, contribuindo para projetos de pequena escala, notadamente o projeto "Passa a Bola" atualmente.',
     areasOfInterest: "Áreas de interesse (Estágio):",
