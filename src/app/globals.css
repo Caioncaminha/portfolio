@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Mode - Adjusted for "Soft Purple/Gray" instead of harsh white */
+  --background: #f8f7fa; /* Light gray-purple */
+  --foreground: #1e1b4b; /* Deep dark purple text */
+  
+  --card: #ffffff;
+  --card-foreground: #1e1b4b;
+  
+  --primary: #7e22ce; /* Purple 700 - Slightly darker for better contrast */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f3e8ff; /* Purple 100 */
+  --secondary-foreground: #581c87; /* Purple 900 */
+  
+  --muted: #f1f5f9; /* Slate 100 */
+  --muted-foreground: #64748b; /* Slate 500 */
+  
+  --accent: #d8b4fe; /* Purple 300 */
+  --accent-foreground: #1e1b4b;
+  
+  --border: #e2e8f0; /* Slate 200 - Visible borders */
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Dark Mode - Deep Space Purple */
+  --background: #0b0514; /* Very dark purple */
+  --foreground: #f3e8ff; /* Light lavender text */
+  
+  --card: #140a23; /* Darker purple card */
+  --card-foreground: #f3e8ff;
+  
+  --primary: #a855f7; /* Purple 500 */
+  --primary-foreground: #0b0514;
+  
+  --secondary: #2e1065; /* Purple 950 */
+  --secondary-foreground: #d8b4fe;
+  
+  --muted: #1f1136;
+  --muted-foreground: #a3a3a3;
+  
+  --accent: #581c87;
+  --accent-foreground: #f3e8ff;
+  
+  --border: #3b0764; /* Purple 950 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
 }
