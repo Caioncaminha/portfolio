@@ -62,7 +62,10 @@ export default function ProjectDetail() {
         </div>
 
         {/* Hero Image */}
-        <div className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-2xl mb-12">
+        <motion.div 
+            layoutId={`project-image-${project.slug}`}
+            className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-2xl mb-12"
+        >
            <Image 
              src={project.coverImage || ""} 
              alt={project.title}
@@ -70,7 +73,7 @@ export default function ProjectDetail() {
              className="object-cover"
              priority
            />
-        </div>
+        </motion.div>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

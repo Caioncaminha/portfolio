@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/language-context";
 import { motion } from "framer-motion";
 import { TechIcon } from "@/components/ui/tech-icon";
+import { RichText } from "@/components/ui/rich-text";
 
 export function About() {
   const { dict } = useLanguage();
@@ -19,15 +20,17 @@ export function About() {
           >
             {dict.about.title}
           </motion.h2>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground leading-relaxed"
           >
-            {dict.about.summary}
-          </motion.p>
+            <RichText 
+              text={dict.about.summary} 
+              className="text-lg text-muted-foreground leading-relaxed" 
+            />
+          </motion.div>
         </div>
 
         {/* Integrated Skills Section */}

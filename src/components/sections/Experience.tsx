@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/context/language-context";
 import { motion, Variants } from "framer-motion";
+import { RichText } from "@/components/ui/rich-text";
 
 export function Experience() {
   const { dict } = useLanguage();
@@ -90,9 +91,10 @@ export function Experience() {
                   </span>
                 </div>
 
-                <p className="text-muted-foreground mb-4 leading-relaxed group-hover:text-foreground/90 transition-colors relative z-10">
-                  {job.description}
-                </p>
+                <RichText 
+                  text={job.description} 
+                  className="text-muted-foreground mb-4 group-hover:text-foreground/90 transition-colors relative z-10" 
+                />
 
                 <div className="flex flex-wrap gap-2 relative z-10">
                   {job.skills.map((skill, i) => (

@@ -7,9 +7,15 @@ import { useLanguage } from "@/context/language-context";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageToggle } from "@/components/ui/language-toggle";
 import { cn } from "@/lib/utils";
-import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from "framer-motion";
 import { HiMenu, HiX, HiHome } from "react-icons/hi";
 import { useActiveSection } from "@/hooks/use-active-section";
+import Magnetic from "@/components/ui/magnetic";
 
 export function Navbar() {
   const { dict } = useLanguage();
@@ -19,7 +25,14 @@ export function Navbar() {
   const pathname = usePathname();
 
   // Define section IDs for Scroll Spy
-  const sectionIds = ["home", "about", "experience", "projects", "education", "contact"];
+  const sectionIds = [
+    "home",
+    "about",
+    "experience",
+    "projects",
+    "education",
+    "contact",
+  ];
   const activeSection = useActiveSection(sectionIds);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -34,7 +47,10 @@ export function Navbar() {
     { name: dict.nav.contact, href: "#contact", id: "contact" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     if (pathname === "/" && href.startsWith("#")) {
       e.preventDefault();
       const targetId = href.replace("#", "");
@@ -60,8 +76,8 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Home Icon Button */}
-        <Link 
-          href="/#home" 
+        <Link
+          href="/#home"
           className={cn(
             "p-2 rounded-full border transition-all duration-300 shadow-sm relative z-50 group",
             activeSection === "home" && pathname === "/"
@@ -73,82 +89,97 @@ export function Navbar() {
         >
           <HiHome size={24} />
         </Link>
-
         {/* Desktop Nav - Centralized */}
         <nav className="hidden md:flex items-center gap-2 p-1.5 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm shadow-sm">
           {links.map((link, index) => {
-             const isActive = activeSection === link.id && pathname === "/";
-             return (
+            const isActive = activeSection === link.id && pathname === "/";
+            return (
               <React.Fragment key={link.href}>
                 {index > 0 && (
-                  <span className="text-muted-foreground/20 text-xs select-none">|</span>
+                  <span className="text-muted-foreground/20 text-xs select-none">
+                    |
+                  </span>
                 )}
-                <Link
-                  href={link.href.startsWith("#") && pathname !== "/" ? `/${link.href}` : link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className={cn(
-                    "relative px-4 py-1.5 text-sm font-medium rounded-full transition-colors duration-200",
-                    isActive ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-pill"
-                      className="absolute inset-0 bg-primary rounded-full -z-10 shadow-md"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                  {link.name}
-                </Link>
+                <Magnetic>
+                  <Link
+                    href={
+                      link.href.startsWith("#") && pathname !== "/"
+                        ? `/${link.href}`
+                        : link.href
+                    }
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className={cn(
+                      "relative px-4 py-1.5 text-sm font-medium rounded-full transition-colors duration-200 block",
+                      isActive
+                        ? "text-primary-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-pill"
+                        className="absolute inset-0 bg-primary rounded-full -z-10 shadow-md"
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                    {link.name}
+                  </Link>
+                </Magnetic>
               </React.Fragment>
             );
           })}
         </nav>
-
         <div className="hidden md:flex items-center gap-4">
           <LanguageToggle />
           <ThemeToggle />
         </div>
-
         {/* Mobile Toggle */}
         <div className="flex md:hidden items-center gap-4 z-50">
-            <LanguageToggle />
-            <ThemeToggle />
-            <button 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-foreground focus:outline-none"
-                aria-label="Toggle Menu"
-            >
-                {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-            </button>
+          <LanguageToggle />
+          <ThemeToggle />
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-foreground focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-            <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg md:hidden p-4 flex flex-col gap-4 items-center"
-            >
-                {links.map((link) => (
-                    <Link
-                        key={link.href}
-                        href={link.href.startsWith("#") && pathname !== "/" ? `/${link.href}` : link.href}
-                        className={cn(
-                            "text-lg font-medium py-2 w-full text-center rounded-lg border transition-all active:scale-95",
-                             link.href === "#contact" 
-                                ? "bg-primary text-primary-foreground border-primary" 
-                                : "bg-card border-border hover:bg-secondary/20"
-                        )}
-                        onClick={(e) => handleNavClick(e, link.href)}
-                    >
-                        {link.name}
-                    </Link>
-                ))}
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg md:hidden p-4 flex flex-col gap-4 items-center"
+          >
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={
+                  link.href.startsWith("#") && pathname !== "/"
+                    ? `/${link.href}`
+                    : link.href
+                }
+                className={cn(
+                  "text-lg font-medium py-2 w-full text-center rounded-lg border transition-all active:scale-95",
+                  link.href === "#contact"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card border-border hover:bg-secondary/20"
+                )}
+                onClick={(e) => handleNavClick(e, link.href)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.header>
