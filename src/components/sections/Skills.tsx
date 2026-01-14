@@ -8,7 +8,7 @@ export function Skills() {
   const { dict } = useLanguage();
 
   return (
-    <section id="skills" className="py-20 bg-muted/30">
+    <section id="skills" className="py-32 bg-muted/30 min-h-[40vh] flex flex-col justify-center">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -27,23 +27,21 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-colors"
+              className="bg-card border border-border rounded-xl p-8 hover:border-primary/50 transition-colors h-full"
             >
-              <h3 className="text-xl font-bold mb-6 text-center text-primary">
+              <h3 className="text-xl font-bold mb-8 text-center text-primary">
                 {category.name}
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {category.items.map((skill) => (
-                  <div
-                    key={skill}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  <a 
+                    key={skill.name} 
+                    href={skill.url}
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group p-2 rounded-md hover:bg-secondary/50"
                   >
-                    <TechIcon
-                      name={skill}
-                      className="w-5 h-5 text-primary/70"
-                    />
-                    <span className="text-sm font-medium">{skill}</span>
-                  </div>
+                    <TechIcon name={skill.name} className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />
+                    <span className="text-sm font-medium">{skill.name}</span>
+                  </a>
                 ))}
               </div>
             </motion.div>

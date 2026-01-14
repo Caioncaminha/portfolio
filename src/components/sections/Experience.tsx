@@ -94,9 +94,20 @@ export function Experience() {
                 </div>
                 
                 <div className="mb-4 relative z-10">
-                  <span className="text-lg font-semibold text-muted-foreground block">
-                    {job.company}
-                  </span>
+                  {job.url ? (
+                    <a 
+                      href={job.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-lg font-semibold text-muted-foreground hover:text-primary transition-colors block w-fit"
+                    >
+                      {job.company}
+                    </a>
+                  ) : (
+                    <span className="text-lg font-semibold text-muted-foreground block">
+                      {job.company}
+                    </span>
+                  )}
                   <span className="text-sm text-muted-foreground block italic">
                     {job.location}
                   </span>

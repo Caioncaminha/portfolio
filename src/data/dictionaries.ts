@@ -23,15 +23,33 @@ export const dictionaries = {
       categories: [
         {
           name: "Development",
-          items: ["Python", "TypeScript", "Pandas", "NumPy"],
+          items: [
+            { name: "Python", url: "#" },
+            { name: "TypeScript", url: "#" },
+            { name: "Pandas", url: "#" },
+            { name: "NumPy", url: "#" },
+          ],
         },
         {
           name: "Databases",
-          items: ["PostgreSQL", "Firebase", "MongoDB", "Supabase", "SQL"],
+          items: [
+            { name: "PostgreSQL", url: "#" },
+            { name: "Firebase", url: "#" },
+            { name: "MongoDB", url: "#" },
+            { name: "Supabase", url: "#" },
+            { name: "SQL", url: "#" },
+          ],
         },
         {
           name: "Tools",
-          items: ["Git", "Docker", "Postman", "dbt", "Excel", "Power BI"],
+          items: [
+            { name: "Git", url: "#" },
+            { name: "Docker", url: "#" },
+            { name: "Postman", url: "#" },
+            { name: "dbt", url: "#" },
+            { name: "Excel", url: "#" },
+            { name: "Power BI", url: "#" },
+          ],
         },
       ],
     },
@@ -43,6 +61,7 @@ export const dictionaries = {
           role: "Pre-Sales & Lead Developer",
           period: "Oct/2025 – Present",
           location: "São Paulo, SP (Hybrid)",
+          url: "https://unentel.com.br/",
           description: `Designed and deployed a [centralized data platform](/projects/unentel-catalog) consolidating [[20,000]]+ SKUs, eliminating data fragmentation across sales operations.
 
 **- ETL & Data Pipelines:** Architected ingestion workflows using TypeScript and SQL to extract, normalize, and deduplicate raw vendor data, ensuring a "Single Source of Truth".
@@ -69,6 +88,7 @@ export const dictionaries = {
           role: "Technical Leader (Academic Project)",
           period: "Mar/2025 – Oct/2025",
           location: "São Paulo, SP (Hybrid)",
+          url: "https://www.fiap.com.br/",
           description: `Technical lead in the development of the MVP for [Passa a Bola](/projects/passa-a-bola), a cross-platform application built with Flutter (Dart) and integrated with Firebase/Cloud Firestore. The project aims to professionalize and bring visibility to the women’s football ecosystem by connecting athletes, clubs, and fans on a single platform — featuring secure authentication, real-time database management, and integration with match APIs.
 
 **Main responsibilities:**
@@ -193,10 +213,15 @@ export const dictionaries = {
           institution: "FIAP",
           degree: "Bachelor’s Degree in Software Engineering",
           status: "2nd Year",
-          graduation: "Expected Graduation - Dec/2028",
+          graduation: "Expected Dec/2028",
+          logo: "/images/experience/fiap_logo.png",
+          description: "Consistently ranked among the top 5% of students. Focused on Full-Stack Development, DevSecOps, and Cloud Computing architecture.",
         },
       ],
-      certifications: ["Design Thinking Process", "Big Data"],
+      certifications: [
+        { name: "Design Thinking Process", issuer: "FIAP", date: "2024", url: "#" },
+        { name: "Big Data & Analytics", issuer: "FIAP", date: "2024", url: "#" },
+      ],
     },
     contact: {
       title: "Let's Talk",
@@ -227,12 +252,33 @@ export const dictionaries = {
     skills: {
       title: "Habilidades Técnicas",
       categories: [
-        { name: "Programação", items: ["Python", "TypeScript", "SQL", "Dart"] },
+        {
+          name: "Programação",
+          items: [
+            { name: "Python", url: "#" },
+            { name: "TypeScript", url: "#" },
+            { name: "SQL", url: "#" },
+            { name: "Dart", url: "#" },
+          ],
+        },
         {
           name: "Banco de Dados",
-          items: ["PostgreSQL", "Firebase", "MongoDB", "Supabase"],
+          items: [
+            { name: "PostgreSQL", url: "#" },
+            { name: "Firebase", url: "#" },
+            { name: "MongoDB", url: "#" },
+            { name: "Supabase", url: "#" },
+          ],
         },
-        { name: "Ferramentas", items: ["Git", "Docker", "Pandas", "Next.js"] },
+        {
+          name: "Ferramentas",
+          items: [
+            { name: "Git", url: "#" },
+            { name: "Docker", url: "#" },
+            { name: "Pandas", url: "#" },
+            { name: "Next.js", url: "#" },
+          ],
+        },
       ],
     },
     experience: {
@@ -243,6 +289,7 @@ export const dictionaries = {
           role: "Estagiário de Pré-Vendas & Desenvolvedor Líder",
           period: "Out/2025 – Presente",
           location: "São Paulo, SP (Híbrido)",
+          url: "https://unentel.com.br/",
           description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de 20.000 SKUs, eliminando a fragmentação de dados nas operações de vendas.
 - ETL e Pipelines de Dados: Estruturei fluxos de trabalho de ingestão usando TypeScript e SQL para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade".
 - Desempenho do Banco de Dados: Otimizei planos de consulta PostgreSQL usando índices GIN, correspondência aproximada (pg_trgm) e unnacent, alcançando tempos de resposta inferiores a 200 ms em consultas de pesquisa complexas.
@@ -256,6 +303,7 @@ export const dictionaries = {
           role: "Líder Técnico (Projeto Acadêmico)",
           period: "Mar/2025 – Out/2025",
           location: "São Paulo, SP (Híbrido)",
+          url: "https://www.fiap.com.br/",
           description:
             "Liderei o desenvolvimento do ['Passa a Bola'](/projects/passa-a-bola) (MVP) usando Flutter e Firebase. Projetei estruturas no Cloud Firestore. Automatizei atualizações de partidas via API pública. Gerenciei fluxos de trabalho Git e apliquei práticas de Clean Code.",
           skills: ["Flutter", "Dart", "Firebase", "Liderança de Equipe"],
@@ -355,9 +403,14 @@ export const dictionaries = {
           degree: "Bacharelado em Engenharia de Software",
           status: "2º Ano (Foco em Full-Stack e DevSecOps)",
           graduation: "Previsão Dez/2028",
+          logo: "/images/experience/fiap_logo.png",
+          description: "Consistentemente classificado entre os 5% melhores alunos. Foco em Desenvolvimento Full-Stack, DevSecOps e Arquitetura de Computação em Nuvem.",
         },
       ],
-      certifications: ["Design Thinking Process", "Big Data"],
+      certifications: [
+        { name: "Design Thinking Process", issuer: "FIAP", date: "2024", url: "#" },
+        { name: "Big Data & Analytics", issuer: "FIAP", date: "2024", url: "#" },
+      ],
     },
     contact: {
       title: "Vamos Conversar",
