@@ -14,7 +14,7 @@ export const dictionaries = {
     },
     about: {
       title: "About Me",
-      summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the ["Passa a Bola"](/projects/passa-a-bola) and ["Catálogo Unentel"](/projects/unentel-catalog) initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
+      summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the [Passa a Bola](/projects/passa-a-bola) and [Catálogo Unentel](/projects/unentel-catalog) initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
         
       Areas of interest (internship and junior): Data Engineering or related fields.`,
     },
@@ -67,13 +67,13 @@ export const dictionaries = {
           period: "Oct/2025 – Present",
           location: "São Paulo, SP (Hybrid)",
           url: "https://unentel.com.br/",
-          description: `Designed and deployed a [centralized data platform](/projects/unentel-catalog) consolidating [[20,000]]+ SKUs, eliminating data fragmentation across sales operations.
+          description: `Designed and deployed a [centralized data platform](/projects/unentel-catalog) consolidating [[20,000]]+ **SKUs**, eliminating data fragmentation across sales operations.
 
 **- ETL & Data Pipelines:** Architected ingestion workflows using TypeScript and SQL to extract, normalize, and deduplicate raw vendor data, ensuring a "Single Source of Truth".
 
 **- Database Performance:** Optimized PostgreSQL query plans using GIN indexes, fuzzy matching (pg_trgm), and unaccent extensions, achieving sub-[[200]]ms response times on complex search queries.
 
-**- Analytics Engineering:** Implemented a __telemetry pipeline__ within the database to __capture high-volume search logs and "zero-result" queries__, enabling data-driven decisions on catalog expansion and future trainings.
+**- Data Analytics:** Implemented a __telemetry pipeline__ within the database to __capture high-volume search logs and "zero-result" queries__, enabling data-driven decisions on catalog expansion and future trainings.
 
 **- Business Impact:** Reduced proposal preparation time by ~[[90]]% when compared to manual spreadsheet processes and increased quote accuracy by centralizing technical specifications.`,
           skills: [
@@ -105,14 +105,7 @@ export const dictionaries = {
 **Key indicators and results:**
 - MVP delivered with full integration (Login/Sign-up, Homepage, Profile, Championships, Admin Panel, Geolocation, Cloud integration, and Multi-factor Authentication).
 - Reduced up to [[70]]% of manual work for clubs in data collection and consolidation (compared to spreadsheet-based processes) by automating ingestion and centralizing records.`,
-          skills: [
-            "Flutter",
-            "Dart",
-            "Cloud Firestore",
-            "Firebase",
-            "Git",
-            "Team Leadership",
-          ],
+          skills: ["Flutter", "Dart", "Firebase", "Git", "Team Leadership"],
           logo: "/images/experience/fiap_logo.png",
         },
       ],
@@ -126,18 +119,18 @@ export const dictionaries = {
           slug: "unentel-catalog",
           title: "Centralized B2B Catalog Platform",
           description:
-            "Data platform consolidating 20,000+ SKUs, eliminating data fragmentation.",
+            "Data platform consolidating 20,000+ SKUs, eliminating data fragmentation for the sales and pre-sales teams.",
           fullDescription: [
-            "At Unentel Distribuição, data fragmentation across various vendor spreadsheets was a major bottleneck for the sales and pre-sales team. This project aimed to centralize over 20,000 SKUs into a single, reliable source of truth.",
-            "I designed and implemented a robust data pipeline using TypeScript and SQL to extract, normalize, and deduplicate data. The backend relies on a highly optimized PostgreSQL database, utilizing GIN indexes and fuzzy matching extensions to ensure search queries return results in under 200ms.",
-            "Beyond performance, data governance and analysis was a key focus. I implemented Row Level Security (RLS) to ensure sensitive pricing information was only accessible to authorized personnel.",
-            "Additionally, I built a telemetry pipeline to capture high-volume search logs and zero-result queries, enabling data-driven decisions on catalog expansion and future trainings.",
+            "At __Unentel Distribuição__, data fragmentation across various vendor spreadsheets was a major bottleneck for the sales and pre-sales teams. This project aimed to centralize over **20,000 SKUs** into a single, reliable source of truth.",
+            "I designed and implemented a __robust data pipeline using TypeScript and SQL to extract, normalize, and deduplicate data__. The backend relies on a highly optimized PostgreSQL database, utilizing GIN indexes and fuzzy matching extensions to ensure search queries return results in **under 200ms**.",
+            "Beyond performance, **data governance and analysis** was a key focus. I implemented __Row Level Security (RLS)__ to ensure sensitive pricing information was only accessible to authorized personnel.",
+            "Additionally, I built a **telemetry pipeline** to capture high-volume search logs and zero-result queries, enabling data-driven decisions on catalog expansion and future trainings.",
           ],
           features: [
-            "Consolidated 20,000+ SKUs from disparate sources.",
+            "Consolidated 20,000+ SKUs.",
             "Sub-200ms search latency using GIN indexes and pg_trgm.",
             "Automated ETL pipelines for daily data updates.",
-            "Role-based access control with RLS.",
+            "Role-based access control with RLS and Auth",
             "Telemetry pipeline capturing search logs for analytics.",
             "Reduced proposal prep time by ~90% compared to manual processes.",
           ],
@@ -146,6 +139,8 @@ export const dictionaries = {
             "/images/projects/unentel-catalog/gallery1catalog.png",
             "/images/projects/unentel-catalog/gallery2catalog.png",
             "/images/projects/unentel-catalog/gallery3catalogo.webp",
+            "/images/projects/unentel-catalog/gallery4catalog.png",
+            "/images/projects/unentel-catalog/gallery5catalog.png",
           ],
           tech: [
             "PostgreSQL",
@@ -164,9 +159,9 @@ export const dictionaries = {
           description:
             "Cross-platform app to strengthen the women's soccer ecosystem. Reduced manual data collection for client and clubs by ~70%.",
           fullDescription: [
-            "Passa a Bola is a mobile application designed to bridge the gap in professionalism for women's football leagues. It serves as a centralized hub for match schedules, player statistics, and team management.",
+            "Passa a Bola is a mobile application designed to bridge the gap in professionalism for women's soccer as a whole. It serves as a centralized hub for matches, player statistics, team management, among other things.",
             "Leading a team of students, I architected the solution using Flutter for a seamless cross-platform experience. The backend is built on Firebase, leveraging Cloud Firestore for real-time data synchronization.",
-            "Some key achievements include: Automating match updates with a public sports API, automating data ingestion and significantly reducing the manual workload for club managers.",
+            "Some key achievements include: Automating match updates with a public sports API, automating data ingestion and significantly reducing the manual workload for club managers and our primary client.",
           ],
           features: [
             "Full control of matches, teams, clubs and players through the admin panel.",
@@ -188,9 +183,9 @@ export const dictionaries = {
           slug: "portfolio-website",
           title: "Portfolio Website",
           description:
-            "Modern SPA portfolio built with Next.js, Tailwind CSS and Framer Motion. Features i18n and Dark Mode.",
+            "Modern SPA portfolio built with Next.js, Tailwind CSS and Framer Motion. Features i18n (Language Switching) and Dark/Light Mode.",
           fullDescription: [
-            "This portfolio website was built to showcase my skills and projects in a clean, modern, and accessible way. It serves as a practical demonstration of my frontend capabilities using the React ecosystem.",
+            "This portfolio website was built to showcase my skills and projects in a clean, modern, and accessible way.",
             "The site is built with Next.js 14 (App Router) for server-side rendering and performance. Styling is handled by Tailwind CSS with a custom 'Purple Aesthetic' theme that supports both dark and light modes.",
             "I implemented a custom internationalization (i18n) system using React Context, allowing for instant language switching without page reloads.",
           ],
@@ -206,9 +201,9 @@ export const dictionaries = {
             "/images/projects/portfolio-website/gallery2port.webp",
             "/images/projects/portfolio-website/gallery3port.png",
           ],
-          tech: ["Next.js", "React", "Tailwind", "Framer Motion", "TypeScript"],
-          link: "#",
-          github: "#",
+          tech: ["TypeScript", "Next.js", "React", "Tailwind", "Framer Motion"],
+          github: "https://github.com/Caioncaminha/portfolio",
+          link: "https://caiocaminha.vercel.app",
         },
       ],
     },
@@ -222,27 +217,26 @@ export const dictionaries = {
           graduation: "Expected Dec/2028",
           url: "https://www.fiap.com.br/",
           logo: "/images/experience/fiap_logo.png",
-          description:
-            "Consistently ranked among the top 5% of students. Focused on Full-Stack Development, DevSecOps, and Cloud Computing architecture.",
+          description: "Full-Stack Development, DevSecOps, and Cloud Computing",
         },
       ],
       certifications: [
         {
-          name: "Design Thinking Process",
+          name: "Design Thinking - Process",
           issuer: "FIAP",
-          date: "2024",
+          date: "2025",
           url: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=9b05a54f6b406d9acc63f10719d84694&action=view",
         },
         {
           name: "Big Data",
           issuer: "FIAP",
-          date: "2024",
+          date: "2025",
           url: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=7a6df5b93c882404590d19188cc8bf56&action=view",
         },
       ],
     },
     contact: {
-      title: "Let's Talk",
+      title: "Contact Me",
       email: "caioncaminha@gmail.com",
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -258,43 +252,52 @@ export const dictionaries = {
       contact: "Contato",
     },
     hero: {
-      role: "Estudante de Engenharia de Software | Especialista em Engenharia de Dados",
-      cta: "Vamos Conversar",
-      downloadCv: "Baixar CV",
+      role: "Estudante de Engenharia de Software | Especializando em Engenharia de Dados",
+      cta: "Contato",
+      downloadCv: "Currículo",
     },
     about: {
       title: "Sobre Mim",
-      summary:
-        "Líder e desenvolvedor experiente focado em Python, TypeScript, algoritmos e estruturas de dados. Histórico comprovado na liderança de projetos acadêmicos e corporativos, notadamente as iniciativas ['Passa a Bola'](/projects/passa-a-bola) e ['Catálogo Unentel'](/projects/unentel-catalog). Atualmente atuando como Estagiário de Pré-Vendas e Desenvolvedor Líder na Unentel Distribuição.",
+      summary: `Líder e desenvolvedor focado em Python, TypeScript, algoritmos e estruturas de dados. Histórico comprovado na liderança de projetos acadêmicos e corporativos, notadamente as iniciativas [Passa a Bola](/projects/passa-a-bola) e [Catálogo Unentel](/projects/unentel-catalog). Atuando como Estagiário em Pré-Vendas e Desenvolvedor na Unentel Distribuição.
+      
+        Áreas de interesse (Estágio e Júnior): Engenharia de Dados ou áreas correlatas.`,
     },
     skills: {
       title: "Habilidades Técnicas",
       categories: [
         {
-          name: "Programação",
+          name: "Desenvolvimento",
           items: [
-            { name: "Python", url: "#" },
-            { name: "TypeScript", url: "#" },
-            { name: "SQL", url: "#" },
-            { name: "Dart", url: "#" },
+            { name: "Python", url: "https://www.python.org/" },
+            { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+            { name: "Pandas", url: "https://pandas.pydata.org/" },
+            { name: "NumPy", url: "https://numpy.org/" },
           ],
         },
         {
           name: "Banco de Dados",
           items: [
-            { name: "PostgreSQL", url: "#" },
-            { name: "Firebase", url: "#" },
-            { name: "MongoDB", url: "#" },
-            { name: "Supabase", url: "#" },
+            { name: "PostgreSQL", url: "https://www.postgresql.org/" },
+            { name: "Firebase", url: "https://firebase.google.com/" },
+            { name: "MongoDB", url: "https://www.mongodb.com/" },
+            { name: "Supabase", url: "https://supabase.com/" },
           ],
         },
         {
           name: "Ferramentas",
           items: [
-            { name: "Git", url: "#" },
-            { name: "Docker", url: "#" },
-            { name: "Pandas", url: "#" },
-            { name: "Next.js", url: "#" },
+            { name: "Git", url: "https://git-scm.com/" },
+            { name: "Docker", url: "https://www.docker.com/" },
+            { name: "Postman", url: "https://www.postman.com/" },
+            { name: "dbt", url: "https://www.getdbt.com/" },
+            {
+              name: "Excel",
+              url: "https://www.microsoft.com/en/microsoft-365",
+            },
+            {
+              name: "Power BI",
+              url: "https://www.microsoft.com/en/microsoft-365",
+            },
           ],
         },
       ],
@@ -304,16 +307,29 @@ export const dictionaries = {
       jobs: [
         {
           company: "Unentel Distribuição",
-          role: "Estagiário de Pré-Vendas & Desenvolvedor Líder",
+          role: "Pré-Vendas e Lead Developer",
           period: "Out/2025 – Presente",
           location: "São Paulo, SP (Híbrido)",
           url: "https://unentel.com.br/",
-          description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de 20.000 SKUs, eliminando a fragmentação de dados nas operações de vendas.
-- ETL e Pipelines de Dados: Estruturei fluxos de trabalho de ingestão usando TypeScript e SQL para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade".
-- Desempenho do Banco de Dados: Otimizei planos de consulta PostgreSQL usando índices GIN, correspondência aproximada (pg_trgm) e unnacent, alcançando tempos de resposta inferiores a 200 ms em consultas de pesquisa complexas.
-- Governança de Dados: Impus integridade de dados rigorosa por meio de Modelagem Relacional e Row Level Security (RLS); automatizei tarefas de manutenção do banco de dados (limpeza/vacuum) usando pg_cron.
-- Impacto nos Negócios: Reduzi o tempo de preparação de propostas em cerca de 90% e aumentei a precisão das cotações padronizando as especificações técnicas.`,
-          skills: ["PostgreSQL", "TypeScript", "SQL", "Engenharia de Dados"],
+          description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de [[20.000]] **SKUs**, eliminando a fragmentação de dados nas operações de vendas.
+
+**- ETL e Pipelines de Dados:** Estruturei fluxos de trabalho de ingestão usando TypeScript e SQL para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade".
+
+**- Desempenho do Banco de Dados:** Otimizei planos de consulta PostgreSQL usando índices GIN, correspondência aproximada (pg_trgm) e unaccent, alcançando tempos de resposta inferiores a [[200]]ms em consultas de pesquisa complexas.
+
+**- Análise de Dados:** Implementei um __pipeline de telemetria__ dentro do banco de dados para __capturar logs de pesquisa de alto volume e consultas "sem resultado"__, permitindo decisões baseadas em dados sobre expansão de catálogo e treinamentos futuros.
+
+**- Impacto nos Negócios:** Reduzi o tempo de preparação de propostas em cerca de ~[[90]]% quando comparado a processos manuais de planilhas e aumentei a precisão das cotações centralizando especificações técnicas.`,
+          skills: [
+            "PostgreSQL",
+            "TypeScript",
+            "Supabase",
+            "Pipelines",
+            "Data Analytics",
+            "Engenharia de Dados",
+            "SQL",
+            "ETL",
+          ],
           logo: "/images/experience/unentel_logo.png",
         },
         {
@@ -322,9 +338,18 @@ export const dictionaries = {
           period: "Mar/2025 – Out/2025",
           location: "São Paulo, SP (Híbrido)",
           url: "https://www.fiap.com.br/",
-          description:
-            "Liderei o desenvolvimento do ['Passa a Bola'](/projects/passa-a-bola) (MVP) usando Flutter e Firebase. Projetei estruturas no Cloud Firestore. Automatizei atualizações de partidas via API pública. Gerenciei fluxos de trabalho Git e apliquei práticas de Clean Code.",
-          skills: ["Flutter", "Dart", "Firebase", "Liderança de Equipe"],
+          description: `Liderança técnica do desenvolvimento do MVP do [Passa a Bola](/projects/passa-a-bola), um aplicativo multiplataforma construído com **Flutter (Dart)** e integrado com **Firebase/Cloud Firestore**. O projeto visa profissionalizar e trazer visibilidade ao ecossistema do futebol feminino conectando atletas, clubes e fãs em uma única plataforma — com __autenticação segura, gerenciamento de banco de dados em tempo real e integração com APIs de partidas__.
+
+            **Principais responsabilidades:**
+            - Modelagem de dados no Cloud Firestore e arquitetura da aplicação.
+            - Integração com API pública para atualizações automáticas de partidas e jogadores.
+            - Implementação de autenticação usando Firebase Auth e regras de segurança de banco de dados.
+            - Liderança e organização da equipe e fluxo de trabalho do projeto.
+
+            **Indicadores e resultados:**
+            - MVP entregue com integração total (Login/Cadastro, Página Inicial, Perfil, Campeonatos, Painel Administrativo, Geolocalização, Integração em Nuvem e Autenticação Multifator).
+            - Redução de até [[70]]% do trabalho manual para clubes na coleta e consolidação de dados (comparado a processos baseados em planilhas) automatizando a ingestão e centralizando registros.`,
+          skills: ["Flutter", "Dart", "Firebase", "Git", "Liderança de Equipe"],
           logo: "/images/experience/fiap_logo.png",
         },
       ],
@@ -338,78 +363,91 @@ export const dictionaries = {
           slug: "unentel-catalog",
           title: "Plataforma de Catálogo B2B Centralizada",
           description:
-            "Plataforma de dados consolidando mais de 20.000 SKUs, eliminando a fragmentação de dados. Reduziu o tempo de preparação de propostas em ~90%.",
+            "Plataforma de dados consolidando mais de 20.000 SKUs, eliminando a fragmentação de dados para as equipes de vendas e pré-vendas.",
           fullDescription: [
-            "Na Unentel Distribuição, a fragmentação de dados entre várias planilhas de fornecedores era um grande gargalo para a equipe de vendas. Este projeto visava centralizar mais de 20.000 SKUs em uma única fonte de verdade confiável.",
-            "Projetei e implementei um pipeline de dados robusto usando TypeScript e SQL para extrair, normalizar e deduplicar dados. O backend baseia-se em um banco de dados PostgreSQL altamente otimizado, utilizando índices GIN e extensões de correspondência difusa para garantir que as consultas de pesquisa retornem resultados em menos de 200ms.",
-            "Além do desempenho, a governança de dados foi um foco principal. Implementei Row Level Security (RLS) para garantir que informações confidenciais de preços fossem acessíveis apenas a pessoal autorizado.",
+            "Na __Unentel Distribuição__, a fragmentação de dados entre várias planilhas de fornecedores era um grande gargalo para as equipes de vendas e pré-vendas. Este projeto visava centralizar mais de **20.000 SKUs** em uma única fonte de verdade confiável.",
+            "Projetei e implementei um __pipeline de dados robusto usando TypeScript e SQL para extrair, normalizar e desduplicar dados__. O backend baseia-se em um banco de dados PostgreSQL altamente otimizado, utilizando índices GIN e extensões de correspondência difusa para garantir que as consultas de pesquisa retornem resultados em **menos de 200ms**.",
+            "Além do desempenho, **governança e análise de dados** foi um foco principal. Implementei __Row Level Security (RLS)__ para garantir que informações confidenciais de preços fossem acessíveis apenas a pessoal autorizado.",
+            "Adicionalmente, construí um **pipeline de telemetria** para capturar logs de pesquisa de alto volume e consultas sem resultados, permitindo decisões baseadas em dados sobre expansão de catálogo e treinamentos futuros.",
           ],
           features: [
-            "Consolidou mais de 20.000 SKUs de fontes díspares.",
+            "Consolidei mais de 20.000 SKUs.",
             "Latência de pesquisa inferior a 200ms usando índices GIN e pg_trgm.",
             "Pipelines ETL automatizados para atualizações diárias de dados.",
-            "Controle de acesso baseado em função com RLS.",
+            "Controle de acesso baseado em função com RLS e Auth.",
+            "Pipeline de telemetria capturando logs de pesquisa para análise.",
+            "Redução do tempo de preparação de propostas em ~90% comparado a processos manuais.",
           ],
-          coverImage: "/images/projects/unentel-catalog/covercatalogo.webp",
+          coverImage: "/images/projects/unentel-catalog/covercatalogo.png",
           gallery: [
-            "/images/projects/unentel-catalog/gallery1catalogo.webp",
-            "/images/projects/unentel-catalog/gallery2catalogo.webp",
+            "/images/projects/unentel-catalog/gallery1catalogo.png",
+            "/images/projects/unentel-catalog/gallery2catalogo.png",
             "/images/projects/unentel-catalog/gallery3catalogo.webp",
+            "/images/projects/unentel-catalog/gallery4catalog.png",
+            "/images/projects/unentel-catalog/gallery5catalog.png",
           ],
-          tech: ["TypeScript", "PostgreSQL", "ETL", "SQL", "Node.js"],
-          github: "#",
+          tech: [
+            "PostgreSQL",
+            "TypeScript",
+            "Supabase",
+            "Pipelines",
+            "Data Analytics",
+            "Engenharia de Dados",
+            "SQL",
+            "ETL",
+          ],
         },
         {
           slug: "passa-a-bola",
           title: "Passa a Bola",
           description:
-            "Aplicativo multiplataforma para profissionalizar o futebol feminino. Reduziu a coleta manual de dados para clubes em 70%.",
+            "Aplicativo multiplataforma para fortalecer o ecossistema do futebol feminino. Redução de ~70% na coleta manual de dados para clientes e clubes.",
           fullDescription: [
-            "Passa a Bola é um aplicativo móvel projetado para preencher a lacuna de profissionalismo nas ligas de futebol feminino. Ele serve como um hub centralizado para horários de jogos, estatísticas de jogadores e gerenciamento de equipes.",
-            "Liderando uma equipe de estudantes, arquitetei a solução usando Flutter para uma experiência multiplataforma perfeita. O backend é construído no Firebase, aproveitando o Cloud Firestore para sincronização de dados em tempo real.",
-            "Uma conquista técnica fundamental foi automatizar as atualizações de partidas integrando-se a uma API de esportes pública, reduzindo significativamente a carga de trabalho manual para os gerentes de clube.",
+            "Passa a Bola é um aplicativo móvel projetado para preencher a lacuna de profissionalismo no futebol feminino como um todo. Ele serve como um hub centralizado para jogos, estatísticas de jogadores, gerenciamento de equipes, entre outras coisas.",
+            "Liderando uma equipe de estudantes, arquitetei a solução usando Flutter para uma experiência multiplataforma. O backend é construído no Firebase, aproveitando o Cloud Firestore para sincronização de dados em tempo real.",
+            "Algumas conquistas foram: Automatizar atualizações de partidas com uma API pública de esportes, automatizar ingestão de dados e reduzir significativamente a carga de trabalho manual para gerentes de clubes e nosso cliente principal.",
           ],
           features: [
-            "Atualizações de partidas e estatísticas em tempo real.",
-            "Suporte multiplataforma (iOS e Android) with Flutter.",
+            "Controle total de partidas, times, clubes e jogadores através do painel administrativo.",
+            "Suporte multiplataforma (iOS e Android) com Flutter.",
             "Autenticação segura via Firebase Auth.",
             "Estrutura de dados NoSQL escalável no Cloud Firestore.",
           ],
-          coverImage: "/images/projects/passa-bola/coverpab.webp",
+          coverImage: "/images/projects/passa-bola/coverpab.png",
           gallery: [
-            "/images/projects/passa-bola/gallery1pab.webp",
-            "/images/projects/passa-bola/galley2pab.webp",
-            "/images/projects/passa-bola/gallery3pab.webp",
-            "/images/projects/passa-bola/gallery4pab.webp",
+            "/images/projects/passa-bola/gallery1pab.jpg",
+            "/images/projects/passa-bola/gallery2pab.jpg",
+            "/images/projects/passa-bola/gallery3pab.jpg",
+            "/images/projects/passa-bola/gallery4pab.jpg",
           ],
-          tech: ["Flutter", "Firebase", "Dart", "Cloud Firestore"],
-          link: "#",
+          tech: ["Flutter", "Dart", "Firebase", "Git", "Liderança de Equipe"],
           github: "https://github.com/Caioncaminha/passabola",
         },
         {
           slug: "portfolio-website",
           title: "Portfolio Website",
           description:
-            "Modern SPA portfolio built with Next.js, Tailwind CSS and Framer Motion. Features i18n and Dark Mode.",
+            "Portfólio SPA moderno construído com Next.js, Tailwind CSS e Framer Motion. Possui i18n (Troca de Idioma) e Modo Escuro/Claro.",
           fullDescription: [
-            "Este site de portfólio foi construído para mostrar minhas habilidades e projetos de forma limpa, moderna e acessível. Ele serve como uma demonstração prática de minhas capacidades de frontend usando o ecossistema React.",
-            "O site é construído com Next.js 14 (App Router) para renderização do lado do servidor e desempenho. O estilo é gerenciado pelo Tailwind CSS com um tema personalizado 'Purple Aesthetic' que suporta os modos escuro e claro.",
+            "Este portfólio foi construído para mostrar minhas habilidades e projetos de forma limpa, moderna e acessível.",
+            "O site é construído com Next.js 14 (App Router) para renderização do lado do servidor e desempenho. O estilo é gerenciado pelo Tailwind CSS com um tema personalizado mais para o roxo que suporta os modos escuro e claro.",
             "Implementei um sistema de internacionalização (i18n) personalizado usando React Context, permitindo a troca instantânea de idioma sem recarregar a página.",
           ],
           features: [
             "Arquitetura de Single Page Application (SPA) responsiva.",
-            "Alternância personalizada de modo Escuro/Claro com estado persistente.",
-            "Internacionalização (i18n) for English and Portuguese.",
-            "Animações suaves usando Framer Motion.",
+            "Alternância entre modo Escuro/Claro com estado persistente.",
+            "Internacionalização (i18n) para Inglês e Português.",
+            "Animações usando Framer Motion.",
           ],
-          coverImage: "/images/projects/portfolio-website/coverport.webp",
+          coverImage: "/images/projects/portfolio-website/coverport.png",
           gallery: [
             "/images/projects/portfolio-website/gallery1port.webp",
             "/images/projects/portfolio-website/gallery2port.webp",
+            "/images/projects/portfolio-website/gallery3port.png",
           ],
-          tech: ["Next.js", "React", "Tailwind", "Framer Motion", "TypeScript"],
-          link: "#",
-          github: "#",
+          tech: ["TypeScript", "Next.js", "React", "Tailwind", "Framer Motion"],
+          github: "https://github.com/Caioncaminha/portfolio",
+          link: "https://caiocaminha.vercel.app",
         },
       ],
     },
@@ -419,26 +457,26 @@ export const dictionaries = {
         {
           institution: "FIAP",
           degree: "Bacharelado em Engenharia de Software",
-          status: "2nd Year (Foco em Full-Stack e DevSecOps)",
+          status: "2º Ano",
           graduation: "Previsão Dez/2028",
           url: "https://www.fiap.com.br/",
           logo: "/images/experience/fiap_logo.png",
           description:
-            "Consistentemente classificado entre os 5% melhores alunos. Foco em Desenvolvimento Full-Stack, DevSecOps e Arquitetura de Computação em Nuvem.",
+            "Desenvolvimento Full-Stack, DevSecOps e Arquitetura de Computação em Nuvem.",
         },
       ],
       certifications: [
         {
-          name: "Design Thinking Process",
+          name: "Design Thinking - Process",
           issuer: "FIAP",
-          date: "2024",
-          url: "#",
+          date: "2025",
+          url: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=9b05a54f6b406d9acc63f10719d84694&action=view",
         },
         {
-          name: "Big Data & Analytics",
+          name: "Big Data",
           issuer: "FIAP",
-          date: "2024",
-          url: "#",
+          date: "2025",
+          url: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=7a6df5b93c882404590d19188cc8bf56&action=view",
         },
       ],
     },

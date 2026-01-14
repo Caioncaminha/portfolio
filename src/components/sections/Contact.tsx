@@ -9,9 +9,9 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-        {/* Background Gradient */}
+      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 -z-10" />
-      
+
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -23,9 +23,9 @@ export function Contact() {
             {dict.contact.title}
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            {language === 'en' 
-              ? "I'm currently available for internship and junior roles. Feel free to reach out if you want to collaborate or just say hi!" 
-              : "Estou disponível para vagas de estágio e júnior. Sinta-se à vontade para entrar em contato se quiser colaborar ou apenas dizer oi!"}
+            {language === "en"
+              ? "I'm currently available for internship and junior roles, more specifically in Data Engineering or related fields. Feel free to reach out if you'd like to collaborate or just say hi!"
+              : "Estou atualmente disponível para estágio e júnior, mais especificamente Engenharia de Dados ou áreas correlatas. Sinta-se à vontade para entrar em contato se quiser colaborar ou apenas dar um alô!"}
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
