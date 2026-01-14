@@ -1,6 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Counter } from "@/components/ui/counter";
+import Link from "next/link";
 
 interface RichTextProps {
   text: string;
@@ -8,8 +9,8 @@ interface RichTextProps {
 }
 
 export function RichText({ text, className }: RichTextProps) {
-  // Updated regex to allow commas and dots inside brackets: [[20,000]] or [[90.5]]
-  const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`|__.*?__|\[\[[\d,.]+\]\])/g);
+  // Updated regex to include markdown links: [text](url)
+  const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`|__.*?__|\[\[[\d,.]+\]\]|\[.*?\]\(.*?\))/g);
 
   return (
     <p className={cn("whitespace-pre-line leading-relaxed", className)}>
@@ -55,6 +56,21 @@ export function RichText({ text, className }: RichTextProps) {
             return (
                 <Counter key={index} value={value} className="font-bold text-primary" />
             );
+        }
+        if (part.startsWith("[") && part.includes("](")) {
+          const match = part.match(/\[(.*?)\]\((.*?)\)/);
+          if (match) {
+            const [, linkText, href] = match;
+            return (
+              <Link 
+                key={index} 
+                href={href} 
+                className="text-primary hover:underline font-medium"
+              >
+                {linkText}
+              </Link>
+            );
+          }
         }
         return part;
       })}

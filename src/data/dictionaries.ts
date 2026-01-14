@@ -14,7 +14,7 @@ export const dictionaries = {
     },
     about: {
       title: "About Me",
-      summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the __"Passa a Bola"__ and __"Catálogo Unentel"__ initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
+      summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the ["Passa a Bola"](/projects/passa-a-bola) and ["Catálogo Unentel"](/projects/unentel-catalog) initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
         
       Areas of interest (internship and junior): Data Engineering or related fields.`,
     },
@@ -43,7 +43,7 @@ export const dictionaries = {
           role: "Pre-Sales & Lead Developer",
           period: "Oct/2025 – Present",
           location: "São Paulo, SP (Hybrid)",
-          description: `Designed and deployed a centralized data platform consolidating [[20,000]]+ SKUs, eliminating data fragmentation across sales operations.
+          description: `Designed and deployed a [centralized data platform](/projects/unentel-catalog) consolidating [[20,000]]+ SKUs, eliminating data fragmentation across sales operations.
 
 **- ETL & Data Pipelines:** Architected ingestion workflows using TypeScript and SQL to extract, normalize, and deduplicate raw vendor data, ensuring a "Single Source of Truth".
 
@@ -69,7 +69,7 @@ export const dictionaries = {
           role: "Technical Leader (Academic Project)",
           period: "Mar/2025 – Oct/2025",
           location: "São Paulo, SP (Hybrid)",
-          description: `Technical lead in the development of the MVP for Passa a Bola, a cross-platform application built with Flutter (Dart) and integrated with Firebase/Cloud Firestore. The project aims to professionalize and bring visibility to the women’s football ecosystem by connecting athletes, clubs, and fans on a single platform — featuring secure authentication, real-time database management, and integration with match APIs.
+          description: `Technical lead in the development of the MVP for [Passa a Bola](/projects/passa-a-bola), a cross-platform application built with Flutter (Dart) and integrated with Firebase/Cloud Firestore. The project aims to professionalize and bring visibility to the women’s football ecosystem by connecting athletes, clubs, and fans on a single platform — featuring secure authentication, real-time database management, and integration with match APIs.
 
 **Main responsibilities:**
 - Data modeling in Cloud Firestore and application architecture.
@@ -222,7 +222,7 @@ export const dictionaries = {
     about: {
       title: "Sobre Mim",
       summary:
-        "Líder e desenvolvedor experiente focado em Python, TypeScript, algoritmos e estruturas de dados. Histórico comprovado na liderança de projetos acadêmicos e corporativos, notadamente as iniciativas 'Passa a Bola' e 'Catálogo Unentel'. Atualmente atuando como Estagiário de Pré-Vendas e Desenvolvedor Líder na Unentel Distribuição.",
+        "Líder e desenvolvedor experiente focado em Python, TypeScript, algoritmos e estruturas de dados. Histórico comprovado na liderança de projetos acadêmicos e corporativos, notadamente as iniciativas ['Passa a Bola'](/projects/passa-a-bola) e ['Catálogo Unentel'](/projects/unentel-catalog). Atualmente atuando como Estagiário de Pré-Vendas e Desenvolvedor Líder na Unentel Distribuição.",
     },
     skills: {
       title: "Habilidades Técnicas",
@@ -243,7 +243,7 @@ export const dictionaries = {
           role: "Estagiário de Pré-Vendas & Desenvolvedor Líder",
           period: "Out/2025 – Presente",
           location: "São Paulo, SP (Híbrido)",
-          description: `Projetei e implementei uma plataforma de dados centralizada consolidando mais de 20.000 SKUs, eliminando a fragmentação de dados nas operações de vendas.
+          description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de 20.000 SKUs, eliminando a fragmentação de dados nas operações de vendas.
 - ETL e Pipelines de Dados: Estruturei fluxos de trabalho de ingestão usando TypeScript e SQL para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade".
 - Desempenho do Banco de Dados: Otimizei planos de consulta PostgreSQL usando índices GIN, correspondência aproximada (pg_trgm) e unnacent, alcançando tempos de resposta inferiores a 200 ms em consultas de pesquisa complexas.
 - Governança de Dados: Impus integridade de dados rigorosa por meio de Modelagem Relacional e Row Level Security (RLS); automatizei tarefas de manutenção do banco de dados (limpeza/vacuum) usando pg_cron.
@@ -257,7 +257,7 @@ export const dictionaries = {
           period: "Mar/2025 – Out/2025",
           location: "São Paulo, SP (Híbrido)",
           description:
-            "Liderei o desenvolvimento do 'Passa a Bola' (MVP) usando Flutter e Firebase. Projetei estruturas no Cloud Firestore. Automatizei atualizações de partidas via API pública. Gerenciei fluxos de trabalho Git e apliquei práticas de Clean Code.",
+            "Liderei o desenvolvimento do ['Passa a Bola'](/projects/passa-a-bola) (MVP) usando Flutter e Firebase. Projetei estruturas no Cloud Firestore. Automatizei atualizações de partidas via API pública. Gerenciei fluxos de trabalho Git e apliquei práticas de Clean Code.",
           skills: ["Flutter", "Dart", "Firebase", "Liderança de Equipe"],
           logo: "/images/experience/fiap_logo.png",
         },
@@ -294,7 +294,7 @@ export const dictionaries = {
           github: "#",
         },
         {
-          slug: "passa-bola",
+          slug: "passa-a-bola",
           title: "Passa a Bola",
           description:
             "Aplicativo multiplataforma para profissionalizar o futebol feminino. Reduziu a coleta manual de dados para clubes em 70%.",
