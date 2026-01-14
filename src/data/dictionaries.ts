@@ -94,7 +94,7 @@ export const dictionaries = {
           period: "Mar/2025 – Oct/2025",
           location: "São Paulo, SP (Hybrid)",
           url: "https://www.fiap.com.br/",
-          description: `Technical lead in the development of the MVP for [Passa a Bola](/projects/passa-a-bola), a cross-platform application built with Flutter (Dart) and integrated with Firebase/Cloud Firestore. The project aims to professionalize and bring visibility to the women’s football ecosystem by connecting athletes, clubs, and fans on a single platform — featuring secure authentication, real-time database management, and integration with match APIs.
+          description: `Technical lead in the development of the MVP for [Passa a Bola](/projects/passa-a-bola), a cross-platform application built with **Flutter(Dart)** and integrated with **Firebase/Cloud Firestore**. The project aims to professionalize and bring visibility to the women’s football ecosystem by connecting athletes, clubs, and fans on a single platform — featuring __secure authentication, real-time database management, and integration with match APIs__.
 
 **Main responsibilities:**
 - Data modeling in Cloud Firestore and application architecture.
@@ -138,7 +138,7 @@ export const dictionaries = {
           gallery: [
             "/images/projects/unentel-catalog/gallery1catalog.png",
             "/images/projects/unentel-catalog/gallery2catalog.png",
-            "/images/projects/unentel-catalog/gallery3catalogo.webp",
+            "/images/projects/unentel-catalog/gallery3catalog.png",
             "/images/projects/unentel-catalog/gallery4catalog.png",
             "/images/projects/unentel-catalog/gallery5catalog.png",
           ],
@@ -311,7 +311,7 @@ export const dictionaries = {
           period: "Out/2025 – Presente",
           location: "São Paulo, SP (Híbrido)",
           url: "https://unentel.com.br/",
-          description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de [[20.000]] **SKUs**, eliminando a fragmentação de dados nas operações de vendas.
+          description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de [[20,000]] **SKUs**, eliminando a fragmentação de dados nas operações de vendas.
 
 **- ETL e Pipelines de Dados:** Estruturei fluxos de trabalho de ingestão usando TypeScript e SQL para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade".
 
@@ -363,15 +363,15 @@ export const dictionaries = {
           slug: "unentel-catalog",
           title: "Plataforma de Catálogo B2B Centralizada",
           description:
-            "Plataforma de dados consolidando mais de 20.000 SKUs, eliminando a fragmentação de dados para as equipes de vendas e pré-vendas.",
+            "Plataforma de dados consolidando mais de 20,000 SKUs, eliminando a fragmentação de dados para as equipes de vendas e pré-vendas.",
           fullDescription: [
-            "Na __Unentel Distribuição__, a fragmentação de dados entre várias planilhas de fornecedores era um grande gargalo para as equipes de vendas e pré-vendas. Este projeto visava centralizar mais de **20.000 SKUs** em uma única fonte de verdade confiável.",
+            "Na __Unentel Distribuição__, a fragmentação de dados entre várias planilhas de fornecedores era um grande gargalo para as equipes de vendas e pré-vendas. Este projeto visava centralizar mais de **20,000 SKUs** em uma única fonte de verdade confiável.",
             "Projetei e implementei um __pipeline de dados robusto usando TypeScript e SQL para extrair, normalizar e desduplicar dados__. O backend baseia-se em um banco de dados PostgreSQL altamente otimizado, utilizando índices GIN e extensões de correspondência difusa para garantir que as consultas de pesquisa retornem resultados em **menos de 200ms**.",
             "Além do desempenho, **governança e análise de dados** foi um foco principal. Implementei __Row Level Security (RLS)__ para garantir que informações confidenciais de preços fossem acessíveis apenas a pessoal autorizado.",
             "Adicionalmente, construí um **pipeline de telemetria** para capturar logs de pesquisa de alto volume e consultas sem resultados, permitindo decisões baseadas em dados sobre expansão de catálogo e treinamentos futuros.",
           ],
           features: [
-            "Consolidei mais de 20.000 SKUs.",
+            "Consolidei mais de 20,000 SKUs.",
             "Latência de pesquisa inferior a 200ms usando índices GIN e pg_trgm.",
             "Pipelines ETL automatizados para atualizações diárias de dados.",
             "Controle de acesso baseado em função com RLS e Auth.",
@@ -382,7 +382,7 @@ export const dictionaries = {
           gallery: [
             "/images/projects/unentel-catalog/gallery1catalog.png",
             "/images/projects/unentel-catalog/gallery2catalog.png",
-            "/images/projects/unentel-catalog/gallery3catalog.webp",
+            "/images/projects/unentel-catalog/gallery3catalog.png",
             "/images/projects/unentel-catalog/gallery4catalog.png",
             "/images/projects/unentel-catalog/gallery5catalog.png",
           ],
