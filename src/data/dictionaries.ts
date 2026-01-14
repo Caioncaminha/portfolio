@@ -24,31 +24,36 @@ export const dictionaries = {
         {
           name: "Development",
           items: [
-            { name: "Python", url: "#" },
-            { name: "TypeScript", url: "#" },
-            { name: "Pandas", url: "#" },
-            { name: "NumPy", url: "#" },
+            { name: "Python", url: "https://www.python.org/" },
+            { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+            { name: "Pandas", url: "https://pandas.pydata.org/" },
+            { name: "NumPy", url: "https://numpy.org/" },
           ],
         },
         {
           name: "Databases",
           items: [
-            { name: "PostgreSQL", url: "#" },
-            { name: "Firebase", url: "#" },
-            { name: "MongoDB", url: "#" },
-            { name: "Supabase", url: "#" },
-            { name: "SQL", url: "#" },
+            { name: "PostgreSQL", url: "https://www.postgresql.org/" },
+            { name: "Firebase", url: "https://firebase.google.com/" },
+            { name: "MongoDB", url: "https://www.mongodb.com/" },
+            { name: "Supabase", url: "https://supabase.com/" },
           ],
         },
         {
           name: "Tools",
           items: [
-            { name: "Git", url: "#" },
-            { name: "Docker", url: "#" },
-            { name: "Postman", url: "#" },
-            { name: "dbt", url: "#" },
-            { name: "Excel", url: "#" },
-            { name: "Power BI", url: "#" },
+            { name: "Git", url: "https://git-scm.com/" },
+            { name: "Docker", url: "https://www.docker.com/" },
+            { name: "Postman", url: "https://www.postman.com/" },
+            { name: "dbt", url: "https://www.getdbt.com/" },
+            {
+              name: "Excel",
+              url: "https://www.microsoft.com/en/microsoft-365",
+            },
+            {
+              name: "Power BI",
+              url: "https://www.microsoft.com/en/microsoft-365",
+            },
           ],
         },
       ],
@@ -121,17 +126,20 @@ export const dictionaries = {
           slug: "unentel-catalog",
           title: "Centralized B2B Catalog Platform",
           description:
-            "Data platform consolidating 20,000+ SKUs, eliminating data fragmentation. Reduced proposal preparation time by ~90%.",
+            "Data platform consolidating 20,000+ SKUs, eliminating data fragmentation.",
           fullDescription: [
-            "At Unentel Distribuição, data fragmentation across various vendor spreadsheets was a major bottleneck for the sales team. This project aimed to centralize over 20,000 SKUs into a single, reliable source of truth.",
+            "At Unentel Distribuição, data fragmentation across various vendor spreadsheets was a major bottleneck for the sales and pre-sales team. This project aimed to centralize over 20,000 SKUs into a single, reliable source of truth.",
             "I designed and implemented a robust data pipeline using TypeScript and SQL to extract, normalize, and deduplicate data. The backend relies on a highly optimized PostgreSQL database, utilizing GIN indexes and fuzzy matching extensions to ensure search queries return results in under 200ms.",
-            "Beyond performance, data governance was a key focus. I implemented Row Level Security (RLS) to ensure sensitive pricing information was only accessible to authorized personnel.",
+            "Beyond performance, data governance and analysis was a key focus. I implemented Row Level Security (RLS) to ensure sensitive pricing information was only accessible to authorized personnel.",
+            "Additionally, I built a telemetry pipeline to capture high-volume search logs and zero-result queries, enabling data-driven decisions on catalog expansion and future trainings.",
           ],
           features: [
             "Consolidated 20,000+ SKUs from disparate sources.",
             "Sub-200ms search latency using GIN indexes and pg_trgm.",
             "Automated ETL pipelines for daily data updates.",
             "Role-based access control with RLS.",
+            "Telemetry pipeline capturing search logs for analytics.",
+            "Reduced proposal prep time by ~90% compared to manual processes.",
           ],
           coverImage: "/images/projects/unentel-catalog/covercatalog.png",
           gallery: [
@@ -149,7 +157,6 @@ export const dictionaries = {
             "SQL",
             "ETL",
           ],
-          github: "#",
         },
         {
           slug: "passa-a-bola",
@@ -174,8 +181,7 @@ export const dictionaries = {
             "/images/projects/passa-bola/gallery3pab.jpg",
             "/images/projects/passa-bola/gallery4pab.jpg",
           ],
-          tech: ["Flutter", "Firebase", "Dart", "Cloud Firestore"],
-          link: "#",
+          tech: ["Flutter", "Dart", "Firebase", "Git", "Team Leadership"],
           github: "https://github.com/Caioncaminha/passabola",
         },
         {
@@ -214,13 +220,25 @@ export const dictionaries = {
           degree: "Bachelor’s Degree in Software Engineering",
           status: "2nd Year",
           graduation: "Expected Dec/2028",
+          url: "https://www.fiap.com.br/",
           logo: "/images/experience/fiap_logo.png",
-          description: "Consistently ranked among the top 5% of students. Focused on Full-Stack Development, DevSecOps, and Cloud Computing architecture.",
+          description:
+            "Consistently ranked among the top 5% of students. Focused on Full-Stack Development, DevSecOps, and Cloud Computing architecture.",
         },
       ],
       certifications: [
-        { name: "Design Thinking Process", issuer: "FIAP", date: "2024", url: "#" },
-        { name: "Big Data & Analytics", issuer: "FIAP", date: "2024", url: "#" },
+        {
+          name: "Design Thinking Process",
+          issuer: "FIAP",
+          date: "2024",
+          url: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=9b05a54f6b406d9acc63f10719d84694&action=view",
+        },
+        {
+          name: "Big Data",
+          issuer: "FIAP",
+          date: "2024",
+          url: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=7a6df5b93c882404590d19188cc8bf56&action=view",
+        },
       ],
     },
     contact: {
@@ -401,15 +419,27 @@ export const dictionaries = {
         {
           institution: "FIAP",
           degree: "Bacharelado em Engenharia de Software",
-          status: "2º Ano (Foco em Full-Stack e DevSecOps)",
+          status: "2nd Year (Foco em Full-Stack e DevSecOps)",
           graduation: "Previsão Dez/2028",
+          url: "https://www.fiap.com.br/",
           logo: "/images/experience/fiap_logo.png",
-          description: "Consistentemente classificado entre os 5% melhores alunos. Foco em Desenvolvimento Full-Stack, DevSecOps e Arquitetura de Computação em Nuvem.",
+          description:
+            "Consistentemente classificado entre os 5% melhores alunos. Foco em Desenvolvimento Full-Stack, DevSecOps e Arquitetura de Computação em Nuvem.",
         },
       ],
       certifications: [
-        { name: "Design Thinking Process", issuer: "FIAP", date: "2024", url: "#" },
-        { name: "Big Data & Analytics", issuer: "FIAP", date: "2024", url: "#" },
+        {
+          name: "Design Thinking Process",
+          issuer: "FIAP",
+          date: "2024",
+          url: "#",
+        },
+        {
+          name: "Big Data & Analytics",
+          issuer: "FIAP",
+          date: "2024",
+          url: "#",
+        },
       ],
     },
     contact: {

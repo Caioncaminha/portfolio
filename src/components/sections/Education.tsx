@@ -74,7 +74,18 @@ export function Education() {
 
                      <div className="flex-grow">
                         <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                             <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">{item.institution}</h3>
+                             {item.url ? (
+                               <a 
+                                 href={item.url} 
+                                 target="_blank" 
+                                 rel="noopener noreferrer" 
+                                 className="text-2xl font-bold hover:text-primary transition-colors block w-fit"
+                               >
+                                 {item.institution}
+                               </a>
+                             ) : (
+                               <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">{item.institution}</h3>
+                             )}
                              <span className="text-sm font-medium px-3 py-1 rounded-full bg-secondary text-secondary-foreground border border-border whitespace-nowrap mt-2 md:mt-0 w-fit">
                                 {item.graduation}
                              </span>
@@ -119,9 +130,12 @@ export function Education() {
                     <div>
                         <h4 className="text-lg font-bold group-hover:text-primary transition-colors flex items-center gap-2">
                             {cert.name}
-                            <FaExternalLinkAlt size={12} className="opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground" />
                         </h4>
-                        <p className="text-muted-foreground">{cert.issuer} • {cert.date}</p>
+                        <p className="text-muted-foreground mb-4">{cert.issuer} • {cert.date}</p>
+                        <div className="flex items-center gap-2 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                           View Certificate
+                           <FaExternalLinkAlt size={12} />
+                        </div>
                     </div>
                   </motion.a>
                 ))}

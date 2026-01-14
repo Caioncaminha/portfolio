@@ -9,6 +9,7 @@ import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaSearchPlus } from "react-ic
 import Image from "next/image";
 import Link from "next/link";
 import { ImageModal } from "@/components/ui/image-modal";
+import { RichText } from "@/components/ui/rich-text";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -107,7 +108,7 @@ export default function ProjectDetail() {
                   </h2>
                   <div className="prose dark:prose-invert max-w-none text-muted-foreground text-lg leading-relaxed space-y-6">
                       {project.fullDescription?.map((paragraph, idx) => (
-                          <p key={idx}>{paragraph}</p>
+                          <RichText key={idx} text={paragraph} />
                       ))}
                   </div>
               </section>

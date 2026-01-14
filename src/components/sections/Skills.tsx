@@ -34,14 +34,21 @@ export function Skills() {
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {category.items.map((skill) => (
-                  <a 
+                  <motion.a 
                     key={skill.name} 
                     href={skill.url}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group p-2 rounded-md hover:bg-secondary/50"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-all group p-3 rounded-lg hover:bg-primary/5 border border-transparent hover:border-primary/20"
                   >
-                    <TechIcon name={skill.name} className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />
-                    <span className="text-sm font-medium">{skill.name}</span>
-                  </a>
+                    <TechIcon 
+                      name={skill.name} 
+                      className="w-6 h-6 text-primary/70 group-hover:text-primary transition-colors" 
+                    />
+                    <span className="text-sm font-semibold tracking-wide">{skill.name}</span>
+                  </motion.a>
                 ))}
               </div>
             </motion.div>
