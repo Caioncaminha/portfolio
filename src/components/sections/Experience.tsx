@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/language-context";
 import { motion, Variants } from "framer-motion";
 import { RichText } from "@/components/ui/rich-text";
+import { TechIcon } from "@/components/ui/tech-icon";
 
 export function Experience() {
   const { dict } = useLanguage();
@@ -98,12 +99,13 @@ export function Experience() {
 
                 <div className="flex flex-wrap gap-2 relative z-10">
                   {job.skills.map((skill, i) => (
-                    <span
+                    <div 
                       key={i}
-                      className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground border border-secondary-foreground/10"
+                      className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary/50 text-xs font-medium text-secondary-foreground hover:bg-secondary transition-colors border border-secondary-foreground/10"
                     >
-                      {skill}
-                    </span>
+                      <TechIcon name={skill} className="w-3.5 h-3.5" />
+                      <span>{skill}</span>
+                    </div>
                   ))}
                 </div>
               </div>

@@ -7,7 +7,6 @@ Deeply analyze the following files in the root (or where available) to understan
 
 - @GEMINI.md (Specific AI behavior guidelines)
 - @README.md (Architecture, installation, and stack)
-- @Resumo.md (Current project state and recent decisions)
 
 **2. Permanent Guidelines for this Session:**
 Maintain this "mindset" for all future responses:
@@ -27,7 +26,7 @@ I await the summary to proceed.
 
 For the rest of the conversation, there is no need to be polite. I want you to be concise and technical. NEVER delete files or change a large part of the code unless I directly ask.
 
-Any code change we make must involve creating a branch in a professional format to maintain the best possible versioning.
+**Any code change we make must involve creating a branch in a professional format to maintain the best possible versioning.**
 
 ---
 

@@ -9,22 +9,38 @@ export const dictionaries = {
     },
     hero: {
       role: "Software Engineering Student | Specializing in Data Engineering",
-      available: "Available for Internship & Junior Roles",
       cta: "Contact Me",
       downloadCv: "Download CV",
     },
     about: {
       title: "About Me",
-      summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the "Passa a Bola" and "Catálogo Unentel" initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
+      summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the __"Passa a Bola"__ and __"Catálogo Unentel"__ initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
         
       Areas of interest (internship and junior): Data Engineering or related fields.`,
+    },
+    skills: {
+      title: "Technical Skills",
+      categories: [
+        {
+          name: "Development",
+          items: ["Python", "TypeScript", "Pandas", "NumPy"],
+        },
+        {
+          name: "Databases",
+          items: ["PostgreSQL", "Firebase", "MongoDB", "Supabase", "SQL"],
+        },
+        {
+          name: "Tools",
+          items: ["Git", "Docker", "Postman", "dbt", "Excel", "Power BI"],
+        },
+      ],
     },
     experience: {
       title: "Experience",
       jobs: [
         {
           company: "Unentel Distribuição",
-          role: "Pre-Sales Intern & Lead Developer",
+          role: "Pre-Sales & Lead Developer",
           period: "Oct/2025 – Present",
           location: "São Paulo, SP (Hybrid)",
           description: `Designed and deployed a centralized data platform consolidating [[20,000]]+ SKUs, eliminating data fragmentation across sales operations.
@@ -33,18 +49,18 @@ export const dictionaries = {
 
 **- Database Performance:** Optimized PostgreSQL query plans using GIN indexes, fuzzy matching (pg_trgm), and unaccent extensions, achieving sub-[[200]]ms response times on complex search queries.
 
-**- Data Governance:** Enforced strict data integrity via Relational Modeling and Row Level Security (RLS); automated database maintenance tasks (cleanup/vacuum) using pg_cron.
+**- Analytics Engineering:** Implemented a __telemetry pipeline__ within the database to __capture high-volume search logs and "zero-result" queries__, enabling data-driven decisions on catalog expansion and future trainings.
 
-**- Business Impact:** Reduced proposal preparation time by ~[[90]]% and increased quote accuracy by standardizing technical specifications.`,
+**- Business Impact:** Reduced proposal preparation time by ~[[90]]% when compared to manual spreadsheet processes and increased quote accuracy by centralizing technical specifications.`,
           skills: [
             "PostgreSQL",
             "TypeScript",
-            "SQL",
-            "Data Engineering",
             "Supabase",
-            "ETL",
             "Pipelines",
             "Data Analytics",
+            "Data Engineering",
+            "SQL",
+            "ETL",
           ],
           logo: "https://via.placeholder.com/150",
         },
@@ -64,8 +80,15 @@ export const dictionaries = {
 **Key indicators and results:**
 - MVP delivered with full integration (Login/Sign-up, Homepage, Profile, Championships, Admin Panel, Geolocation, Cloud integration, and Multi-factor Authentication).
 - Reduced up to [[70]]% of manual work for clubs in data collection and consolidation (compared to spreadsheet-based processes) by automating ingestion and centralizing records.`,
-          skills: ["Flutter", "Dart", "Firebase", "Team Leadership"],
-          logo: "https://via.placeholder.com/150",
+          skills: [
+            "Flutter",
+            "Dart",
+            "Cloud Firestore",
+            "Firebase",
+            "Git",
+            "Team Leadership",
+          ],
+          logo: "/public/images/projects/unentel-catalog/unentel_logo.jpg",
         },
       ],
     },
@@ -153,22 +176,11 @@ export const dictionaries = {
         {
           institution: "FIAP",
           degree: "Bachelor’s Degree in Software Engineering",
-          status: "2nd Year (Full-Stack and DevSecOps focus)",
-          graduation: "Expected Dec/2028",
+          status: "2nd Year",
+          graduation: "Expected Graduation - Dec/2028",
         },
       ],
       certifications: ["Design Thinking Process", "Big Data"],
-    },
-    skills: {
-      title: "Technical Skills",
-      categories: [
-        { name: "Programming", items: ["Python", "TypeScript", "SQL", "Dart"] },
-        {
-          name: "Databases",
-          items: ["PostgreSQL", "Firebase", "MongoDB", "Supabase"],
-        },
-        { name: "Tools", items: ["Git", "Docker", "Pandas", "Next.js"] },
-      ],
     },
     contact: {
       title: "Let's Talk",
@@ -188,7 +200,6 @@ export const dictionaries = {
     },
     hero: {
       role: "Estudante de Engenharia de Software | Especialista em Engenharia de Dados",
-      available: "Disponível para Estágio e Vagas Júnior",
       cta: "Vamos Conversar",
       downloadCv: "Baixar CV",
     },
@@ -196,6 +207,17 @@ export const dictionaries = {
       title: "Sobre Mim",
       summary:
         "Líder e desenvolvedor experiente focado em Python, TypeScript, algoritmos e estruturas de dados. Histórico comprovado na liderança de projetos acadêmicos e corporativos, notadamente as iniciativas 'Passa a Bola' e 'Catálogo Unentel'. Atualmente atuando como Estagiário de Pré-Vendas e Desenvolvedor Líder na Unentel Distribuição.",
+    },
+    skills: {
+      title: "Habilidades Técnicas",
+      categories: [
+        { name: "Programação", items: ["Python", "TypeScript", "SQL", "Dart"] },
+        {
+          name: "Banco de Dados",
+          items: ["PostgreSQL", "Firebase", "MongoDB", "Supabase"],
+        },
+        { name: "Ferramentas", items: ["Git", "Docker", "Pandas", "Next.js"] },
+      ],
     },
     experience: {
       title: "Experiência",
@@ -314,17 +336,6 @@ export const dictionaries = {
         },
       ],
       certifications: ["Design Thinking Process", "Big Data"],
-    },
-    skills: {
-      title: "Habilidades Técnicas",
-      categories: [
-        { name: "Programação", items: ["Python", "TypeScript", "SQL", "Dart"] },
-        {
-          name: "Banco de Dados",
-          items: ["PostgreSQL", "Firebase", "MongoDB", "Supabase"],
-        },
-        { name: "Ferramentas", items: ["Git", "Docker", "Pandas", "Next.js"] },
-      ],
     },
     contact: {
       title: "Vamos Conversar",
