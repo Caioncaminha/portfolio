@@ -13,7 +13,8 @@ import { ImageModal } from "@/components/ui/image-modal";
 export default function ProjectDetail() {
   const { slug } = useParams();
   const { dict } = useLanguage();
-  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [initialImageIndex, setInitialImageIndex] = React.useState(0);
 
   // Find the project in the current language dictionary
   const project = dict.projects.items.find((p) => p.slug === slug);
@@ -28,6 +29,20 @@ export default function ProjectDetail() {
       </div>
     );
   }
+
+  // Collect all images for the carousel (Cover + Gallery)
+  const allImages = [
+    ...(project.coverImage ? [project.coverImage] : []),
+    ...(project.gallery || [])
+  ];
+
+  const handleImageClick = (imageSrc: string) => {
+    const index = allImages.indexOf(imageSrc);
+    if (index !== -1) {
+      setInitialImageIndex(index);
+      setIsModalOpen(true);
+    }
+  };
 
   return (
     <>
@@ -68,7 +83,7 @@ export default function ProjectDetail() {
           <motion.div 
               layoutId={`project-image-${project.slug}`}
               className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-2xl mb-12 group cursor-zoom-in"
-              onClick={() => setSelectedImage(project.coverImage || null)}
+              onClick={() => project.coverImage && handleImageClick(project.coverImage)}
           >
              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
                 <FaSearchPlus className="text-white drop-shadow-md text-3xl" />
@@ -118,7 +133,7 @@ export default function ProjectDetail() {
                               <div 
                                 key={idx} 
                                 className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-all group cursor-zoom-in"
-                                onClick={() => setSelectedImage(img)}
+                                onClick={() => handleImageClick(img)}
                               >
                                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
                                       <FaSearchPlus className="text-white drop-shadow-md text-2xl" />
@@ -155,10 +170,10 @@ export default function ProjectDetail() {
 
       {/* Zoom Modal */}
       <ImageModal 
-        isOpen={!!selectedImage} 
-        src={selectedImage} 
-        alt={project.title} 
-        onClose={() => setSelectedImage(null)} 
+        isOpen={isModalOpen}
+        images={allImages}
+        initialIndex={initialImageIndex}
+        onClose={() => setIsModalOpen(false)} 
       />
     </>
   );
