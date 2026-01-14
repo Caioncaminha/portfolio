@@ -39,7 +39,7 @@ export function Projects() {
               >
                 <div className="flex flex-col h-full">
                     {/* Card Image */}
-                    <Link href={`/projects/${project.slug}`} className="block h-48 w-full overflow-hidden">
+                    <Link href={`/projects/${project.slug}`} className="block h-80 w-full overflow-hidden bg-secondary/20">
                         <motion.div 
                             layoutId={`project-image-${project.slug}`}
                             className="relative h-full w-full"
@@ -51,7 +51,7 @@ export function Projects() {
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 loading="lazy"
-                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                             />
                             ) : (
                             <div className="w-full h-full bg-secondary flex items-center justify-center text-muted-foreground">

@@ -113,10 +113,10 @@ export const dictionaries = {
             "Automated ETL pipelines for daily data updates.",
             "Role-based access control with RLS.",
           ],
-          coverImage: "/images/projects/unentel-catalog/covercatalogo.webp",
+          coverImage: "/images/projects/unentel-catalog/covercatalog.png",
           gallery: [
-            "/images/projects/unentel-catalog/gallery1catalogo.webp",
-            "/images/projects/unentel-catalog/gallery2catalogo.webp",
+            "/images/projects/unentel-catalog/gallery1catalog.png",
+            "/images/projects/unentel-catalog/gallery2catalog.png",
             "/images/projects/unentel-catalog/gallery3catalogo.webp",
           ],
           tech: ["TypeScript", "PostgreSQL", "ETL", "SQL", "Node.js"],
