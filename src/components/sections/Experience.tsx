@@ -4,6 +4,7 @@ import { useLanguage } from "@/context/language-context";
 import { motion, Variants } from "framer-motion";
 import { RichText } from "@/components/ui/rich-text";
 import { TechIcon } from "@/components/ui/tech-icon";
+import Image from "next/image";
 
 export function Experience() {
   const { dict } = useLanguage();
@@ -63,11 +64,20 @@ export function Experience() {
 
               {/* Logo Column */}
               <div className="flex flex-col items-center">
-                <div className="w-14 h-14 rounded-full bg-card border-2 border-border p-1 shadow-sm flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:border-primary group-hover:shadow-primary/20 transition-all duration-300 ease-out">
-                   {/* Placeholder for Logo */}
-                   <div className="w-full h-full rounded-full bg-secondary/50 flex items-center justify-center text-[10px] text-muted-foreground font-bold">
-                     LOGO
-                   </div>
+                <div className="w-14 h-14 rounded-full bg-card border-2 border-border p-1 shadow-sm flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:border-primary group-hover:shadow-primary/20 transition-all duration-300 ease-out overflow-hidden">
+                   {job.logo ? (
+                     <Image 
+                        src={job.logo} 
+                        alt={job.company}
+                        width={56}
+                        height={56}
+                        className="rounded-full object-cover"
+                     />
+                   ) : (
+                     <div className="w-full h-full rounded-full bg-secondary/50 flex items-center justify-center text-[10px] text-muted-foreground font-bold">
+                       {job.company.substring(0, 2).toUpperCase()}
+                     </div>
+                   )}
                 </div>
               </div>
 

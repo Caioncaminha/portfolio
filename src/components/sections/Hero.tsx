@@ -4,6 +4,7 @@ import { useLanguage } from "@/context/language-context";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import Image from "next/image";
 
 export function Hero() {
   const { dict } = useLanguage();
@@ -81,11 +82,14 @@ export function Hero() {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent rounded-full opacity-20 blur-2xl animate-pulse" />
-            <div className="relative w-full h-full bg-muted border-4 border-background rounded-full overflow-hidden shadow-2xl flex items-center justify-center group">
-               {/* Placeholder for Photo */}
-               <div className="w-full h-full bg-secondary/50 flex items-center justify-center text-muted-foreground font-medium group-hover:bg-secondary/70 transition-colors">
-                  Photo Placeholder
-               </div>
+            <div className="relative w-full h-full bg-muted border-4 border-background rounded-full overflow-hidden shadow-2xl group">
+               <Image 
+                  src="/images/hero/avatar.svg"
+                  alt="Caio Nascimento"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  priority
+               />
             </div>
           </div>
         </motion.div>

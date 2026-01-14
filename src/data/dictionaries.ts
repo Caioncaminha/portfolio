@@ -62,7 +62,7 @@ export const dictionaries = {
             "SQL",
             "ETL",
           ],
-          logo: "https://via.placeholder.com/150",
+          logo: "/images/experience/unentel.svg",
         },
         {
           company: "FIAP",
@@ -88,7 +88,7 @@ export const dictionaries = {
             "Git",
             "Team Leadership",
           ],
-          logo: "/public/images/projects/unentel-catalog/unentel_logo.jpg",
+          logo: "/images/experience/fiap.svg",
         },
       ],
     },
@@ -233,7 +233,7 @@ export const dictionaries = {
 - Governança de Dados: Impus integridade de dados rigorosa por meio de Modelagem Relacional e Row Level Security (RLS); automatizei tarefas de manutenção do banco de dados (limpeza/vacuum) usando pg_cron.
 - Impacto nos Negócios: Reduzi o tempo de preparação de propostas em cerca de 90% e aumentei a precisão das cotações padronizando as especificações técnicas.`,
           skills: ["PostgreSQL", "TypeScript", "SQL", "Engenharia de Dados"],
-          logo: "https://via.placeholder.com/150",
+          logo: "/images/experience/unentel.svg",
         },
         {
           company: "FIAP",
@@ -243,7 +243,7 @@ export const dictionaries = {
           description:
             "Liderei o desenvolvimento do 'Passa a Bola' (MVP) usando Flutter e Firebase. Projetei estruturas no Cloud Firestore. Automatizei atualizações de partidas via API pública. Gerenciei fluxos de trabalho Git e apliquei práticas de Clean Code.",
           skills: ["Flutter", "Dart", "Firebase", "Liderança de Equipe"],
-          logo: "https://via.placeholder.com/150",
+          logo: "/images/experience/fiap.svg",
         },
       ],
     },
