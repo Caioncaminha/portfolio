@@ -82,7 +82,7 @@ export default function ProjectDetail() {
           {/* Hero Image */}
           <motion.div 
               layoutId={`project-image-${project.slug}`}
-              className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-2xl mb-12 group cursor-zoom-in"
+              className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-2xl mb-12 group cursor-zoom-in bg-secondary/10"
               onClick={() => project.coverImage && handleImageClick(project.coverImage)}
           >
              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -92,7 +92,7 @@ export default function ProjectDetail() {
                src={project.coverImage || ""} 
                alt={project.title}
                fill
-               className="object-cover"
+               className="object-contain p-2"
                priority
              />
           </motion.div>
@@ -132,7 +132,7 @@ export default function ProjectDetail() {
                           {project.gallery.map((img, idx) => (
                               <div 
                                 key={idx} 
-                                className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-all group cursor-zoom-in"
+                                className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-all group cursor-zoom-in bg-secondary/10"
                                 onClick={() => handleImageClick(img)}
                               >
                                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -142,7 +142,7 @@ export default function ProjectDetail() {
                                       src={img} 
                                       alt={`${project.title} screenshot ${idx + 1}`}
                                       fill
-                                      className="object-cover"
+                                      className="object-contain p-2"
                                   />
                               </div>
                           ))}
