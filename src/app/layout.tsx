@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Caio Caminha | Software Engineer",
-  description: "Portfolio of Caio Nascimento Caminha, Software Engineering Student specializing in Data Engineering.",
+  title: "Caio Caminha",
+  description:
+    "Portfolio of Caio Nascimento Caminha, Software Engineering Student specializing in Data Engineering.",
 };
 
 export default function RootLayout({
@@ -39,9 +40,7 @@ export default function RootLayout({
         >
           <LanguageProvider>
             <Navbar />
-            <main className="min-h-screen">
-              {children}
-            </main>
+            <main className="min-h-screen">{children}</main>
             <Footer />
           </LanguageProvider>
         </ThemeProvider>
