@@ -46,6 +46,8 @@ Act as a Senior Software Engineer and Clean Code specialist. Perform a Code Revi
 3. **Clean Code & Architecture:**
 
    - Apply the DRY (Don't Repeat Yourself) principle.
+   - Apply the KISS (Keep It Simple, Stupid) principle
+   - Apply the SOLID principle (don't go too far with this one, keep the project working)
    - Break down very long functions into smaller, single-responsibility functions (Single Responsibility Principle).
    - Simplify complex conditionals (guard clauses, early returns).
 
