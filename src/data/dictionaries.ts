@@ -27,7 +27,7 @@ export const dictionaries = {
             { name: "Python", url: "https://www.python.org/" },
             { name: "TypeScript", url: "https://www.typescriptlang.org/" },
             { name: "Pandas", url: "https://pandas.pydata.org/" },
-            { name: "NumPy", url: "https://numpy.org/" },
+            { name: "API Rest" },
           ],
         },
         {
@@ -69,20 +69,26 @@ export const dictionaries = {
           url: "https://unentel.com.br/",
           description: `Designed and deployed a [centralized data platform](/projects/unentel-catalog) consolidating [[20,000]]+ **SKUs**, eliminating data fragmentation across sales operations.
 
-**- ETL & Data Pipelines:** Architected ingestion workflows using TypeScript and SQL to extract, normalize, and deduplicate raw vendor data, ensuring a "Single Source of Truth".
+**- ETL & Data Pipelines:** Architected ingestion workflows using **TypeScript** and **SQL** to extract, normalize, and deduplicate raw vendor data, ensuring a "Single Source of Truth".
 
-**- Database Performance:** Optimized PostgreSQL query plans using GIN indexes, fuzzy matching (pg_trgm), and unaccent extensions, achieving sub-[[200]]ms response times on complex search queries.
+**- Database Performance:** Optimized **PostgreSQL** query plans using __GIN indexes__, fuzzy matching __(pg_trgm), and unaccent extensions__, achieving sub-[[200]]ms response times on complex search queries.
 
-**- Data Analytics:** Implemented a __telemetry pipeline__ within the database to __capture high-volume search logs and "zero-result" queries__, enabling data-driven decisions on catalog expansion and future trainings.
+**- Data Analytics:** Implemented a **telemetry pipeline** within the database to capture high-volume search logs and "zero-result" queries, __enabling data-driven decisions__ on catalog expansion and future trainings.
 
-**- Business Impact:** Reduced proposal preparation time by ~[[90]]% when compared to manual spreadsheet processes and increased quote accuracy by centralizing technical specifications.`,
+**- Business Impact:** **Reduced proposal preparation time by ~**[[90]]**%** when compared to manual spreadsheet processes and __increased quote accuracy by centralizing technical specifications__.
+
+**- AI and Agents:** **AI Training and Virtual Agent** for Zoom, using **Prompt Engineering**, FAQ correlation, and documentation. Daily use of code assistants and agents (**Gemini CLI** and **Claude Code**) for **productivity increase**, achieving **feature delivery ~4x faster**, and facilitating/preventing manual work.`,
+
           skills: [
             "PostgreSQL",
             "TypeScript",
             "Supabase",
             "Pipelines",
             "Data Analytics",
+            "AI Agents",
             "Data Engineering",
+            "Prompt Engineering",
+            "AI Integration",
             "SQL",
             "ETL",
           ],
@@ -94,17 +100,17 @@ export const dictionaries = {
           period: "Mar/2025 – Oct/2025",
           location: "São Paulo, SP (Hybrid)",
           url: "https://www.fiap.com.br/",
-          description: `Technical lead in the development of the MVP for [Passa a Bola](/projects/passa-a-bola), a cross-platform application built with **Flutter(Dart)** and integrated with **Firebase/Cloud Firestore**. The project aims to professionalize and bring visibility to the women’s football ecosystem by connecting athletes, clubs, and fans on a single platform — featuring __secure authentication, real-time database management, and integration with match APIs__.
+          description: `**Technical lead** in the development of the MVP for [Passa a Bola](/projects/passa-a-bola), a cross-platform application built with **Flutter(Dart)** and integrated with **Firebase/Cloud Firestore**. The project aims to professionalize and bring visibility to the women’s football ecosystem by connecting athletes, clubs, and fans on a single platform — featuring __secure authentication, real-time database management, and integration with match APIs__.
 
 **Main responsibilities:**
-- Data modeling in Cloud Firestore and application architecture.
+- Data modeling in **Cloud Firestore** and application architecture.
 - Integration with a public API for automatic updates of matches and players.
-- Implementation of authentication using Firebase Auth and database security rules.
+- Implementation of authentication using **Firebase Auth** and database security rules.
 - Leadership and organization of the team and project workflow.
 
 **Key indicators and results:**
-- MVP delivered with full integration (Login/Sign-up, Homepage, Profile, Championships, Admin Panel, Geolocation, Cloud integration, and Multi-factor Authentication).
-- Reduced up to [[70]]% of manual work for clubs in data collection and consolidation (compared to spreadsheet-based processes) by automating ingestion and centralizing records.`,
+- **MVP delivered** with __full integration__ (Login/Sign-up, Homepage, Profile, Championships, Admin Panel, Geolocation, Cloud integration, and Multi-factor Authentication).
+- **Reduced up to **[[70]]**% of manual work** for clubs in data collection and consolidation (compared to spreadsheet-based processes) by automating ingestion and centralizing records.`,
           skills: ["Flutter", "Dart", "Firebase", "Git", "Team Leadership"],
           logo: "/images/experience/fiap_logo.png",
         },
@@ -122,9 +128,9 @@ export const dictionaries = {
             "Data platform consolidating 20,000+ SKUs, eliminating data fragmentation for the sales and pre-sales teams.",
           fullDescription: [
             "At __Unentel Distribuição__, data fragmentation across various vendor spreadsheets was a major bottleneck for the sales and pre-sales teams. This project aimed to centralize over **20,000 SKUs** into a single, reliable source of truth.",
-            "I designed and implemented a __robust data pipeline using TypeScript and SQL to extract, normalize, and deduplicate data__. The backend relies on a highly optimized PostgreSQL database, utilizing GIN indexes and fuzzy matching extensions to ensure search queries return results in **under 200ms**.",
-            "Beyond performance, **data governance and analysis** was a key focus. I implemented __Row Level Security (RLS)__ to ensure sensitive pricing information was only accessible to authorized personnel.",
-            "Additionally, I built a **telemetry pipeline** to capture high-volume search logs and zero-result queries, enabling data-driven decisions on catalog expansion and future trainings.",
+            "I designed and implemented a __robust data pipeline__ using **TypeScript** and **SQL** to extract, normalize, and deduplicate data. The backend relies on a highly optimized **PostgreSQL** database, utilizing __GIN indexes and fuzzy matching extensions__ to ensure search queries return results in **under 200ms**.",
+            "Beyond performance, **data governance and analysis** was a key focus. I implemented __Row Level Security (RLS)__ to ensure sensitive information was only accessible to authorized personnel, in conjunction, used __pg_cron__ to automate scheduled tasks __(Vaccum/Clean)__.",
+            "Additionally, I built a **telemetry pipeline** to capture high-volume search logs and zero-result queries, **enabling data-driven decisions** on catalog expansion and future trainings.",
           ],
           features: [
             "Consolidated 20,000+ SKUs.",
@@ -271,7 +277,7 @@ export const dictionaries = {
             { name: "Python", url: "https://www.python.org/" },
             { name: "TypeScript", url: "https://www.typescriptlang.org/" },
             { name: "Pandas", url: "https://pandas.pydata.org/" },
-            { name: "NumPy", url: "https://numpy.org/" },
+            { name: "API Rest" },
           ],
         },
         {
@@ -319,14 +325,19 @@ export const dictionaries = {
 
 **- Análise de Dados:** Implementei um __pipeline de telemetria__ dentro do banco de dados para __capturar logs de pesquisa de alto volume e consultas "sem resultado"__, permitindo decisões baseadas em dados sobre expansão de catálogo e treinamentos futuros.
 
-**- Impacto nos Negócios:** Reduzi o tempo de preparação de propostas em cerca de ~[[90]]% quando comparado a processos manuais de planilhas e aumentei a precisão das cotações centralizando especificações técnicas.`,
+**- Impacto nos Negócios:** Reduzi o tempo de preparação de propostas em cerca de ~[[90]]% quando comparado a processos manuais de planilhas e aumentei a precisão das cotações centralizando especificações técnicas.
+
+**- IA e Agentes:** **Treinamento de IA e Agente Virtual** para Zoom, usando **Engenharia de Prompt**, correlação de FAQ e documentação. Uso diário de assistentes de código e agentes (**Gemini CLI** e **Claude Code**) para **aumento de produtividade**, alcançando **entrega de recursos ~4x mais rápida**, e facilitando/prevenindo trabalho manual.`,
           skills: [
             "PostgreSQL",
             "TypeScript",
             "Supabase",
             "Pipelines",
-            "Data Analytics",
+            "Análise de Dados",
+            "Agentes de IA",
             "Engenharia de Dados",
+            "Engenharia de Prompt",
+            "Integração de IA",
             "SQL",
             "ETL",
           ],
@@ -366,8 +377,8 @@ export const dictionaries = {
             "Plataforma de dados consolidando mais de 20,000 SKUs, eliminando a fragmentação de dados para as equipes de vendas e pré-vendas.",
           fullDescription: [
             "Na __Unentel Distribuição__, a fragmentação de dados entre várias planilhas de fornecedores era um grande gargalo para as equipes de vendas e pré-vendas. Este projeto visava centralizar mais de **20,000 SKUs** em uma única fonte de verdade confiável.",
-            "Projetei e implementei um __pipeline de dados robusto usando TypeScript e SQL para extrair, normalizar e desduplicar dados__. O backend baseia-se em um banco de dados PostgreSQL altamente otimizado, utilizando índices GIN e extensões de correspondência difusa para garantir que as consultas de pesquisa retornem resultados em **menos de 200ms**.",
-            "Além do desempenho, **governança e análise de dados** foi um foco principal. Implementei __Row Level Security (RLS)__ para garantir que informações confidenciais de preços fossem acessíveis apenas a pessoal autorizado.",
+            "Projetei e implementei um __pipeline de dados robusto__ usando **TypeScript** e **SQL** para extrair, normalizar e desduplicar dados. O backend baseia-se em um banco de dados **PostgreSQL** altamente otimizado, utilizando __índices GIN e extensões de correspondência difusa__ para garantir que as consultas de pesquisa retornem resultados em **menos de 200ms**.",
+            "Além do desempenho, **governança e análise de dados** foi um foco principal. Implementei __Row Level Security (RLS)__ para garantir que informações confidenciais de preços fossem acessíveis apenas a pessoal autorizado, em conjunto, utilizei __pg_cron__ para automatizar tarefas agendadas __(Vaccum/Clean)__.",
             "Adicionalmente, construí um **pipeline de telemetria** para capturar logs de pesquisa de alto volume e consultas sem resultados, permitindo decisões baseadas em dados sobre expansão de catálogo e treinamentos futuros.",
           ],
           features: [
