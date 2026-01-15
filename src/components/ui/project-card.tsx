@@ -5,7 +5,6 @@ import { TechIcon } from "@/components/ui/tech-icon";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import { TiltCard } from "@/components/ui/tilt-card";
 
 interface ProjectCardProps {
   project: {
@@ -18,19 +17,16 @@ interface ProjectCardProps {
     tech: string[];
   };
   index: number;
-  useTilt?: boolean;
 }
 
-export function ProjectCard({ project, index, useTilt = true }: ProjectCardProps) {
-  const CardWrapper = useTilt ? TiltCard : motion.div;
-
+export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <CardWrapper
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
-      className="group flex flex-col h-full bg-card text-card-foreground rounded-xl border border-border hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 overflow-hidden"
+      className="group flex flex-col h-full bg-card text-card-foreground rounded-xl border border-border hover:border-primary hover:shadow-xl hover:shadow-primary/10 hover:scale-[1.02] transition-all duration-300 overflow-hidden"
     >
       <div className="flex flex-col h-full">
         {/* Card Image */}
@@ -114,6 +110,6 @@ export function ProjectCard({ project, index, useTilt = true }: ProjectCardProps
           </div>
         </div>
       </div>
-    </CardWrapper>
+    </motion.div>
   );
 }

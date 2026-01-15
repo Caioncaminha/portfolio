@@ -33,7 +33,6 @@ export default function ProjectsPage() {
             key={project.slug} 
             project={project} 
             index={index}
-            useTilt={false}
           />
         ))}
       </div>
