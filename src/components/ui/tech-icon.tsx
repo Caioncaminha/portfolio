@@ -26,7 +26,8 @@ import {
   FaRegFileExcel,
   FaChartBar,
 } from "react-icons/fa";
-
+import { BsDatabaseFillGear, BsGear } from "react-icons/bs";
+import { PiUserCircleGearLight } from "react-icons/pi";
 export function TechIcon({
   name,
   className,
@@ -44,7 +45,6 @@ export function TechIcon({
     dart: SiDart,
     firebase: SiFirebase,
     react: SiReact,
-    "next.js": SiNextdotjs,
     tailwind: SiTailwindcss,
     docker: SiDocker,
     git: SiGit,
@@ -53,17 +53,26 @@ export function TechIcon({
     supabase: SiSupabase,
     sql: FaDatabase,
     etl: FaDatabase,
-    "data engineering": FaDatabase,
-    "data analytics": FaChartLine,
-    "team leadership": FaUsers,
+    excel: FaRegFileExcel,
     pipelines: FaProjectDiagram,
-    "liderança de equipe": FaUsers, // PT support
-    "engenharia de dados": FaDatabase, // PT support
     numpy: SiNumpy,
     postman: SiPostman,
     dbt: SiDbt,
-    excel: FaRegFileExcel,
+    "team leadership": FaUsers,
+    "data analytics": FaChartLine,
+    "data engineering": FaDatabase,
+    "next.js": SiNextdotjs,
     "power bi": FaChartBar,
+    "api rest": BsDatabaseFillGear,
+    "ai integration": BsGear,
+    "prompt engineering": BsGear,
+    "ai agents": PiUserCircleGearLight,
+    "análise de dados": FaChartLine, // PT support
+    "engenharia de dados": FaDatabase, // PT support
+    "liderança de equipe": FaUsers, // PT support
+    "agentes de ia": PiUserCircleGearLight, // PT support
+    "integração de ia": BsGear, // PT support
+    "engenharia de prompt": BsGear, // PT support
   };
 
   const Icon = icons[normalized] || FaCode;

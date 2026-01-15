@@ -16,7 +16,7 @@ export const dictionaries = {
       title: "About Me",
       summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the [Passa a Bola](/projects/passa-a-bola) and [Catálogo Unentel](/projects/unentel-catalog) initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
         
-      Areas of interest (internship and junior): Data Engineering or related fields.`,
+      Areas of interest (Internship and Junior): Data Engineering or related fields.`,
     },
     skills: {
       title: "Technical Skills",
@@ -71,7 +71,7 @@ export const dictionaries = {
 
 **- ETL & Data Pipelines:** Architected ingestion workflows using **TypeScript** and **SQL** to extract, normalize, and deduplicate raw vendor data, ensuring a "Single Source of Truth".
 
-**- Database Performance:** Optimized **PostgreSQL** query plans using __GIN indexes__, fuzzy matching __(pg_trgm), and unaccent extensions__, achieving sub-[[200]]ms response times on complex search queries.
+**- Database Performance:** Optimized **PostgreSQL** query plans using __GIN indexes__, fuzzy matching __(pg_trgm), and unaccent extensions__, **achieving sub-**[[200]]**ms response times** on complex search queries.
 
 **- Data Analytics:** Implemented a **telemetry pipeline** within the database to capture high-volume search logs and "zero-result" queries, __enabling data-driven decisions__ on catalog expansion and future trainings.
 
@@ -165,9 +165,9 @@ export const dictionaries = {
           description:
             "Cross-platform app to strengthen the women's soccer ecosystem. Reduced manual data collection for client and clubs by ~70%.",
           fullDescription: [
-            "Passa a Bola is a mobile application designed to bridge the gap in professionalism for women's soccer as a whole. It serves as a centralized hub for matches, player statistics, team management, among other things.",
-            "Leading a team of students, I architected the solution using Flutter for a seamless cross-platform experience. The backend is built on Firebase, leveraging Cloud Firestore for real-time data synchronization.",
-            "Some key achievements include: Automating match updates with a public sports API, automating data ingestion and significantly reducing the manual workload for club managers and our primary client.",
+            "Passa a Bola is a **mobile application** designed to bridge the gap in professionalism for women's soccer as a whole. It serves as a centralized hub for matches, player statistics, team management, among other things.",
+            "Leading a team of students, I architected the solution using **Flutter** for a seamless cross-platform experience. The backend is built on **Firebase**, leveraging **Cloud Firestore** for **real-time data synchronization**.",
+            "Some key achievements include: **Automating match updates** with a public sports **API**, **automating data ingestion** and **reducing by around ~70%** the manual workload for club managers and our primary client.",
           ],
           features: [
             "Full control of matches, teams, clubs and players through the admin panel.",
@@ -192,8 +192,8 @@ export const dictionaries = {
             "Modern SPA portfolio built with Next.js, Tailwind CSS and Framer Motion. Features i18n (Language Switching) and Dark/Light Mode.",
           fullDescription: [
             "This portfolio website was built to showcase my skills and projects in a clean, modern, and accessible way.",
-            "The site is built with Next.js 14 (App Router) for server-side rendering and performance. Styling is handled by Tailwind CSS with a custom 'Purple Aesthetic' theme that supports both dark and light modes.",
-            "I implemented a custom internationalization (i18n) system using React Context, allowing for instant language switching without page reloads.",
+            "The site is built with **Next.js 14** (App Router) for server-side rendering and performance. Styling is handled by **Tailwind CSS** with a custom 'Purple Aesthetic' theme that supports both **dark and light modes**.",
+            "I implemented a **custom internationalization (i18n) system** using **React Context**, allowing for instant language switching without page reloads.",
           ],
           features: [
             "Responsive Single Page Application (SPA) architecture.",
@@ -319,15 +319,15 @@ export const dictionaries = {
           url: "https://unentel.com.br/",
           description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de [[20,000]] **SKUs**, eliminando a fragmentação de dados nas operações de vendas.
 
-**- ETL e Pipelines de Dados:** Estruturei fluxos de trabalho de ingestão usando TypeScript e SQL para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade".
+**- ETL e Pipelines de Dados:** Estruturei fluxos de trabalho de ingestão usando **TypeScript** e **SQL** para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade".
 
-**- Desempenho do Banco de Dados:** Otimizei planos de consulta PostgreSQL usando índices GIN, correspondência aproximada (pg_trgm) e unaccent, alcançando tempos de resposta inferiores a [[200]]ms em consultas de pesquisa complexas.
+**- Desempenho do Banco de Dados:** Otimizei planos de consulta **PostgreSQL** usando __índices GIN__, correspondência aproximada __(pg_trgm) e unaccent__, alcançando **tempos de resposta inferiores a **[[200]]**ms** em consultas de pesquisa complexas.
 
-**- Análise de Dados:** Implementei um __pipeline de telemetria__ dentro do banco de dados para __capturar logs de pesquisa de alto volume e consultas "sem resultado"__, permitindo decisões baseadas em dados sobre expansão de catálogo e treinamentos futuros.
+**- Análise de Dados:** Implementei um **pipeline de telemetria** dentro do banco de dados para capturar logs de pesquisa de alto volume e consultas "sem resultado", __permitindo decisões baseadas em dados__ sobre expansão de catálogo e treinamentos futuros.
 
-**- Impacto nos Negócios:** Reduzi o tempo de preparação de propostas em cerca de ~[[90]]% quando comparado a processos manuais de planilhas e aumentei a precisão das cotações centralizando especificações técnicas.
+**- Impacto nos Negócios:** **Reduzi o tempo de preparação de propostas em cerca de ~**[[90]]**%** quando comparado a processos manuais de planilhas e __aumentei a precisão das cotações centralizando especificações técnicas__.
 
-**- IA e Agentes:** **Treinamento de IA e Agente Virtual** para Zoom, usando **Engenharia de Prompt**, correlação de FAQ e documentação. Uso diário de assistentes de código e agentes (**Gemini CLI** e **Claude Code**) para **aumento de produtividade**, alcançando **entrega de recursos ~4x mais rápida**, e facilitando/prevenindo trabalho manual.`,
+**- IA e Agentes:** **Treinamento de IA e Agente Virtual** para Zoom, usando **Engenharia de Prompt**, correlação de FAQ e documentação. Uso diário de assistentes de código e agentes (**Gemini CLI** e **Claude Code**) para **aumento de produtividade**, alcançando **entrega de funcionalidades ~4x mais rápida**, e facilitando/prevenindo trabalho manual.`,
           skills: [
             "PostgreSQL",
             "TypeScript",
@@ -349,17 +349,17 @@ export const dictionaries = {
           period: "Mar/2025 – Out/2025",
           location: "São Paulo, SP (Híbrido)",
           url: "https://www.fiap.com.br/",
-          description: `Liderança técnica do desenvolvimento do MVP do [Passa a Bola](/projects/passa-a-bola), um aplicativo multiplataforma construído com **Flutter (Dart)** e integrado com **Firebase/Cloud Firestore**. O projeto visa profissionalizar e trazer visibilidade ao ecossistema do futebol feminino conectando atletas, clubes e fãs em uma única plataforma — com __autenticação segura, gerenciamento de banco de dados em tempo real e integração com APIs de partidas__.
+          description: `**Liderança técnica** do desenvolvimento do MVP do [Passa a Bola](/projects/passa-a-bola), um aplicativo multiplataforma construído com **Flutter (Dart)** e integrado com **Firebase/Cloud Firestore**. O projeto visa profissionalizar e trazer visibilidade ao ecossistema do futebol feminino conectando atletas, clubes e fãs em uma única plataforma — com __autenticação segura, gerenciamento de banco de dados em tempo real e integração com APIs de partidas__.
 
             **Principais responsabilidades:**
-            - Modelagem de dados no Cloud Firestore e arquitetura da aplicação.
+            - Modelagem de dados no **Cloud Firestore** e arquitetura da aplicação.
             - Integração com API pública para atualizações automáticas de partidas e jogadores.
-            - Implementação de autenticação usando Firebase Auth e regras de segurança de banco de dados.
+            - Implementação de autenticação usando **Firebase Auth** e regras de segurança de banco de dados.
             - Liderança e organização da equipe e fluxo de trabalho do projeto.
 
             **Indicadores e resultados:**
-            - MVP entregue com integração total (Login/Cadastro, Página Inicial, Perfil, Campeonatos, Painel Administrativo, Geolocalização, Integração em Nuvem e Autenticação Multifator).
-            - Redução de até [[70]]% do trabalho manual para clubes na coleta e consolidação de dados (comparado a processos baseados em planilhas) automatizando a ingestão e centralizando registros.`,
+            - **MVP entregue** com __integração total__ (Login/Cadastro, Página Inicial, Perfil, Campeonatos, Painel Administrativo, Geolocalização, Integração em Nuvem e Autenticação Multifator).
+            - **Redução de até **[[70]]**% do trabalho manual** para clubes na coleta e consolidação de dados (comparado a processos baseados em planilhas) automatizando a ingestão e centralizando registros.`,
           skills: ["Flutter", "Dart", "Firebase", "Git", "Liderança de Equipe"],
           logo: "/images/experience/fiap_logo.png",
         },
@@ -379,7 +379,7 @@ export const dictionaries = {
             "Na __Unentel Distribuição__, a fragmentação de dados entre várias planilhas de fornecedores era um grande gargalo para as equipes de vendas e pré-vendas. Este projeto visava centralizar mais de **20,000 SKUs** em uma única fonte de verdade confiável.",
             "Projetei e implementei um __pipeline de dados robusto__ usando **TypeScript** e **SQL** para extrair, normalizar e desduplicar dados. O backend baseia-se em um banco de dados **PostgreSQL** altamente otimizado, utilizando __índices GIN e extensões de correspondência difusa__ para garantir que as consultas de pesquisa retornem resultados em **menos de 200ms**.",
             "Além do desempenho, **governança e análise de dados** foi um foco principal. Implementei __Row Level Security (RLS)__ para garantir que informações confidenciais de preços fossem acessíveis apenas a pessoal autorizado, em conjunto, utilizei __pg_cron__ para automatizar tarefas agendadas __(Vaccum/Clean)__.",
-            "Adicionalmente, construí um **pipeline de telemetria** para capturar logs de pesquisa de alto volume e consultas sem resultados, permitindo decisões baseadas em dados sobre expansão de catálogo e treinamentos futuros.",
+            "Adicionalmente, construí um **pipeline de telemetria** para capturar logs de pesquisa de alto volume e consultas sem resultados, **permitindo decisões baseadas em dados** sobre expansão de catálogo e treinamentos futuros.",
           ],
           features: [
             "Consolidei mais de 20,000 SKUs.",
@@ -414,9 +414,9 @@ export const dictionaries = {
           description:
             "Aplicativo multiplataforma para fortalecer o ecossistema do futebol feminino. Redução de ~70% na coleta manual de dados para clientes e clubes.",
           fullDescription: [
-            "Passa a Bola é um aplicativo móvel projetado para preencher a lacuna de profissionalismo no futebol feminino como um todo. Ele serve como um hub centralizado para jogos, estatísticas de jogadores, gerenciamento de equipes, entre outras coisas.",
-            "Liderando uma equipe de estudantes, arquitetei a solução usando Flutter para uma experiência multiplataforma. O backend é construído no Firebase, aproveitando o Cloud Firestore para sincronização de dados em tempo real.",
-            "Algumas conquistas foram: Automatizar atualizações de partidas com uma API pública de esportes, automatizar ingestão de dados e reduzir significativamente a carga de trabalho manual para gerentes de clubes e nosso cliente principal.",
+            "Passa a Bola é um **aplicativo mobile** projetado para preencher a lacuna de profissionalismo no futebol feminino como um todo. Ele serve como um hub centralizado para jogos, estatísticas de jogadores, gerenciamento de equipes, entre outras coisas.",
+            "Liderando uma equipe de estudantes, arquitetei a solução usando **Flutter** para uma experiência multiplataforma. O backend é construído no **Firebase**, aproveitando o **Cloud Firestore** para **sincronização de dados em tempo real**.",
+            "Algumas conquistas foram: **Automatizar atualizações de partidas** com uma **API** pública de esportes, **automatizar ingestão de dados** e **reduzir em cerca de ~70%** a carga de trabalho manual para gerentes de clubes e nosso cliente principal.",
           ],
           features: [
             "Controle total de partidas, times, clubes e jogadores através do painel administrativo.",
@@ -441,8 +441,8 @@ export const dictionaries = {
             "Portfólio SPA moderno construído com Next.js, Tailwind CSS e Framer Motion. Possui i18n (Troca de Idioma) e Modo Escuro/Claro.",
           fullDescription: [
             "Este portfólio foi construído para mostrar minhas habilidades e projetos de forma limpa, moderna e acessível.",
-            "O site é construído com Next.js 14 (App Router) para renderização do lado do servidor e desempenho. O estilo é gerenciado pelo Tailwind CSS com um tema personalizado mais para o roxo que suporta os modos escuro e claro.",
-            "Implementei um sistema de internacionalização (i18n) personalizado usando React Context, permitindo a troca instantânea de idioma sem recarregar a página.",
+            "O site é construído com **Next.js 14** (App Router) para renderização do lado do servidor e desempenho. O estilo é gerenciado pelo **Tailwind CSS** com um tema personalizado mais para o roxo que suporta os **modos escuro e claro**.",
+            "Implementei um **sistema de internacionalização (i18n) personalizado** usando **React Context**, permitindo a troca instantânea de idioma sem recarregar a página.",
           ],
           features: [
             "Arquitetura de Single Page Application (SPA) responsiva.",
