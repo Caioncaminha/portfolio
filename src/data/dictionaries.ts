@@ -77,7 +77,7 @@ export const dictionaries = {
 
 **- Business Impact:** **Reduced proposal preparation time by ~**[[90]]**%** when compared to manual spreadsheet processes and __increased quote accuracy by centralizing technical specifications__.
 
-**- AI and Agents:** **AI Training and Virtual Agent** for Zoom, using **Prompt Engineering**, FAQ correlation, and documentation. Daily use of code assistants and agents (**Gemini CLI**, **Claude Code**, **MCP**) for **productivity increase**, achieving **feature delivery ~4x faster**, and facilitating/preventing manual work.`,
+**- AI and Agents:** **Zoom's AI and Virtual Agent training**, using **Prompt Engineering**, FAQ correlation, and documentation. Daily use of code assistants and agents (**Gemini CLI**, **Claude Code**, **MCP**) for **productivity increase**, achieving **feature delivery ~4x faster**, and facilitating/preventing manual work.`,
 
           skills: [
             "PostgreSQL",
@@ -327,7 +327,7 @@ export const dictionaries = {
 
 **- Impacto nos Negócios:** **Reduzi o tempo de preparação de propostas em cerca de ~**[[90]]**%** quando comparado a processos manuais de planilhas e __aumentei a precisão das cotações centralizando especificações técnicas__.
 
-**- IA e Agentes:** **Treinamento de IA e Agente Virtual** para Zoom, usando **Engenharia de Prompt**, correlação de FAQ e documentação. Uso diário de assistentes de código e agentes (**Gemini CLI**, **Claude Code**, **MCP**) para **aumento de produtividade**, alcançando **entrega de funcionalidades ~4x mais rápida**, e facilitando/prevenindo trabalho manual.`,
+**- IA e Agentes:** **Treinamento de IA e Agente Virtual da Zoom**, usando **Engenharia de Prompt**, correlação de FAQ e documentação. Uso diário de assistentes de código e agentes (**Gemini CLI**, **Claude Code**, **MCP**) para **aumento de produtividade**, alcançando **entrega de funcionalidades ~4x mais rápida**, e facilitando/prevenindo trabalho manual.`,
           skills: [
             "PostgreSQL",
             "TypeScript",
