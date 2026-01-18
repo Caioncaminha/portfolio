@@ -147,6 +147,8 @@ export const dictionaries = {
             "/images/projects/unentel-catalog/gallery3catalog.png",
             "/images/projects/unentel-catalog/gallery4catalog.png",
             "/images/projects/unentel-catalog/gallery5catalog.png",
+            "/images/projects/unentel-catalog/gallery6catalog.png",
+            "/images/projects/unentel-catalog/gallery7catalog.png",
           ],
           tech: [
             "PostgreSQL",
@@ -396,6 +398,8 @@ export const dictionaries = {
             "/images/projects/unentel-catalog/gallery3catalog.png",
             "/images/projects/unentel-catalog/gallery4catalog.png",
             "/images/projects/unentel-catalog/gallery5catalog.png",
+            "/images/projects/unentel-catalog/gallery6catalog.png",
+            "/images/projects/unentel-catalog/gallery7catalog.png",
           ],
           tech: [
             "PostgreSQL",
