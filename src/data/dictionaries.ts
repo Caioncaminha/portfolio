@@ -67,13 +67,13 @@ export const dictionaries = {
           period: "Oct/2025 – Present",
           location: "São Paulo, SP (Hybrid)",
           url: "https://unentel.com.br/",
-          description: `Designed and deployed a [centralized data platform](/projects/unentel-catalog) consolidating [[20,000]]+ **SKUs**, eliminating data fragmentation across sales operations.
+          description: `Designed and deployed a [centralized data platform](/projects/unentel-catalog) consolidating [[20,000]]+ **SKUs** into a single source of truth, eliminating data fragmentation across sales operations.
 
-**- Development:** Architected ingestion workflows using **TypeScript** and **SQL** to extract, normalize, and deduplicate raw vendor data, ensuring a "Single Source of Truth". Implemented **CI/CD (GitHub Actions, Vercel)**.
+**- Data Engineering & ETL:** Architected robust **ETL** pipelines using **TypeScript** and **SQL** to ingest raw vendor data. Implemented **fuzzy entity resolution** and normalization logic in **PostgreSQL** to automatically deduplicate manufacturers and SKUs, ensuring **high data integrity**. Implemented **CI/CD (GitHub Actions, Vercel)**.
 
-**- Database Performance:** Optimized **PostgreSQL** query plans using __GIN indexes__, fuzzy matching __(pg_trgm), and unaccent extensions__, **achieving sub-**[[200]]**ms response times** on complex search queries.
+**- Search Engine Optimization:** __Engineered a Hybrid Search system__ combining **Full-Text Search (FTS)** with **Trigram (pg_trgm)** similarity. __Implemented Synonym logic__. **Achieved sub-**[[200]]**ms response times on complex search queries**.
 
-**- Data Analytics:** Implemented a **telemetry pipeline** within the database to capture high-volume search logs and "zero-result" queries, __enabling data-driven decisions__ on catalog expansion and future trainings.
+**- Analytics & Telemetry:** Implemented a **telemetry pipeline** within the database, converting to a dashboard, to capture high-volume search logs and "zero-result" queries, __enabling data-driven decisions__ on catalog expansion and future trainings.
 
 **- Business Impact:** **Reduced proposal preparation time by ~**[[90]]**%** when compared to manual spreadsheet processes and __increased quote accuracy by centralizing technical specifications__.
 
@@ -319,13 +319,13 @@ export const dictionaries = {
           period: "Out/2025 – Presente",
           location: "São Paulo, SP (Híbrido)",
           url: "https://unentel.com.br/",
-          description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de [[20,000]] **SKUs**, eliminando a fragmentação de dados nas operações de vendas.
+          description: `Projetei e implementei uma [plataforma de dados centralizada](/projects/unentel-catalog) consolidando mais de [[20,000]] **SKUs** em uma única fonte de verdade, eliminando a fragmentação de dados nas operações de vendas.
 
-**- Desenvolvimento:** Estruturei fluxos de trabalho de ingestão usando **TypeScript** e **SQL** para extrair, normalizar e desduplicar dados brutos de fornecedores, garantindo uma "Fonte Única de Verdade". Implementei **CI/CD (GitHub Actions, Vercel)**.
+**- Engenharia de Dados e ETL:** Desenvolvi pipelines de **ETL** robustos usando **TypeScript** e **SQL** para ingerir dados brutos de fornecedores. Implementei **fuzzy entity resolution** e normalização em **PostgreSQL** para desduplicar automaticamente fabricantes e SKUs, garantindo **alta integridade de dados**. Implementei **CI/CD (GitHub Actions, Vercel)**.
 
-**- Desempenho do Banco de Dados:** Otimizei planos de consulta **PostgreSQL** usando __índices GIN__, correspondência aproximada __(pg_trgm) e unaccent__, alcançando **tempos de resposta inferiores a **[[200]]**ms** em consultas de pesquisa complexas.
+**- Otimização de Buscas:** __Desenvolvi um sistema de busca híbrido__ que combina **Full-Text Search (FTS)** com correspondência aproximada **(pg_trgm)**. __Implementei lógica de sinônimos__. Obtive **tempos de resposta abaixo de** [[200]]** ms** em consultas de busca complexas.
 
-**- Análise de Dados:** Implementei um **pipeline de telemetria** dentro do banco de dados para capturar logs de pesquisa de alto volume e consultas "sem resultado", __permitindo decisões baseadas em dados__ sobre expansão de catálogo e treinamentos futuros.
+**- Análise e Telemetria:** Implementei um **pipeline de telemetria** dentro do banco de dados, convertendo-o a um dashboard, para capturar logs de pesquisa de alto volume e consultas "sem resultado", __permitindo decisões baseadas em dados__ sobre expansão de catálogo e treinamentos futuros.
 
 **- Impacto nos Negócios:** **Reduzi o tempo de preparação de propostas em cerca de ~**[[90]]**%** quando comparado a processos manuais de planilhas e __aumentei a precisão das cotações centralizando especificações técnicas__.
 
