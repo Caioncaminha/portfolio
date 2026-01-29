@@ -75,7 +75,7 @@ export const dictionaries = {
 
 **- Analytics & Telemetry:** Implemented a **telemetry pipeline** within the database, converting to a dashboard, to capture high-volume search logs and "zero-result" queries, __enabling data-driven decisions__ on catalog expansion and future trainings.
 
-**- Business Impact:** **Reduced proposal preparation time by ~**[[90]]**%** when compared to manual spreadsheet processes and __increased quote accuracy by centralizing technical specifications__.
+**- Business Impact:** **Reduced BoMs preparation time by ~**[[90]]**%** when compared to manual spreadsheet processes and __increased quote accuracy by centralizing technical specifications__.
 
 **- AI and Agents:** **Zoom's AI and Virtual Agent training**, using **Prompt Engineering**, FAQ correlation, and documentation. Daily use of code assistants and agents (**Gemini CLI**, **Claude Code**, **MCP**) for **productivity increase**, achieving **feature delivery ~4x faster**, and facilitating/preventing manual work.`,
 
@@ -138,7 +138,7 @@ export const dictionaries = {
             "Automated ETL pipelines for daily data updates.",
             "Role-based access control with RLS and Auth",
             "Telemetry pipeline capturing search logs for analytics.",
-            "Reduced proposal prep time by ~90% compared to manual processes.",
+            "Reduced BoMs prep time by ~90% compared to manual processes.",
           ],
           coverImage: "/images/projects/unentel-catalog/covercatalog.png",
           gallery: [
@@ -327,7 +327,7 @@ export const dictionaries = {
 
 **- Análise e Telemetria:** Implementei um **pipeline de telemetria** dentro do banco de dados, convertendo-o a um dashboard, para capturar logs de pesquisa de alto volume e consultas "sem resultado", __permitindo decisões baseadas em dados__ sobre expansão de catálogo e treinamentos futuros.
 
-**- Impacto nos Negócios:** **Reduzi o tempo de preparação de propostas em cerca de ~**[[90]]**%** quando comparado a processos manuais de planilhas e __aumentei a precisão das cotações centralizando especificações técnicas__.
+**- Impacto nos Negócios:** **Reduzi o tempo de preparação de BoMs em cerca de ~**[[90]]**%** quando comparado a processos manuais de planilhas e __aumentei a precisão das cotações centralizando especificações técnicas__.
 
 **- IA e Agentes:** **Treinamento de IA e Agente Virtual da Zoom**, usando **Engenharia de Prompt**, correlação de FAQ e documentação. Uso diário de assistentes de código e agentes (**Gemini CLI**, **Claude Code**, **MCP**) para **aumento de produtividade**, alcançando **entrega de funcionalidades ~4x mais rápida**, e facilitando/prevenindo trabalho manual.`,
           skills: [
@@ -389,7 +389,7 @@ export const dictionaries = {
             "Pipelines ETL automatizados para atualizações diárias de dados.",
             "Controle de acesso baseado em função com RLS e Auth.",
             "Pipeline de telemetria capturando logs de pesquisa para análise.",
-            "Redução do tempo de preparação de propostas em ~90% comparado a processos manuais.",
+            "Redução do tempo de preparação de BoMs em ~90% comparado a processos manuais.",
           ],
           coverImage: "/images/projects/unentel-catalog/covercatalog.png",
           gallery: [
