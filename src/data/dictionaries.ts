@@ -14,7 +14,7 @@ export const dictionaries = {
     },
     about: {
       title: "About Me",
-      summary: `Experienced leader and developer focused on Python, TypeScript, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the [Passa a Bola](/projects/passa-a-bola) and [Catálogo Unentel](/projects/unentel-catalog) initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
+      summary: `Experienced leader and developer focused on Python, algorithms, and data structures. Proven track record in leading academic and corporate projects, notably the [Passa a Bola](/projects/passa-a-bola) and [Catálogo Unentel](/projects/unentel-catalog) initiatives. Currently serving as a Pre-Sales Intern and Lead Developer at Unentel Distribuição.
         
       Areas of interest (Internship and Junior): Data Engineering or related fields.`,
     },
@@ -25,8 +25,11 @@ export const dictionaries = {
           name: "Development",
           items: [
             { name: "Python", url: "https://www.python.org/" },
-            { name: "TypeScript", url: "https://www.typescriptlang.org/" },
             { name: "Pandas", url: "https://pandas.pydata.org/" },
+            {
+              name: "PySpark",
+              url: "https://spark.apache.org/docs/latest/api/python/index.html",
+            },
             { name: "API Rest" },
           ],
         },
@@ -44,7 +47,7 @@ export const dictionaries = {
           items: [
             { name: "Git", url: "https://git-scm.com/" },
             { name: "Docker", url: "https://www.docker.com/" },
-            { name: "Postman", url: "https://www.postman.com/" },
+            { name: "DBeaver", url: "https://dbeaver.io/" },
             { name: "dbt", url: "https://www.getdbt.com/" },
             {
               name: "Excel",

@@ -14,8 +14,8 @@ import {
   SiMongodb,
   SiSupabase,
   SiNumpy,
-  SiPostman,
   SiDbt,
+  SiDbeaver,
 } from "react-icons/si";
 import {
   FaDatabase,
@@ -25,6 +25,7 @@ import {
   FaProjectDiagram,
   FaRegFileExcel,
   FaChartBar,
+  FaStar,
 } from "react-icons/fa";
 import { BsDatabaseFillGear, BsGear } from "react-icons/bs";
 import { PiUserCircleGearLight } from "react-icons/pi";
@@ -51,12 +52,13 @@ export function TechIcon({
     pandas: SiPandas,
     mongodb: SiMongodb,
     supabase: SiSupabase,
+    dbeaver: SiDbeaver,
     sql: FaDatabase,
+    pyspark: FaStar,
     etl: FaDatabase,
     excel: FaRegFileExcel,
     pipelines: FaProjectDiagram,
     numpy: SiNumpy,
-    postman: SiPostman,
     dbt: SiDbt,
     "team leadership": FaUsers,
     "data analytics": FaChartLine,
