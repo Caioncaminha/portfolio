@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useLanguage } from "@/context/language-context";
 import type { RawContent, Job, Project, EducationItem, Certification, SkillCategory, SkillItem } from "@/types/content";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -323,15 +322,18 @@ const TABS = ["Hero", "About", "Skills", "Experience", "Projects", "Education", 
 type Tab = typeof TABS[number];
 
 export default function AdminPage() {
-  const { raw } = useLanguage();
   const [allowed, setAllowed] = useState(false);
-  const [content, setContent] = useState<RawContent>(raw);
+  const [content, setContent] = useState<RawContent | null>(null);
   const [tab, setTab] = useState<Tab>("Hero");
-  const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "saving" | "saved" | "error">("loading");
 
   useEffect(() => {
     if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
       setAllowed(true);
+      fetch("/api/admin/content")
+        .then((r) => r.json())
+        .then((data) => { setContent(data); setStatus("idle"); })
+        .catch(() => setStatus("error"));
     }
   }, []);
 
@@ -340,6 +342,14 @@ export default function AdminPage() {
       <div className="min-h-screen flex items-center justify-center flex-col gap-4 text-center p-8">
         <h1 className="text-2xl font-bold">Admin panel only available on localhost</h1>
         <p className="text-muted-foreground">Run <code className="bg-muted px-2 py-1 rounded text-sm">npm run dev</code> and open this page at http://localhost:3000/admin</p>
+      </div>
+    );
+  }
+
+  if (!content || status === "loading") {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-muted-foreground">Loading content…</p>
       </div>
     );
   }
@@ -354,9 +364,7 @@ export default function AdminPage() {
       });
       if (!res.ok) throw new Error("Save failed");
       setStatus("saved");
-      setTimeout(() => {
-        window.location.reload();
-      }, 800);
+      setTimeout(() => setStatus("idle"), 1500);
     } catch {
       setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
@@ -369,7 +377,7 @@ export default function AdminPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold">Content Admin</h1>
-            <p className="text-muted-foreground text-sm mt-1">Edit portfolio content. EN and PT side by side. Save reloads the page.</p>
+            <p className="text-muted-foreground text-sm mt-1">Edit portfolio content. EN and PT side by side. Changes save directly to content.json.</p>
           </div>
           <button
             onClick={save}
