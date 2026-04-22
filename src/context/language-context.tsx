@@ -1,36 +1,46 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { dictionaries, Language, Dictionary } from "@/data/dictionaries";
+import rawContent from "../../content.json";
+import { getDict, type Dictionary } from "@/lib/content";
+import type { RawContent } from "@/types/content";
+
+export type Language = "en" | "pt";
 
 interface LanguageContextType {
   language: Language;
   dict: Dictionary;
+  raw: RawContent;
   setLanguage: (lang: Language) => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const content = rawContent as RawContent;
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguageState] = useState<Language>("en");
 
-  // Load language from local storage on mount
   useEffect(() => {
-    const savedLang = localStorage.getItem("language") as Language;
-    if (savedLang && (savedLang === "en" || savedLang === "pt") && savedLang !== language) {
-      // eslint-disable-next-line
-      setLanguage(savedLang);
+    const saved = localStorage.getItem("language") as Language | null;
+    if (saved === "en" || saved === "pt") {
+      setLanguageState(saved);
     }
-  }, [language]);
+  }, []); // empty deps — run once on mount only
 
-  const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang);
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
     localStorage.setItem("language", lang);
   };
 
   return (
     <LanguageContext.Provider
-      value={{ language, dict: dictionaries[language], setLanguage: handleSetLanguage }}
+      value={{
+        language,
+        dict: getDict(content, language),
+        raw: content,
+        setLanguage,
+      }}
     >
       {children}
     </LanguageContext.Provider>
@@ -38,9 +48,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 }
 
 export function useLanguage() {
-  const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
-  return context;
+  const ctx = useContext(LanguageContext);
+  if (!ctx) throw new Error("useLanguage must be used within a LanguageProvider");
+  return ctx;
 }
