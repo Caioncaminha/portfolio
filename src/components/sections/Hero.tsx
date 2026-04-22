@@ -7,7 +7,7 @@ import { HiDownload } from "react-icons/hi";
 import Image from "next/image";
 
 export function Hero() {
-  const { dict, language } = useLanguage();
+  const { dict } = useLanguage();
 
   return (
     <section
@@ -44,11 +44,7 @@ export function Hero() {
               {dict.hero.cta}
             </a>
             <a
-              href={
-                language === "pt"
-                  ? "/cv/pt_curriculo_caio_nascimento_caminha.pdf"
-                  : "/cv/en_curriculo_caio_nascimento_caminha.pdf"
-              }
+              href={dict.hero.cvPath}
               download
               className="px-8 py-3 bg-secondary text-secondary-foreground rounded-full font-medium hover:bg-secondary/80 transition-all flex items-center gap-2"
             >

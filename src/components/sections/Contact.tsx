@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function Contact() {
-  const { dict, language } = useLanguage();
+  const { dict } = useLanguage();
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
@@ -23,9 +23,7 @@ export function Contact() {
             {dict.contact.title}
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            {language === "en"
-              ? "I'm currently available for internship and junior roles, more specifically in Data Engineering or related fields. Feel free to reach out if you'd like to collaborate or just say hi!"
-              : "Estou atualmente disponível para estágio e júnior, mais especificamente Engenharia de Dados ou áreas correlatas. Sinta-se à vontade para entrar em contato se quiser colaborar ou apenas dar um alô!"}
+            {dict.contact.availability}
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
@@ -40,7 +38,7 @@ export function Contact() {
 
           <div className="flex items-center justify-center gap-8">
             <a
-              href="https://github.com/Caioncaminha"
+              href={dict.contact.github}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
@@ -51,7 +49,7 @@ export function Contact() {
               <span className="text-sm font-medium">GitHub</span>
             </a>
             <a
-              href="https://linkedin.com/in/caionascimentocaminha"
+              href={dict.contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"

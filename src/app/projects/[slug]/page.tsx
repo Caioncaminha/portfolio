@@ -25,7 +25,7 @@ export default function ProjectDetail() {
       <div className="min-h-screen flex items-center justify-center flex-col gap-4">
         <h1 className="text-2xl font-bold">Project Not Found</h1>
         <Link href="/projects" className="text-primary hover:underline">
-          Back to Projects
+          {dict.projects.backToProjects}
         </Link>
       </div>
     );
@@ -54,7 +54,7 @@ export default function ProjectDetail() {
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 group"
         >
           <FaArrowLeft className="group-hover:-translate-x-1 transition-transform" />
-          Back to Projects
+          {dict.projects.backToProjects}
         </Link>
 
         {/* Header */}
@@ -75,7 +75,7 @@ export default function ProjectDetail() {
               )}
               {project.link && (
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium">
-                      <FaExternalLinkAlt /> Live Demo
+                      <FaExternalLinkAlt /> {dict.projects.liveDemo}
                   </a>
               )}
           </div>
@@ -104,7 +104,7 @@ export default function ProjectDetail() {
           <div className="lg:col-span-2 space-y-12">
               <section>
                   <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                      Overview
+                      {dict.projects.overview}
                   </h2>
                   <div className="prose dark:prose-invert max-w-none text-muted-foreground text-lg leading-relaxed space-y-6">
                       {project.fullDescription?.map((paragraph, idx) => (
@@ -114,7 +114,7 @@ export default function ProjectDetail() {
               </section>
 
               <section>
-                   <h2 className="text-2xl font-bold mb-6">Key Features</h2>
+                   <h2 className="text-2xl font-bold mb-6">{dict.projects.keyFeatures}</h2>
                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                        {project.features?.map((feature, idx) => (
                            <li key={idx} className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border">
@@ -128,7 +128,7 @@ export default function ProjectDetail() {
                {/* Gallery */}
                {project.gallery && project.gallery.length > 0 && (
                   <section>
-                      <h2 className="text-2xl font-bold mb-6">Gallery</h2>
+                      <h2 className="text-2xl font-bold mb-6">{dict.projects.gallery}</h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           {project.gallery.map((img, idx) => (
                               <div 
@@ -155,7 +155,7 @@ export default function ProjectDetail() {
           {/* Sidebar */}
           <aside className="space-y-8">
               <div className="bg-card border border-border rounded-xl p-6 sticky top-24">
-                  <h3 className="text-xl font-bold mb-6">Tech Stack</h3>
+                  <h3 className="text-xl font-bold mb-6">{dict.projects.techStack}</h3>
                   <div className="flex flex-wrap gap-3">
                       {project.tech.map((t) => (
                           <div key={t} className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-secondary/50 text-secondary-foreground text-sm font-medium">
